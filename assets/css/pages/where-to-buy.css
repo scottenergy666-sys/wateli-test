@@ -1,0 +1,485 @@
+/* WATELI where-to-buy sandbox only. Header/footer remain controlled by main site layout. */
+.wateli-where-buy {
+  color: #111820;
+}
+
+.wateli-where-buy-hero {
+  padding: 76px 0 34px;
+}
+
+.wateli-where-buy-hero__inner,
+.wateli-where-buy-list .container {
+  max-width: 1180px;
+}
+
+.wateli-where-buy-hero__copy {
+  max-width: 720px;
+}
+
+.wateli-where-buy-kicker {
+  margin: 0 0 18px;
+  color: rgba(156, 203, 255, 0.86);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .1em;
+}
+
+.wateli-where-buy-head .wateli-where-buy-kicker {
+  color: #4DA3FF;
+}
+
+.wateli-where-buy-kicker::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin-top: 12px;
+  background: currentColor;
+}
+
+.wateli-where-buy-head .wateli-where-buy-kicker::after {
+  width: 24px;
+  background: currentColor;
+}
+.wateli-where-buy h1 {
+  margin: 0;
+  font-size: clamp(56px, 7.8vw, 96px);
+  line-height: .9;
+  letter-spacing: -.055em;
+}
+
+.wateli-where-buy-lead {
+  margin: 40px 0 0;
+  color: rgba(255,255,255,0.78);
+  font-size: clamp(22px, 2.7vw, 34px);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.wateli-where-buy-note {
+  margin: 26px 0 0;
+  max-width: 620px;
+  color: rgba(255,255,255,0.62);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.wateli-where-buy-list {
+  padding: 18px 0 78px;
+  margin-top: 30px;
+}
+
+.wateli-where-buy-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 52px;
+}
+
+.wateli-where-buy-head h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.wateli-region-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.wateli-region-filter button {
+  appearance: none;
+  color: rgba(255,255,255,0.66);
+  background: transparent;
+  border: 1px solid rgba(77,163,255,0.32);
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 11px 18px;
+  transition: border-color .18s ease, color .18s ease, background .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+.wateli-region-filter button.is-active {
+  color: #ffffff;
+  background: #4DA3FF;
+  border-color: rgba(77,163,255,0.74);
+}
+
+.wateli-region-filter button:hover {
+  transform: translateY(-1px);
+}
+
+.wateli-area-stack {
+  display: grid;
+  gap: 44px;
+}
+
+.wateli-area-section[hidden] {
+  display: none;
+}
+
+.wateli-area-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.wateli-area-title-row h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: 0.08em;
+}
+
+.wateli-area-title-row h3::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  background: #4DA3FF;
+  opacity: 1;
+  clip-path: path("M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z");
+}
+
+.wateli-area-title-row span {
+  color: rgba(77, 163, 255, 0.88);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.wateli-city-group {
+  display: grid;
+  grid-template-columns: minmax(86px, 120px) 1fr;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 20px 0 6px;
+  border-bottom: 0;
+}
+
+.wateli-city-group h4 {
+  margin: 0;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.18;
+  letter-spacing: -.03em;
+  padding-top: 3px;
+}
+
+.wateli-city-stores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.wateli-store-card {
+  width: 100%;
+  max-width: none;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: none;
+}
+
+.wateli-store-card h5 {
+  margin: 0 0 7px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.wateli-store-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.wateli-store-card span {
+  display: block;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .wateli-where-buy-hero {
+    padding: 58px 0 28px;
+  }
+
+  .wateli-where-buy-list {
+    padding-bottom: 56px;
+  }
+
+  .wateli-where-buy-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .wateli-region-filter {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .wateli-region-filter button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .wateli-city-group {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+
+/* ===== WATELI WHERE TO BUY - BLUE ONLY CONTROL R3 =====
+   Scope: blue accent parts only.
+   Do not change page background, white text system, layout, header, footer, or dealer.css.
+*/
+.wateli-where-buy {
+  --wtb-blue-r3: #3B82F6;
+  --wtb-blue-r3-light: #60A5FA;
+  --wtb-blue-r3-soft: rgba(59, 130, 246, 0.74);
+}
+
+/* WHERE TO BUY / TAIWAN blue labels and underline */
+.wateli-where-buy .wateli-where-buy-kicker,
+.wateli-where-buy .wateli-where-buy-head .wateli-where-buy-kicker {
+  color: var(--wtb-blue-r3) !important;
+}
+
+.wateli-where-buy .wateli-where-buy-kicker::after,
+.wateli-where-buy .wateli-where-buy-head .wateli-where-buy-kicker::after {
+  background: var(--wtb-blue-r3) !important;
+}
+
+/* Region filter buttons: blue border/text; active blue fill */
+.wateli-where-buy .wateli-region-filter button {
+  color: var(--wtb-blue-r3) !important;
+  border-color: var(--wtb-blue-r3-soft) !important;
+}
+
+.wateli-where-buy .wateli-region-filter button.is-active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, var(--wtb-blue-r3), var(--wtb-blue-r3-light)) !important;
+  border-color: var(--wtb-blue-r3) !important;
+}
+
+/* Area icon and English region text */
+.wateli-where-buy .wateli-area-title-row h3::before {
+  background: var(--wtb-blue-r3) !important;
+}
+
+.wateli-where-buy .wateli-area-title-row span {
+  color: var(--wtb-blue-r3) !important;
+}
+
+/* ===== WATELI BRAND BLUE R4 / BLUE ONLY =====
+   Scope: blue accent system only.
+   No background, no layout, no white text, no header/footer changes.
+*/
+:root {
+  --wateli-blue: #5DA9FF;
+  --wateli-blue-deep: #2F7BFF;
+  --wateli-blue-light: #8EC5FF;
+  --wateli-blue-soft: rgba(93, 169, 255, 0.18);
+  --wateli-blue-line: rgba(93, 169, 255, 0.34);
+}
+
+/* Hero / region small blue labels */
+.wateli-where-buy-eyebrow,
+.wateli-where-buy-region-kicker {
+  color: var(--wateli-blue-light) !important;
+}
+
+.wateli-where-buy-eyebrow::after,
+.wateli-where-buy-region-kicker::after {
+  background: linear-gradient(90deg, var(--wateli-blue-deep), var(--wateli-blue-light)) !important;
+}
+
+/* Region filter blue controls */
+.wateli-where-buy-filter {
+  color: var(--wateli-blue-light) !important;
+  border-color: var(--wateli-blue-line) !important;
+  box-shadow: inset 0 0 0 1px rgba(93, 169, 255, 0.06) !important;
+}
+
+.wateli-where-buy-filter:hover {
+  color: #ffffff !important;
+  border-color: rgba(142, 197, 255, 0.58) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(142, 197, 255, 0.12),
+    0 0 18px rgba(47, 123, 255, 0.16) !important;
+}
+
+.wateli-where-buy-filter.is-active {
+  color: #ffffff !important;
+  border-color: rgba(142, 197, 255, 0.62) !important;
+  background:
+    linear-gradient(135deg, rgba(47, 123, 255, 0.96), rgba(93, 169, 255, 0.88) 55%, rgba(142, 197, 255, 0.82)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 0 22px rgba(47, 123, 255, 0.24) !important;
+}
+
+/* Region card blue accents */
+.wateli-where-buy-region-en,
+.wateli-where-buy-region-icon {
+  color: var(--wateli-blue-light) !important;
+  fill: var(--wateli-blue-light) !important;
+}
+
+.wateli-where-buy-region-icon svg,
+.wateli-where-buy-region-icon path {
+  color: var(--wateli-blue-light) !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Decorative blue divider / dot accents */
+.wateli-where-buy-divider,
+.wateli-where-buy-divider-line {
+  border-color: var(--wateli-blue-line) !important;
+  background-color: var(--wateli-blue-line) !important;
+}
+
+.wateli-where-buy-divider-dot,
+.wateli-where-buy-dot {
+  background: var(--wateli-blue-light) !important;
+  box-shadow: 0 0 14px rgba(93, 169, 255, 0.42) !important;
+}
+
+/* ===== WATELI R5 / BUTTON BALANCE ONLY =====
+   Scope: right-side region filter buttons only.
+   No background, no layout, no white text, no header/footer changes.
+*/
+.wateli-where-buy-filter {
+  background: rgba(255, 255, 255, 0.025) !important;
+  border: 1px solid rgba(93, 169, 255, 0.24) !important;
+  color: rgba(220, 235, 255, 0.72) !important;
+  box-shadow: none !important;
+}
+
+.wateli-where-buy-filter:hover {
+  background: rgba(93, 169, 255, 0.08) !important;
+  border-color: rgba(93, 169, 255, 0.38) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: none !important;
+}
+
+.wateli-where-buy-filter.is-active {
+  background: rgba(47, 123, 255, 0.22) !important;
+  border: 1px solid rgba(93, 169, 255, 0.44) !important;
+  color: #ffffff !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 0 1px rgba(47, 123, 255, 0.08) !important;
+}
+
+/* ===== WATELI R6 / FINAL BUTTON BALANCE =====
+   Scope: right-side region filter buttons only.
+   Goal: reduce active brightness, raise inactive presence, remove strong UI/button feel.
+*/
+.wateli-where-buy-filter {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(93, 169, 255, 0.18) !important;
+  color: rgba(226, 238, 255, 0.78) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035) !important;
+}
+
+.wateli-where-buy-filter:hover {
+  background: rgba(93, 169, 255, 0.075) !important;
+  border-color: rgba(93, 169, 255, 0.28) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.055) !important;
+}
+
+.wateli-where-buy-filter.is-active {
+  background: rgba(47, 123, 255, 0.16) !important;
+  border: 1px solid rgba(93, 169, 255, 0.30) !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.065) !important;
+}
+
+
+
+
+/* ===== R7 CARD BRAND UPGRADE =====
+   Scope: store card visual hierarchy only
+*/
+
+/* Card base refinement */
+.wateli-store-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: all 0.2s ease;
+}
+
+/* Hover subtle lift */
+.wateli-store-card:hover {
+  background: rgba(255,255,255,0.035);
+  border-color: rgba(93,169,255,0.18);
+}
+
+/* Store name (primary) */
+.wateli-store-card h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+/* Address (secondary) */
+.wateli-store-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Phone (accent / action) */
+.wateli-store-card span {
+  font-size: 13px;
+  color: rgba(93,169,255,0.85);
+  font-weight: 500;
+}
+
+/* Improve spacing rhythm inside card groups */
+.wateli-city-stores {
+  gap: 16px;
+}
+
+/* Slight visual separation between city groups */
+.wateli-city-group {
+  margin-bottom: 28px;
+}
+

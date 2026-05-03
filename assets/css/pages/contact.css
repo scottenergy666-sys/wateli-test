@@ -1,0 +1,77 @@
+/* Contact is a text page that reuses the existing Dealer/page-template system.
+   Only contact-specific alignment lives here. */
+
+.wateli-contact-page .dealer-hero__lead {
+  max-width: 36ch;
+}
+
+.wateli-contact-page__process-grid,
+.wateli-contact-page__optional-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.wateli-contact-page__step {
+  margin: 0 0 24px;
+  color: var(--site-text-secondary);
+  font-size: .9rem;
+  letter-spacing: .16em;
+}
+
+.wateli-contact-page__email {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--site-text-main);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wateli-contact-page__email:hover {
+  color: var(--site-brand);
+}
+
+@media (max-width: 980px) {
+  .wateli-contact-page__process-grid,
+  .wateli-contact-page__optional-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.wateli-contact-page__ending-panel {
+  text-align: center;
+}
+
+.wateli-contact-page__ending-panel p {
+  margin: 0;
+  color: var(--site-text-main);
+}
+
+.wateli-contact-page__optional-grid {
+  text-align: center;
+}
+
+.wateli-contact-page__ending-panel {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* CONTACT FINAL SEAL: optional items centered + ending note unframed */
+.wateli-contact-page__optional-grid .dealer-system__item {
+  text-align: center;
+  justify-items: center;
+}
+
+.wateli-contact-page__optional-grid .dealer-system__item h3 {
+  margin-inline: auto;
+}
+
+.wateli-contact-page__ending-panel {
+  text-align: center;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+

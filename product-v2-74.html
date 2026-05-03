@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WATELI | SKU v2</title>
+  <meta name="description" content="WATELI SKU v2 product page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/core/tokens.css" />
+  <link rel="stylesheet" href="assets/css/core/base.css" />
+  <link rel="stylesheet" href="assets/css/core/layout.css" />
+  <link rel="stylesheet" href="assets/css/components/buttons.css" />
+  <link rel="stylesheet" href="assets/css/components/sections.css" />
+  <style>
+    :root {
+      --wateli-sku-v2-line: rgba(255,255,255,.16);
+      --wateli-sku-v2-text-soft: rgba(255,255,255,.72);
+      --wateli-sku-v2-text-faint: rgba(255,255,255,.52);
+    }
+
+    body.page-template--sku-v2 {
+      color: #f3f6fb;
+      background: #0a0f17;
+    }
+
+    .wateli-sku-v2 {
+      padding: 40px 0 96px;
+    }
+
+    .wateli-sku-v2 .container {
+      width: min(1280px, calc(100vw - 40px));
+    }
+
+    .wateli-sku-v2__section + .wateli-sku-v2__section {
+      margin-top: 48px;
+    }
+
+    .wateli-sku-v2__core {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr);
+  gap: 32px;
+  align-items: start;
+}
+
+    .wateli-sku-v2__media,
+    .wateli-sku-v2__info,
+    .wateli-sku-v2__content,
+    .wateli-sku-v2__support {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .wateli-sku-v2__info {
+      gap: 18px;
+    }
+
+    .wateli-sku-v2__hero-copy + .wateli-sku-v2__selector {
+  margin-bottom: 24px;
+}
+
+    .wateli-sku-v2__selector + .wateli-sku-v2__specs {
+      margin-top: 18px;
+    }
+
+    .wateli-sku-v2__hero-frame {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      min-height: 0;
+    }
+
+    .wateli-sku-v2__hero-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .wateli-sku-v2__thumbs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .wateli-sku-v2__thumb {
+      appearance: none;
+      border: 1px solid var(--wateli-sku-v2-line);
+      background: transparent;
+      min-height: 108px;
+      padding: 12px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .wateli-sku-v2__thumb.is-active {
+      border-color: rgba(123,170,255,.72);
+    }
+
+    .wateli-sku-v2__thumb img {
+      width: 100%;
+      height: 64px;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .wateli-sku-v2__thumb-label,
+    .wateli-sku-v2__selector-label,
+    .wateli-sku-v2__spec-label,
+    .wateli-sku-v2__content-block h2,
+    .wateli-sku-v2__support-title,
+    .wateli-sku-v2__download-meta span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.46);
+    }
+
+    .wateli-sku-v2__hero-copy {
+      display: grid;
+      gap: 10px;
+    }
+
+    .wateli-sku-v2__hero-title {
+      margin: 0;
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height: 1.06;
+      font-weight: 600;
+      letter-spacing: .035em;
+      color: #fff;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+
+    .wateli-sku-v2__hero-lead {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+    .wateli-sku-v2__selector {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+    .wateli-sku-v2__selector-label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.54);
+    }
+
+    .wateli-sku-v2__capacity-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .wateli-sku-v2__capacity-chip {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.02);
+      color: rgba(255,255,255,.82);
+      min-height: 42px;
+      padding: 0 14px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 999px;
+      transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease, box-shadow .18s ease;
+    }
+
+    .wateli-sku-v2__capacity-chip:hover {
+      border-color: rgba(255,255,255,.34);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .wateli-sku-v2__capacity-chip:focus-visible {
+      outline: none;
+      border-color: rgba(123,170,255,.9);
+      box-shadow: 0 0 0 3px rgba(123,170,255,.18);
+    }
+
+    .wateli-sku-v2__capacity-chip.is-active {
+      border-color: rgba(123,170,255,.88);
+      background: rgba(123,170,255,.18);
+      color: #fff;
+      box-shadow: inset 0 0 0 1px rgba(123,170,255,.2);
+    }
+
+    .wateli-sku-v2__specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .wateli-sku-v2__spec {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      min-width: 0;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+
+    .wateli-sku-v2__spec:first-child .wateli-sku-v2__spec-label {
+      color: rgba(255,255,255,.62);
+    }
+
+    .wateli-sku-v2__spec:first-child .wateli-sku-v2__spec-value {
+      font-size: clamp(24px, 2.6vw, 32px);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: .01em;
+    }
+
+    .wateli-sku-v2__spec-value {
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 750;
+      letter-spacing: .02em;
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: normal;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+
+    .wateli-sku-v2__value-updated {
+      animation: wateliSkuV2Pulse .28s ease;
+    }
+
+    @keyframes wateliSkuV2Pulse {
+      0% { opacity: .56; transform: translateY(2px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .wateli-sku-v2__spec-item {
+      min-width: fit-content;
+    }
+
+    .wateli-sku-v2__content {
+      gap: 20px;
+    }
+
+    .wateli-sku-v2__content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(320px, .94fr);
+      gap: 40px;
+      align-items: start;
+    }
+
+    .wateli-v2__content-column {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .wateli-v2__content-column:first-child .wateli-sku-v2__content-block:nth-child(1) {
+      margin-bottom: 14px;
+    }
+
+    .wateli-v2__content-column:first-child .wateli-sku-v2__content-block:nth-child(2) {
+      margin-bottom: 6px;
+    }
+
+    .wateli-sku-v2__content-block {
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    .wateli-v2__content-column:first-child .wateli-sku-v2__content-block h2,
+    .wateli-v2__content-column:last-child .wateli-sku-v2__content-block h2 {
+      margin-bottom: 12px;
+    }
+
+    .wateli-sku-v2__content-block p,
+    .wateli-sku-v2__download-desc {
+      margin: 0;
+      color: rgba(255,255,255,.64);
+      line-height: 1.8;
+      font-size: 13px;
+    }
+
+    .wateli-sku-v2__content-list,
+    .wateli-sku-v2__spec-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .wateli-sku-v2__content-list {
+      display: grid;
+      gap: 8px;
+      color: var(--wateli-sku-v2-text-soft);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .wateli-sku-v2__spec-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .wateli-sku-v2__spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+    .wateli-sku-v2__spec-term,
+    .wateli-sku-v2__spec-value-text {
+      font-size: 14px;
+      line-height: 1.72;
+    }
+
+    .wateli-sku-v2__spec-term {
+      color: var(--wateli-sku-v2-text-faint);
+      flex: 0 0 148px;
+      min-width: fit-content;
+    }
+
+    .wateli-sku-v2__spec-value-text {
+      color: rgba(255,255,255,.94);
+      flex: 0 0 auto;
+      min-width: fit-content;
+      text-align: right;
+      white-space: nowrap;
+      word-break: normal;
+      overflow-wrap: normal;
+    }
+
+    .wateli-sku-v2__support-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    .wateli-sku-v2__download {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    .wateli-sku-v2__content-block h2,
+    .wateli-sku-v2__download h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .wateli-sku-v2__download-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .wateli-sku-v2__support-title {
+      margin-bottom: 4px;
+    }
+
+    .wateli-sku-v2__download a {
+      align-self: flex-start;
+      opacity: .88;
+      transition: opacity .18s ease, border-color .18s ease, color .18s ease;
+    }
+
+    .wateli-sku-v2__download a:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 1080px) {
+      .wateli-sku-v2__core,
+      .wateli-sku-v2__specs,
+      .wateli-sku-v2__content-grid,
+      .wateli-sku-v2__support-list {
+        grid-template-columns: 1fr;
+      }
+
+      .wateli-sku-v2__hero-title {
+        font-size: 30px;
+      }
+
+      .wateli-sku-v2__hero-frame {
+        min-height: 0;
+      }
+
+      .wateli-sku-v2__spec-term {
+        flex-basis: 136px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .wateli-sku-v2 {
+        padding: 24px 0 72px;
+      }
+
+      .wateli-sku-v2 .container {
+        width: min(100vw - 24px, 1280px);
+      }
+
+      .wateli-sku-v2__hero-frame {
+        min-height: 0;
+      }
+
+      .wateli-sku-v2__thumbs {
+        grid-template-columns: 1fr;
+      }
+
+      .wateli-sku-v2__spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+      .wateli-sku-v2__spec-term,
+      .wateli-sku-v2__spec-value-text {
+        font-size: 13px;
+      }
+
+      .wateli-sku-v2__spec-term {
+        flex-basis: 116px;
+      }
+
+      .wateli-sku-v2__support-list {
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body class="page-template page-template--sku-v2" data-page="products">
+  <div id="site-header"></div>
+
+  <main class="wateli-sku-v2" aria-label="WATELI SKU v2">
+    <div class="container">
+      <section class="wateli-sku-v2__section wateli-sku-v2__core">
+        <article class="wateli-sku-v2__media" aria-label="Product Media">
+          <div class="wateli-sku-v2__hero-frame">
+            <img id="wateli-sku-v2-hero-image" class="wateli-sku-v2__hero-image" src="" alt="" />
+          </div>
+          <div id="wateli-sku-v2-thumbs" class="wateli-sku-v2__thumbs" aria-label="Product Image Options"></div>
+        </article>
+
+        <article class="wateli-sku-v2__info">
+          <div class="wateli-sku-v2__hero-copy">
+            <h1 class="wateli-sku-v2__hero-title" id="wateli-sku-v2-hero-title"></h1>
+            <p class="wateli-sku-v2__hero-lead" id="wateli-sku-v2-hero-lead"></p>
+          </div>
+
+          <div class="wateli-sku-v2__selector">
+            <span class="wateli-sku-v2__selector-label" id="wateli-sku-v2-capacity-label"></span>
+            <div id="wateli-sku-v2-capacity-options" class="wateli-sku-v2__capacity-options" aria-label="Capacity Selector"></div>
+          </div>
+
+          <div class="wateli-sku-v2__specs">
+            <div class="wateli-sku-v2__spec">
+              <span class="wateli-sku-v2__spec-label" id="wateli-sku-v2-spec-label-voltage"></span>
+              <div class="wateli-sku-v2__spec-value" id="wateli-sku-v2-spec-voltage"></div>
+            </div>
+            <div class="wateli-sku-v2__spec">
+              <span class="wateli-sku-v2__spec-label" id="wateli-sku-v2-spec-label-capacity"></span>
+              <div class="wateli-sku-v2__spec-value" id="wateli-sku-v2-spec-capacity"></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="wateli-sku-v2__section wateli-sku-v2__content">
+        <div class="wateli-sku-v2__content-grid">
+          <div class="wateli-v2__content-column" aria-label="Content Column">
+            <section class="wateli-sku-v2__content-block">
+              <h2 id="wateli-sku-v2-description-title"></h2>
+              <p id="wateli-sku-v2-description-body"></p>
+            </section>
+            <section class="wateli-sku-v2__content-block">
+              <h2 id="wateli-sku-v2-features-title"></h2>
+              <ul id="wateli-sku-v2-features-list" class="wateli-sku-v2__content-list"></ul>
+            </section>
+            <section class="wateli-sku-v2__content-block">
+              <h2 id="wateli-sku-v2-package-title"></h2>
+              <ul id="wateli-sku-v2-package-list" class="wateli-sku-v2__content-list"></ul>
+            </section>
+            <section class="wateli-sku-v2__content-block">
+              <h2 id="wateli-sku-v2-special-notes-title"></h2>
+              <ul id="wateli-sku-v2-special-notes-list" class="wateli-sku-v2__content-list"></ul>
+            </section>
+            <section class="wateli-sku-v2__content-block">
+              <h2 id="wateli-sku-v2-safety-notes-title"></h2>
+              <ul id="wateli-sku-v2-safety-notes-list" class="wateli-sku-v2__content-list"></ul>
+            </section>
+          </div>
+          <div class="wateli-v2__content-column" aria-label="Specification Column">
+            <section class="wateli-sku-v2__content-block">
+              <h2 id="wateli-sku-v2-general-spec-title"></h2>
+              <dl id="wateli-sku-v2-general-spec-list" class="wateli-sku-v2__spec-list"></dl>
+            </section>
+            <section class="wateli-sku-v2__content-block">
+              <h2 id="wateli-sku-v2-battery-spec-title"></h2>
+              <dl id="wateli-sku-v2-battery-spec-list" class="wateli-sku-v2__spec-list"></dl>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="wateli-sku-v2__section wateli-sku-v2__support">
+        <div class="wateli-sku-v2__support-title" id="wateli-sku-v2-support-title"></div>
+        <div class="wateli-sku-v2__support-list" id="wateli-sku-v2-support-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script defer src="assets/data/i18n/translations.js"></script>
+  <script defer src="assets/js/core/utils.js"></script>
+  <script defer src="assets/js/core/site-layout.js"></script>
+  <script defer src="assets/js/core/mobile-menu.js"></script>
+  <script defer src="assets/js/core/i18n.js"></script>
+  <script>
+    window.WATELI_SKU_V2_PAGE = {
+            CURRENT_VOLTAGE: 7.4,
+      copy: {
+        zh: {
+          metaTitle: 'WATELI | SKU v2 | 7.4V',
+          metaDescription: 'WATELI SKU v2 7.4V 頁。一頁一電壓，頁內只切同電壓容量。',
+          capacityLabel: '容量',
+          descriptionTitle: '產品說明',
+          featuresTitle: '產品特點',
+          featuresList: [
+            '模組化結構有利於整線與安裝配置。',
+            '產品圖可在頁內直接檢視。',
+            '同頁只處理同電壓下的容量選擇。',
+            '主要規格由資料欄位直接帶入。'
+          ],
+          packageTitle: '包裝內容',
+          packageList: [
+            '電池組 ×1',
+            '基本使用說明'
+          ],
+          specialNotesTitle: '注意事項',
+          specialNotesList: [
+            '請先確認設備工作電壓、接頭形式與安裝空間。',
+            '本頁不混用不同電壓資料。',
+            '若需要其他電壓，應建立對應頁面。'
+          ],
+          safetyNotesTitle: '安全須知',
+        generalSpecificationTitle: '一般規格',
+        batterySpecificationTitle: '電池規格',
+          safetyNotesList: [
+            '請使用相容充電設備。',
+            '請避免過充、過放、短路與高溫環境。',
+            '若發現異常膨脹或破損，請立即停止使用。'
+          ],
+          generalSpecTitle: '一般規格',
+          batterySpecTitle: '電池規格',
+          supportTitle: '下載支援',
+          downloads: [
+            {
+              title: 'Safety Guide PDF',
+              desc: '查看基本充電、存放、運輸與使用安全原則。',
+              tags: ['PDF', 'Safety'],
+              cta: '下載 PDF',
+              href: 'assets/pdf/battery-guide.pdf'
+            },
+            {
+              title: 'User Guide PDF',
+              desc: '提供使用流程與常見操作參考。',
+              tags: ['PDF', 'Guide'],
+              cta: '下載 PDF',
+              href: 'assets/pdf/battery-guide-sample.pdf'
+            },
+            {
+              title: 'Product Guide PDF',
+              desc: '集中查看產品資料與系列導覽。',
+              tags: ['PDF', 'Product'],
+              cta: '下載 PDF',
+              href: 'assets/pdf/product-catalog.pdf'
+            }
+          ],
+          imageLabels: { hero: '主圖', sku_1: '細節圖 1', sku_2: '細節圖 2' },
+          batteryChemistry: '鋰離子',
+          specLabelOverrides: { voltage: '電壓', capacity: '容量' },
+          imageAlt: (item, label) => `WATELI ${item.sku_id} ${label} 圖片`
+        },
+        en: {
+          metaTitle: 'WATELI | SKU v2 | 7.4V',
+          metaDescription: 'WATELI SKU v2 7.4V page. One page per voltage, with in-page switching only for capacities under the same voltage.',
+          capacityLabel: 'Capacity',
+          descriptionTitle: 'Description',
+          featuresTitle: 'Features',
+          featuresList: [
+            'Modular structure supports organized routing and installation layouts.',
+            'Product images can be reviewed directly inside the page.',
+            'The page only handles capacity switching within the same voltage.',
+            'Core specifications are rendered directly from data fields.'
+          ],
+          packageTitle: 'Package Includes',
+          packageList: [
+            'Battery pack ×1',
+            'Basic usage guide'
+          ],
+          specialNotesTitle: 'Special Notes',
+          specialNotesList: [
+            'Confirm device voltage, connector type, and installation space before use.',
+            'This page does not mix data from different voltages.',
+            'Create a separate page when another voltage is required.'
+          ],
+          safetyNotesTitle: 'Safety Notes',
+          safetyNotesList: [
+            'Use a compatible charger.',
+            'Avoid overcharge, over-discharge, short circuit, and high-heat conditions.',
+            'Stop use immediately if swelling or damage is found.'
+          ],
+          generalSpecTitle: 'General Specification',
+          batterySpecTitle: 'Battery Specification',
+          supportTitle: 'Download Support',
+          downloads: [
+            {
+              title: 'Safety Guide PDF',
+              desc: 'Review the main safety principles for charging, storage, transport, and use.',
+              tags: ['PDF', 'Safety'],
+              cta: 'Download PDF',
+              href: 'assets/pdf/battery-guide.pdf'
+            },
+            {
+              title: 'User Guide PDF',
+              desc: 'See the basic usage flow and quick operating reference.',
+              tags: ['PDF', 'Guide'],
+              cta: 'Download PDF',
+              href: 'assets/pdf/battery-guide-sample.pdf'
+            },
+            {
+              title: 'Product Guide PDF',
+              desc: 'Access broader product material and series guidance.',
+              tags: ['PDF', 'Product'],
+              cta: 'Download PDF',
+              href: 'assets/pdf/product-catalog.pdf'
+            }
+          ],
+          imageLabels: { hero: 'Hero', sku_1: 'Detail 1', sku_2: 'Detail 2' },
+          batteryChemistry: 'Li-ion',
+          specLabelOverrides: { voltage: 'Voltage', capacity: 'Capacity' },
+          imageAlt: (item, label) => `WATELI ${item.sku_id} ${label} image`
+        }
+      }
+    };
+
+    (function () {
+      const page = window.WATELI_SKU_V2_PAGE;
+      if (!page) return;
+
+      const heroImg = document.getElementById('wateli-sku-v2-hero-image');
+      const thumbsRoot = document.getElementById('wateli-sku-v2-thumbs');
+      const capacityRoot = document.getElementById('wateli-sku-v2-capacity-options');
+      const supportRoot = document.getElementById('wateli-sku-v2-support-list');
+      const selectorWrap = document.querySelector('.wateli-sku-v2__selector');
+
+      const state = {
+        product: null,
+        variants: [],
+        specMap: [],
+        rules: {},
+        activeSkuId: '',
+        activeImageKey: 'hero',
+        ready: false
+      };
+
+      function getLang() {
+        return window.WATELI?.utils?.getStoredLang?.() || (document.documentElement.lang === 'zh-Hant' ? 'zh' : 'en');
+      }
+
+      function getCopy() {
+        const lang = getLang();
+        return page.copy[lang] || page.copy.en;
+      }
+
+      function setText(id, value) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value ?? '';
+      }
+
+      function renderList(id, items) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.innerHTML = '';
+        (items || []).forEach((item) => {
+          if (!item) return;
+          const li = document.createElement('li');
+          li.textContent = item;
+          el.appendChild(li);
+        });
+      }
+
+      function getSpecEntry(key) {
+        return (state.specMap || []).find((item) => item.key === key) || null;
+      }
+
+      function getSpecUnit(key) {
+        const entry = getSpecEntry(key);
+        return entry ? (entry.unit ?? '') : '';
+      }
+
+      function getSpecLabel(key) {
+        const entry = getSpecEntry(key);
+        const copy = getCopy();
+        const override = copy?.specLabelOverrides?.[key];
+        if (override) return override;
+        if (!entry) return '';
+        return getLang() === 'zh' ? (entry.label_zh ?? '') : (entry.label_en ?? '');
+      }
+
+      function toTitleCase(value) {
+        return String(value || '')
+          .replace(/[_-]+/g, ' ')
+          .replace(/\w/g, (char) => char.toUpperCase())
+          .trim();
+      }
+
+      function getSeriesDisplayName(seriesKey, lang) {
+        const normalized = String(seriesKey || '').trim().toLowerCase();
+        const seriesLabels = {
+          twin: { zh: '雙聯', en: 'Twin' },
+          slim: { zh: '薄型', en: 'Slim' },
+          block: { zh: '方塊', en: 'Block' },
+          split: { zh: '分離', en: 'Split' },
+          stick: { zh: '棒型', en: 'Stick' }
+        };
+        const matched = seriesLabels[normalized];
+        if (matched) return matched[lang] || matched.en;
+        return toTitleCase(normalized || seriesKey || '');
+      }
+
+
+      function formatSkuDisplay(raw) {
+        if (!raw) return '';
+
+        let s = String(raw).trim().toUpperCase();
+        s = s.replace(/_/g, '-');
+        s = s.replace(/^SLIM-/, 'SL-');
+        s = s.replace(/^TWIN-/, 'TW-');
+        s = s.replace(/^BLOCK-/, 'BL-');
+        s = s.replace(/^SPLIT-/, 'SP-');
+        s = s.replace(/^STICK-/, 'ST-');
+        return s;
+      }
+
+      function renderSkuDisplay(current) {
+        const value = formatSkuDisplay(current?.sku_id || current?.model || current?.name || '');
+        [
+          'wateli-sku-v2-model',
+          'wateli-sku-v2-sku',
+          'wateli-sku-v2-hero-sku'
+        ].forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = value;
+        });
+      }
+
+      function getFallbackDisplayTitle(current, product) {
+        if (!current) return '';
+
+        const lang = getLang();
+        const seriesKey = product?.series || current?.series || '';
+        const seriesLabel = getSeriesDisplayName(seriesKey, lang);
+        const voltageText = formatValue(current?.voltage, getSpecUnit('voltage'));
+        const capacityText = formatValue(current?.capacity, getSpecUnit('capacity'));
+
+        if (lang === 'zh') {
+          return [seriesLabel, '系列', voltageText, capacityText].filter(Boolean).join(' ');
+        }
+
+        return [seriesLabel, voltageText, capacityText].filter(Boolean).join(' ');
+      }
+
+      function getDisplayTitle(current, product) {
+        if (!current) return '';
+
+        const candidates = [
+          current.display_name,
+          current.title,
+          current.name,
+          current.model,
+          product?.display_name,
+          product?.title,
+          product?.name,
+          product?.model
+        ];
+        const explicit = candidates.find((value) => typeof value === 'string' && value.trim());
+        if (explicit) return explicit.trim();
+
+        return getFallbackDisplayTitle(current, product);
+      }
+
+      function getHeroVoltageText(current) {
+        if (current?.voltage === null || current?.voltage === undefined || current?.voltage === '') return '';
+        const voltageText = formatValue(current?.voltage, getSpecUnit('voltage'));
+        const chemistryText = getCopy()?.batteryChemistry || '';
+        return [voltageText, chemistryText].filter(Boolean).join(' ');
+      }
+
+      function formatValue(value, unit) {
+        if (value === undefined || value === null || value === '') return '';
+        return unit ? `${value}${unit}` : String(value);
+      }
+
+      const detailImageResolveCache = new Map();
+      let detailHeroRenderToken = 0;
+
+      function resolveDetailImage(src) {
+        const raw = typeof src === 'string' ? src.trim() : '';
+        if (!raw) return Promise.resolve('');
+        if (detailImageResolveCache.has(raw)) return detailImageResolveCache.get(raw);
+
+        const base = raw.replace(/\/hero\.(?:jpe?g|png|webp)$/i, '/hero');
+        const candidates = ['jpg', 'png', 'webp'].map((ext) => `${base}.${ext}`);
+
+        const promise = new Promise((resolve) => {
+          let index = 0;
+          const probe = new Image();
+
+          const tryNext = () => {
+            if (index >= candidates.length) {
+              resolve('');
+              return;
+            }
+
+            const nextSrc = candidates[index++];
+            probe.onload = () => resolve(nextSrc);
+            probe.onerror = tryNext;
+            probe.src = nextSrc;
+          };
+
+          tryNext();
+        });
+
+        detailImageResolveCache.set(raw, promise);
+        return promise;
+      }
+
+      function getVariantImages(variant) {
+        if (!variant) return [];
+        return [
+          { key: 'hero', src: variant.hero_image, thumb: variant.hero_image },
+          { key: 'sku_1', src: variant.sku_1_image, thumb: variant.sku_1_image },
+          { key: 'sku_2', src: variant.sku_2_image, thumb: variant.sku_2_image }
+        ].filter((image) => image.src && image.thumb);
+      }
+
+      function formatSpecDisplayValue(value, unit) {
+        if (value === undefined || value === null || value === '') return '';
+        const text = String(value).trim();
+        if (!unit) return text;
+        if (/([a-zA-Z%]|\/)$/u.test(text) || text.toLowerCase().endsWith(String(unit).toLowerCase())) {
+          return text;
+        }
+        return `${text}${unit}`;
+      }
+
+      function getExcelDrivenSpecRows(targetId, current) {
+        if (current?.key_id !== 'twin_111_2000') return null;
+
+        const rows = [];
+        const isGeneral = String(targetId || '').includes('general');
+        const pushRow = (label, value) => {
+          if (!label || value === undefined || value === null || value === '') return;
+          rows.push({ label, text: String(value) });
+        };
+
+        if (isGeneral) {
+          pushRow(getSpecLabel('voltage'), formatSpecDisplayValue(current?.voltage, getSpecUnit('voltage') || 'V'));
+          pushRow(getSpecLabel('capacity'), formatSpecDisplayValue(current?.capacity, getSpecUnit('capacity') || 'mAh'));
+          return rows;
+        }
+
+        const size = current?.length !== undefined && current?.length !== null && current?.length !== '' &&
+          current?.width !== undefined && current?.width !== null && current?.width !== '' &&
+          current?.height !== undefined && current?.height !== null && current?.height !== ''
+            ? `${current.length} x ${current.width} x ${current.height} ${current.dimension_unit || 'cm'}`
+            : '';
+
+        pushRow(getSpecLabel('battery_type'), current?.battery_type || '');
+        pushRow(getSpecLabel('connector'), current?.connector || '');
+        pushRow(getSpecLabel('discharge_rate'), current?.discharge_rate || '');
+        pushRow(getSpecLabel('dimension'), size);
+        return rows;
+      }
+
+      function renderSpecList(targetId, current, specMap) {
+        const el = document.getElementById(targetId);
+        if (!el) return;
+        el.innerHTML = '';
+
+        const excelRows = getExcelDrivenSpecRows(targetId, current);
+        if (excelRows) {
+          excelRows.forEach((item) => {
+            const row = document.createElement('div');
+            row.className = 'wateli-sku-v2__spec-row';
+            row.innerHTML = `
+              <dt class="wateli-sku-v2__spec-term">${item.label}</dt>
+              <dd class="wateli-sku-v2__spec-value-text" style="margin:0">${item.text}</dd>
+            `;
+            el.appendChild(row);
+          });
+          return;
+        }
+
+        const generalKeys = ['voltage', 'capacity'];
+        const batteryKeys = ['battery_type', 'connector', 'discharge_rate', 'dimension'];
+        const allowedKeys = String(targetId || '').includes('general') ? generalKeys : batteryKeys;
+        const size = current?.length !== undefined && current?.length !== null && current?.length !== '' &&
+          current?.width !== undefined && current?.width !== null && current?.width !== '' &&
+          current?.height !== undefined && current?.height !== null && current?.height !== ''
+            ? `${current.length} x ${current.width} x ${current.height} ${current.dimension_unit || 'cm'}`
+            : '';
+
+        const filteredSpecMap = (specMap || []).filter((item) => allowedKeys.includes(item.key));
+        filteredSpecMap.forEach((item) => {
+          const value = item.key === 'dimension' ? size : current?.[item.key];
+          if (value === null || value === undefined || value === '') return;
+
+          const text = item.key === 'dimension' ? String(value) : (item.unit ? `${value}${item.unit}` : `${value}`);
+          const label = getLang() === 'zh' ? (item.label_zh ?? '') : (item.label_en ?? '');
+          if (!label) return;
+
+          const row = document.createElement('div');
+          row.className = 'wateli-sku-v2__spec-row';
+          row.innerHTML = `
+            <dt class="wateli-sku-v2__spec-term">${label}</dt>
+            <dd class="wateli-sku-v2__spec-value-text" style="margin:0">${text}</dd>
+          `;
+          el.appendChild(row);
+        });
+      }
+
+      function renderSupport(copy) {
+        if (!supportRoot) return;
+        supportRoot.innerHTML = '';
+        (copy.downloads || []).forEach((item) => {
+          const article = document.createElement('article');
+          article.className = 'wateli-sku-v2__download';
+          article.innerHTML = `
+            <h2>${item.title}</h2>
+            <p class="wateli-sku-v2__download-desc">${item.desc}</p>
+            <div class="wateli-sku-v2__download-meta">${(item.tags || []).map((tag) => `<span>${tag}</span>`).join('')}</div>
+            <a class="btn btn-secondary" href="${item.href}">${item.cta}</a>
+          `;
+          supportRoot.appendChild(article);
+        });
+      }
+
+      function hideSelector() {
+        if (selectorWrap) selectorWrap.style.display = 'none';
+      }
+
+      function renderSelector(capacities, variants) {
+        if (!capacityRoot) return;
+        capacityRoot.innerHTML = '';
+        setText('wateli-sku-v2-capacity-label', `${getCopy().capacityLabel}`);
+
+        variants.forEach((variant, index) => {
+          const capacity = capacities[index];
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'wateli-sku-v2__capacity-chip' + (variant.sku_id === state.activeSkuId ? ' is-active' : '');
+          btn.textContent = formatValue(capacity, getSpecUnit('capacity'));
+          btn.setAttribute('aria-label', `Select ${formatValue(capacity, getSpecUnit('capacity'))}`);
+          btn.setAttribute('aria-pressed', variant.sku_id === state.activeSkuId ? 'true' : 'false');
+          btn.addEventListener('click', () => selectSKU(variant.sku_id, state.variants, state.specMap));
+          capacityRoot.appendChild(btn);
+        });
+
+        if (selectorWrap) selectorWrap.style.display = '';
+      }
+
+      function renderThumbs(copy, current) {
+        if (!thumbsRoot) return;
+        thumbsRoot.innerHTML = '';
+        const images = getVariantImages(current);
+        thumbsRoot.style.display = images.length ? '' : 'none';
+
+        images.forEach((image) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'wateli-sku-v2__thumb' + (image.key === state.activeImageKey ? ' is-active' : '');
+          btn.setAttribute('aria-pressed', image.key === state.activeImageKey ? 'true' : 'false');
+          btn.innerHTML = `
+            <img src="${image.thumb}" alt="${copy.imageAlt(current, copy.imageLabels[image.key] || image.key)}">
+            <span class="wateli-sku-v2__thumb-label">${copy.imageLabels[image.key] || image.key}</span>
+          `;
+          if (image.key === 'hero') {
+            const thumbImg = btn.querySelector('img');
+            if (thumbImg) {
+              thumbImg.removeAttribute('src');
+              resolveDetailImage(image.thumb).then((resolvedSrc) => {
+                if (!thumbsRoot.contains(btn)) return;
+                if (resolvedSrc) {
+                  thumbImg.src = resolvedSrc;
+                } else {
+                  thumbImg.removeAttribute('src');
+                }
+              });
+            }
+          }
+          btn.addEventListener('click', () => {
+            state.activeImageKey = image.key;
+            renderHeroImage(current);
+            renderThumbs(getCopy(), current);
+          });
+          thumbsRoot.appendChild(btn);
+        });
+      }
+
+      function renderHeroImage(current) {
+        if (!heroImg) return;
+        const images = getVariantImages(current);
+        const activeImage = images.find((image) => image.key === state.activeImageKey) || images[0];
+        detailHeroRenderToken += 1;
+        const renderToken = detailHeroRenderToken;
+
+        if (!activeImage?.src) {
+          heroImg.removeAttribute('src');
+          heroImg.alt = '';
+          return;
+        }
+
+        const copy = getCopy();
+        const altText = copy.imageAlt(current, copy.imageLabels[activeImage.key] || activeImage.key);
+
+        if (activeImage.key !== 'hero') {
+          heroImg.src = activeImage.src;
+          heroImg.alt = altText;
+          return;
+        }
+
+        heroImg.removeAttribute('src');
+        heroImg.alt = '';
+
+        resolveDetailImage(activeImage.src).then((resolvedSrc) => {
+          if (renderToken !== detailHeroRenderToken) return;
+          if (!resolvedSrc) {
+            heroImg.removeAttribute('src');
+            heroImg.alt = '';
+            return;
+          }
+          heroImg.src = resolvedSrc;
+          heroImg.alt = altText;
+        });
+      }
+
+      function renderTitle(value) {
+        setText('wateli-sku-v2-hero-title', value);
+      }
+
+      function renderLead(value) {
+        setText('wateli-sku-v2-hero-lead', value);
+      }
+
+      function renderProductContent(product) {
+        const lang = getLang();
+        setText('wateli-sku-v2-description-body', product?.description?.[lang] || '');
+        renderList('wateli-sku-v2-features-list', product?.features?.[lang] || []);
+        renderList('wateli-sku-v2-package-list', product?.package?.[lang] || []);
+        renderList('wateli-sku-v2-special-notes-list', product?.notes?.[lang] || []);
+        renderList('wateli-sku-v2-safety-notes-list', product?.safety?.[lang] || []);
+      }
+
+      function renderHeroSpec(current) {
+        setText('wateli-sku-v2-spec-label-voltage', getSpecLabel('voltage'));
+        setText('wateli-sku-v2-spec-label-capacity', getSpecLabel('capacity'));
+        setText('wateli-sku-v2-spec-voltage', getHeroVoltageText(current));
+        setText('wateli-sku-v2-spec-capacity', formatValue(current?.capacity, getSpecUnit('capacity')));
+      }
+
+      function renderStaticContent(copy) {
+        document.title = copy.metaTitle;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) metaDescription.setAttribute('content', copy.metaDescription);
+
+        setText('wateli-sku-v2-description-title', copy.descriptionTitle);
+        setText('wateli-sku-v2-features-title', copy.featuresTitle);
+        setText('wateli-sku-v2-package-title', copy.packageTitle);
+        setText('wateli-sku-v2-special-notes-title', copy.specialNotesTitle);
+        setText('wateli-sku-v2-safety-notes-title', copy.safetyNotesTitle);
+        setText('wateli-sku-v2-general-spec-title', copy.generalSpecTitle);
+        setText('wateli-sku-v2-battery-spec-title', copy.batterySpecTitle);
+        setText('wateli-sku-v2-support-title', copy.supportTitle);
+        renderSupport(copy);
+      }
+
+      function initPage(product, variants, specMap, rules) {
+        const copy = getCopy();
+        const requestedKeyId = getRequestedKeyId();
+        const matchedVariant = (variants || []).find((variant) => variant.key_id === requestedKeyId);
+        renderStaticContent(copy);
+        renderLead(product?.lead?.[getLang()] || '');
+        renderProductContent(product);
+
+        if (!variants || variants.length === 0) {
+          console.warn('No variants for current page');
+          hideSelector();
+          return;
+        }
+
+        renderSelector(variants.map((variant) => variant.capacity), variants);
+        selectSKU((matchedVariant || variants[0]).sku_id, variants, specMap);
+
+        if (variants.length < 2) {
+          hideSelector();
+        }
+      }
+
+      function pulseUpdatedFields() {
+        [
+          'wateli-sku-v2-hero-title',
+          'wateli-sku-v2-spec-voltage',
+          'wateli-sku-v2-spec-capacity',
+          'wateli-sku-v2-general-spec-list',
+          'wateli-sku-v2-battery-spec-list'
+        ].forEach((id) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.classList.remove('wateli-sku-v2__value-updated');
+          void el.offsetWidth;
+          el.classList.add('wateli-sku-v2__value-updated');
+        });
+      }
+
+      function selectSKU(sku_id, variants, specMap) {
+        const current = (variants || []).find((variant) => variant.sku_id === sku_id);
+        if (!current) return;
+
+        state.activeSkuId = current.sku_id;
+        state.activeImageKey = 'hero';
+        renderSkuDisplay(current);
+
+        if (current.key_id) {
+          const url = new URL(window.location.href);
+          url.searchParams.set('key_id', current.key_id);
+          history.replaceState(null, '', `${url.pathname}?${url.searchParams.toString()}`);
+        }
+
+        const displayTitle = getDisplayTitle(current, state.product);
+        const heroTitle = formatSkuDisplay(current?.model || current?.sku_id || current?.key_id || '');
+        renderTitle(heroTitle);
+        renderHeroSpec(current);
+        renderSpecList('wateli-sku-v2-general-spec-list', current, specMap);
+        renderSpecList('wateli-sku-v2-battery-spec-list', current, specMap);
+        renderHeroImage(current);
+        renderThumbs(getCopy(), current);
+        renderSelector((variants || []).map((variant) => variant.capacity), variants);
+        pulseUpdatedFields();
+
+        document.title = `${getCopy().metaTitle} | ${displayTitle || current.key_id || current.sku_id}`;
+      }
+      window.__WATELI_EMBEDDED_DATA__ = {
+  "products": {
+    "twin": {
+      "product_id": "twin",
+      "series": "Twin",
+      "series_name_zh": "雙胞胎",
+      "series_name_en": "Twin",
+      "lead": {
+        "zh": "適合高容量與穩定輸出需求",
+        "en": "Designed for high capacity output"
+      },
+      "description": {
+        "zh": "Twin 系列採用雙本體結構，適合需要較高容量、穩定供電與雙側配置的安裝情境。",
+        "en": "The Twin series uses a dual-pack structure for installations that need higher capacity, stable output, and balanced side placement."
+      },
+      "features": {
+        "zh": [
+          "雙本體配置",
+          "適合高容量需求",
+          "穩定供電表現",
+          "適合雙側安裝空間"
+        ],
+        "en": [
+          "Dual-pack configuration",
+          "Supports higher capacity needs",
+          "Stable power delivery",
+          "Fits dual-side installation spaces"
+        ]
+      },
+      "package": {
+        "zh": [
+          "電池本體 ×1"
+        ],
+        "en": [
+          "Battery pack ×1"
+        ]
+      },
+      "notes": {
+        "zh": [
+          "請依設備可用空間與電壓需求選擇對應 Twin 型號。"
+        ],
+        "en": [
+          "Choose the matching Twin model based on your available installation space and voltage requirements."
+        ]
+      },
+      "safety": {
+        "zh": [
+          "請使用專用充電器，避免過充、過放與短路。"
+        ],
+        "en": [
+          "Use a dedicated charger. Avoid overcharging, over-discharging, and short circuits."
+        ]
+      }
+    },
+    "slim": {
+      "product_id": "slim",
+      "series": "Slim",
+      "lead": {
+        "zh": "專為狹小空間設計的輕量化鋰電池",
+        "en": "Lightweight Li-ion battery designed for compact spaces"
+      },
+      "description": {
+        "zh": "SLIM 系列採用細長型配置，適合安裝空間較窄的裝置，提供穩定輸出與實用容量選擇。",
+        "en": "The SLIM series uses a narrow-profile configuration suitable for devices with limited installation space, providing stable output and practical capacity options."
+      },
+      "series_name_zh": "薄型",
+      "series_name_en": "Slim",
+      "features": {
+        "zh": [
+          "輕量化設計",
+          "穩定輸出",
+          "適用窄空間配置",
+          "高效率放電表現"
+        ],
+        "en": [
+          "Lightweight design",
+          "Stable output",
+          "Optimized for tight spaces",
+          "High discharge efficiency"
+        ]
+      },
+      "package": {
+        "zh": [
+          "電池本體 ×1"
+        ],
+        "en": [
+          "Battery pack ×1"
+        ]
+      },
+      "notes": {
+        "zh": [
+          "請依設備需求選擇適當電壓與容量。"
+        ],
+        "en": [
+          "Select the appropriate voltage and capacity according to your device requirements."
+        ]
+      },
+      "safety": {
+        "zh": [
+          "請使用專用充電器，避免過充、過放與短路。"
+        ],
+        "en": [
+          "Use a dedicated charger. Avoid overcharging, over-discharging, and short circuits."
+        ]
+      }
+    },
+    "block": {
+      "product_id": "block",
+      "series": "Block",
+      "series_name_zh": "方塊型",
+      "series_name_en": "Block",
+      "lead": {
+        "zh": "適用於標準矩形電池空間與較熟悉的安裝情境",
+        "en": "Standard rectangular format for familiar battery bays"
+      },
+      "description": {
+        "zh": "Block 系列採用標準矩形外型，適合常見電池艙與傳統安裝配置，提供穩定輸出與清楚的規格對應。",
+        "en": "The Block series uses a standard rectangular format for common battery bays and conventional installations, providing stable output and clear specification matching."
+      },
+      "features": {
+        "zh": [
+          "標準矩形外型",
+          "穩定輸出表現",
+          "適合常見電池艙",
+          "易於對應安裝方向"
+        ],
+        "en": [
+          "Standard rectangular format",
+          "Stable output performance",
+          "Fits common battery bays",
+          "Easy installation matching"
+        ]
+      },
+      "package": {
+        "zh": [
+          "電池本體 ×1"
+        ],
+        "en": [
+          "Battery pack ×1"
+        ]
+      },
+      "notes": {
+        "zh": [
+          "請依設備空間、電壓與容量需求選擇對應型號。"
+        ],
+        "en": [
+          "Select the matching model based on your device space, voltage, and capacity requirements."
+        ]
+      },
+      "safety": {
+        "zh": [
+          "請使用專用充電器，避免過充、過放與短路。"
+        ],
+        "en": [
+          "Use a dedicated charger. Avoid overcharging, over-discharging, and short circuits."
+        ]
+      }
+    },
+    "split": {
+      "product_id": "split",
+      "series": "Split",
+      "series_name_zh": "三片式",
+      "series_name_en": "Split",
+      "lead": {
+        "zh": "適用於分段或特殊空間配置",
+        "en": "Flexible layout for split configurations"
+      },
+      "description": {
+        "zh": "Split 系列採用分段式結構，適合需要分佈式配置與特殊安裝空間的應用，兼顧穩定輸出與配置彈性。",
+        "en": "The Split series uses a distributed segmented structure for special installation spaces, balancing stable output with flexible fit."
+      },
+      "features": {
+        "zh": [
+          "分段式結構",
+          "適合特殊空間配置",
+          "保留配線彈性",
+          "穩定輸出表現"
+        ],
+        "en": [
+          "Segmented structure",
+          "Fits special space layouts",
+          "Flexible wiring arrangement",
+          "Stable output performance"
+        ]
+      },
+      "package": {
+        "zh": [
+          "電池本體 ×1"
+        ],
+        "en": [
+          "Battery pack ×1"
+        ]
+      },
+      "notes": {
+        "zh": [
+          "請先確認安裝路徑與空間分佈，再選擇對應電壓與容量。"
+        ],
+        "en": [
+          "Confirm your installation path and space distribution before choosing the matching voltage and capacity."
+        ]
+      },
+      "safety": {
+        "zh": [
+          "請使用專用充電器，避免過充、過放與短路。"
+        ],
+        "en": [
+          "Use a dedicated charger. Avoid overcharging, over-discharging, and short circuits."
+        ]
+      }
+    },
+    "stick": {
+      "product_id": "stick",
+      "series": "Stick",
+      "series_name_zh": "細長型",
+      "series_name_en": "Stick",
+      "lead": {
+        "zh": "適用於較窄電池通道與細長安裝空間",
+        "en": "Compact battery for standard narrow setups"
+      },
+      "description": {
+        "zh": "Stick 系列採用細長型配置，適合較窄、較長的電池通道與一般細長安裝空間，提供穩定輸出與實用容量選擇。",
+        "en": "The Stick series uses a narrow-profile format for long and slim battery channels, providing stable output and practical capacity options."
+      },
+      "features": {
+        "zh": [
+          "細長型外觀",
+          "適合窄型安裝路徑",
+          "穩定輸出表現",
+          "容易對應常見配置"
+        ],
+        "en": [
+          "Slim profile format",
+          "Fits narrow installation paths",
+          "Stable output performance",
+          "Easy matching for common setups"
+        ]
+      },
+      "package": {
+        "zh": [
+          "電池本體 ×1"
+        ],
+        "en": [
+          "Battery pack ×1"
+        ]
+      },
+      "notes": {
+        "zh": [
+          "請先確認設備通道長度與寬度，再選擇合適型號。"
+        ],
+        "en": [
+          "Check your device channel length and width before selecting the appropriate model."
+        ]
+      },
+      "safety": {
+        "zh": [
+          "請使用專用充電器，避免過充、過放與短路。"
+        ],
+        "en": [
+          "Use a dedicated charger. Avoid overcharging, over-discharging, and short circuits."
+        ]
+      }
+    }
+  },
+  "skuList": [
+    {
+      "sku_id": "twin_74_2000",
+      "key_id": "twin_74_2000",
+      "product_id": "twin",
+      "series": "twin",
+      "voltage": 7.4,
+      "capacity": 2000,
+      "hero_image": "./assets/images/products/twin/twin_74_2000/hero.jpg",
+      "sku_1_image": "./assets/images/products/twin/twin_74_2000/sku-1.png",
+      "sku_2_image": "./assets/images/products/twin/twin_74_2000/sku-2.png",
+      "battery_type": "Li-ion",
+      "connector": "T Plug",
+      "discharge_rate": "20C / 40C",
+      "length": 7.5,
+      "width": 11.8,
+      "height": 1.7,
+      "dimension_unit": "cm"
+    },
+    {
+      "sku_id": "slim_74_950",
+      "key_id": "slim_74_950",
+      "product_id": "slim",
+      "series": "slim",
+      "voltage": 7.4,
+      "capacity": 950,
+      "hero_image": "./assets/images/products/slim/slim_74_950/hero.jpg",
+      "sku_1_image": "./assets/images/products/slim/slim_74_950/sku-1.png",
+      "sku_2_image": "./assets/images/products/slim/slim_74_950/sku-2.png",
+      "series_key": "slim",
+      "sku_code": "SL-74-950",
+      "display_name_zh": "SLIM 鋰電池 7.4V 950mAh",
+      "display_name_en": "SLIM Li-ion Battery 7.4V 950mAh",
+      "battery_type": "Li-ion",
+      "connector": "T Plug",
+      "discharge_rate": "20C / 40C",
+      "length": 10.0,
+      "width": 2.0,
+      "height": 1.5,
+      "dimension_unit": "cm"
+    },
+    {
+      "sku_id": "slim_74_1000",
+      "key_id": "slim_74_1000",
+      "product_id": "slim",
+      "series": "slim",
+      "voltage": 7.4,
+      "capacity": 1000,
+      "hero_image": "./assets/images/products/slim/slim_74_1000/hero.jpg",
+      "sku_1_image": "./assets/images/products/slim/slim_74_1000/sku-1.png",
+      "sku_2_image": "./assets/images/products/slim/slim_74_1000/sku-2.png",
+      "series_key": "slim",
+      "sku_code": "SL-74-1000",
+      "display_name_zh": "SLIM 鋰電池 7.4V 1000mAh",
+      "display_name_en": "SLIM Li-ion Battery 7.4V 1000mAh",
+      "battery_type": "Li-ion",
+      "connector": "T Plug",
+      "discharge_rate": "20C / 40C",
+      "length": 10.0,
+      "width": 2.0,
+      "height": 1.5,
+      "dimension_unit": "cm"
+    },
+    {
+      "sku_id": "slim_74_1200",
+      "key_id": "slim_74_1200",
+      "product_id": "slim",
+      "series": "slim",
+      "voltage": 7.4,
+      "capacity": 1200,
+      "hero_image": "./assets/images/products/slim/slim_74_1200/hero.jpg",
+      "sku_1_image": "./assets/images/products/slim/slim_74_1200/sku-1.png",
+      "sku_2_image": "./assets/images/products/slim/slim_74_1200/sku-2.png",
+      "series_key": "slim",
+      "sku_code": "SL-74-1200",
+      "display_name_zh": "SLIM 鋰電池 7.4V 1200mAh",
+      "display_name_en": "SLIM Li-ion Battery 7.4V 1200mAh",
+      "battery_type": "Li-ion",
+      "connector": "T Plug",
+      "discharge_rate": "20C / 40C",
+      "length": 10.0,
+      "width": 2.0,
+      "height": 1.5,
+      "dimension_unit": "cm"
+    },
+    {
+      "sku_id": "block_74_1300",
+      "key_id": "block_74_1300",
+      "product_id": "block",
+      "series": "block",
+      "voltage": 7.4,
+      "capacity": 1300,
+      "hero_image": "./assets/images/products/block/block_74_1300/hero.jpg",
+      "sku_1_image": "./assets/images/products/block/block_74_1300/sku-1.png",
+      "sku_2_image": "./assets/images/products/block/block_74_1300/sku-2.png",
+      "battery_type": "Li-ion",
+      "connector": "T Plug",
+      "discharge_rate": "20C / 40C",
+      "length": 7.5,
+      "width": 11.8,
+      "height": 1.7,
+      "dimension_unit": "cm"
+    },
+    {
+      "sku_id": "split_74_1000",
+      "key_id": "split_74_1000",
+      "product_id": "split",
+      "series": "split",
+      "voltage": 7.4,
+      "capacity": 1000,
+      "hero_image": "./assets/images/products/split/split_74_1000/hero.jpg",
+      "sku_1_image": "./assets/images/products/split/split_74_1000/sku-1.png",
+      "sku_2_image": "./assets/images/products/split/split_74_1000/sku-2.png",
+      "battery_type": "Li-ion",
+      "connector": "T Plug",
+      "discharge_rate": "20C / 40C",
+      "length": 7.5,
+      "width": 11.8,
+      "height": 1.7,
+      "dimension_unit": "cm"
+    },
+    {
+      "sku_id": "stick_74_1000",
+      "key_id": "stick_74_1000",
+      "product_id": "stick",
+      "series": "stick",
+      "voltage": 7.4,
+      "capacity": 1000,
+      "hero_image": "./assets/images/products/stick/stick_74_1000/hero.jpg",
+      "sku_1_image": "./assets/images/products/stick/stick_74_1000/sku-1.png",
+      "sku_2_image": "./assets/images/products/stick/stick_74_1000/sku-2.png",
+      "battery_type": "Li-ion",
+      "connector": "T Plug",
+      "discharge_rate": "20C / 40C",
+      "length": 7.5,
+      "width": 11.8,
+      "height": 1.7,
+      "dimension_unit": "cm"
+    }
+  ],
+  "specMapRaw": [
+    {
+      "key": "voltage",
+      "label_zh": "電壓",
+      "label_en": "Voltage",
+      "unit": "V",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "key": "capacity",
+      "label_zh": "容量",
+      "label_en": "Capacity",
+      "unit": "mAh",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "key": "battery_type",
+      "label_zh": "電池類型",
+      "label_en": "Battery Type",
+      "unit": "",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "key": "connector",
+      "label_zh": "接頭類型",
+      "label_en": "Connector",
+      "unit": "",
+      "visible": true,
+      "order": 4
+    },
+    {
+      "key": "discharge_rate",
+      "label_zh": "放電倍率",
+      "label_en": "Discharge",
+      "unit": "",
+      "visible": true,
+      "order": 5
+    },
+    {
+      "key": "dimension",
+      "label_zh": "尺寸",
+      "label_en": "Size",
+      "unit": "",
+      "visible": true,
+      "order": 6
+    }
+  ],
+  "rules": {
+    "selector_min_items": 2,
+    "hide_selector_if_single": true,
+    "title_source": "sku_id"
+  }
+};
+      
+      function getRequestedKeyId() {
+        const params = new URLSearchParams(window.location.search);
+        return (params.get('key_id') || '').trim();
+      }
+
+      function getSeriesFromKeyId(keyId) {
+        if (!keyId) return '';
+        return String(keyId).split('_')[0] || '';
+      }
+
+      function normalizeVariantFromKeyId(variant) {
+        if (!variant) return variant;
+        const keyId = (variant.key_id || variant.sku_id || '').trim();
+        const series = getSeriesFromKeyId(keyId);
+        if (!keyId || !series) return variant;
+
+        return {
+          ...variant,
+          sku_id: variant.sku_id || keyId,
+          key_id: keyId,
+          product_id: series,
+          series,
+          hero_image: variant.hero_image,
+          sku_1_image: `./assets/images/products/${series}/${keyId}/sku-1.png`,
+          sku_2_image: `./assets/images/products/${series}/${keyId}/sku-2.png`
+        };
+      }
+
+      function resolveRequestedVariant(requestedKeyId, skuList) {
+        if (!requestedKeyId) return null;
+
+        return (skuList || []).find((variant) => {
+          const normalized = normalizeVariantFromKeyId(variant);
+          return normalized?.key_id === requestedKeyId;
+        }) || null;
+      }
+
+      function resolveCurrentProduct(requestedKeyId, products, skuList) {
+        const series = getSeriesFromKeyId(requestedKeyId);
+        if (!series || !products?.[series]) return '';
+
+        const matchedVariant = resolveRequestedVariant(requestedKeyId, skuList);
+        if (!matchedVariant) return '';
+
+        const normalized = normalizeVariantFromKeyId(matchedVariant);
+        const resolvedProductId = (normalized?.product_id || series || '').trim();
+
+        return products?.[resolvedProductId] ? resolvedProductId : '';
+      }
+
+      function clearDynamicContent() {
+        renderTitle('');
+        renderLead('');
+        setText('wateli-sku-v2-description-body', '');
+        renderHeroImage(null);
+        renderList('wateli-sku-v2-features-list', []);
+        renderList('wateli-sku-v2-package-list', []);
+        renderList('wateli-sku-v2-special-notes-list', []);
+        renderList('wateli-sku-v2-safety-notes-list', []);
+        renderSpecList('wateli-sku-v2-general-spec-list', {}, []);
+        renderSpecList('wateli-sku-v2-battery-spec-list', {}, []);
+        selectorRoot?.classList.add('is-hidden');
+      }
+
+      function applyLoadedData(products, skuList, specMapRaw, rules) {
+        const requestedKeyId = getRequestedKeyId();
+        const normalizedSkuList = (skuList || []).map(normalizeVariantFromKeyId);
+        const requestedVariant = resolveRequestedVariant(requestedKeyId, normalizedSkuList);
+        const currentProductId = resolveCurrentProduct(requestedKeyId, products, normalizedSkuList);
+        const product = currentProductId ? products?.[currentProductId] : null;
+        const currentVoltage = Number(page.CURRENT_VOLTAGE);
+        const variants = currentProductId
+          ? normalizedSkuList.filter((variant) => (
+              variant.product_id === currentProductId &&
+              Number(variant.voltage) === currentVoltage
+            ))
+          : [];
+        const specMap = (specMapRaw || [])
+          .filter((item) => item.visible === true || item.visible === 'true' || item.visible === 1 || item.visible === '1')
+          .sort((a, b) => Number(a.order) - Number(b.order));
+
+        state.product = product ?? null;
+        state.variants = variants;
+        state.specMap = specMap;
+        state.rules = rules ?? {};
+        state.activeSkuId = requestedVariant && variants.some((variant) => variant.sku_id === requestedVariant.sku_id)
+          ? requestedVariant.sku_id
+          : '';
+        state.ready = true;
+
+        renderStaticContent(getCopy());
+
+        if (!requestedKeyId || !currentProductId || !product || state.activeSkuId === '') {
+          clearDynamicContent();
+          return;
+        }
+
+        initPage(state.product, state.variants, state.specMap, state.rules);
+      }
+
+      function loadData() {
+        const local = window.__WATELI_EMBEDDED_DATA__;
+        if (!local) {
+          console.error('WATELI SKU v2 embedded data missing.');
+          return Promise.resolve();
+        }
+
+        applyLoadedData(local.products, local.skuList, local.specMapRaw, local.rules);
+        return Promise.resolve();
+      }
+
+      function render() {
+        if (!state.ready) return;
+        const current = state.variants.find((variant) => variant.sku_id === state.activeSkuId) || state.variants[0];
+        if (!current) return;
+        renderStaticContent(getCopy());
+        renderLead(state.product?.lead?.[getLang()] || '');
+        renderProductContent(state.product);
+        selectSKU(current.sku_id, state.variants, state.specMap);
+
+        if (state.variants.length < 2) {
+          hideSelector();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', loadData, { once: true });
+      document.addEventListener('wateli:layout-ready', render);
+      window.addEventListener('storage', render);
+      document.addEventListener('click', (event) => {
+        const btn = event.target.closest('[data-lang-btn]');
+        if (!btn) return;
+        setTimeout(render, 10);
+      });
+
+      window.selectSKU = (sku_id) => selectSKU(sku_id, state.variants, state.specMap);
+    })();
+  </script>
+
+</body>
+</html>

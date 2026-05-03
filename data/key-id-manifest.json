@@ -1,0 +1,172 @@
+[
+  {
+    "key_id": "block_74_1300",
+    "series": "block",
+    "voltage": 7.4,
+    "capacity": 1300,
+    "asset_dir": "./assets/images/products/block/block_74_1300/",
+    "hero_image": "./assets/images/products/block/block_74_1300/hero.jpg",
+    "sku_1_image": "./assets/images/products/block/block_74_1300/sku-1.png",
+    "sku_2_image": "./assets/images/products/block/block_74_1300/sku-2.png"
+  },
+  {
+    "key_id": "block_111_1300",
+    "series": "block",
+    "voltage": 11.1,
+    "capacity": 1300,
+    "asset_dir": "./assets/images/products/block/block_111_1300/",
+    "hero_image": "./assets/images/products/block/block_111_1300/hero.jpg",
+    "sku_1_image": "./assets/images/products/block/block_111_1300/sku-1.png",
+    "sku_2_image": "./assets/images/products/block/block_111_1300/sku-2.png"
+  },
+  {
+    "key_id": "slim_74_950",
+    "series": "slim",
+    "voltage": 7.4,
+    "capacity": 950,
+    "asset_dir": "./assets/images/products/slim/slim_74_950/",
+    "hero_image": "./assets/images/products/slim/slim_74_950/hero.jpg",
+    "sku_1_image": "./assets/images/products/slim/slim_74_950/sku-1.png",
+    "sku_2_image": "./assets/images/products/slim/slim_74_950/sku-2.png"
+  },
+  {
+    "key_id": "slim_74_1000",
+    "series": "slim",
+    "voltage": 7.4,
+    "capacity": 1000,
+    "asset_dir": "./assets/images/products/slim/slim_74_1000/",
+    "hero_image": "./assets/images/products/slim/slim_74_1000/hero.jpg",
+    "sku_1_image": "./assets/images/products/slim/slim_74_1000/sku-1.png",
+    "sku_2_image": "./assets/images/products/slim/slim_74_1000/sku-2.png"
+  },
+  {
+    "key_id": "slim_74_1200",
+    "series": "slim",
+    "voltage": 7.4,
+    "capacity": 1200,
+    "asset_dir": "./assets/images/products/slim/slim_74_1200/",
+    "hero_image": "./assets/images/products/slim/slim_74_1200/hero.jpg",
+    "sku_1_image": "./assets/images/products/slim/slim_74_1200/sku-1.png",
+    "sku_2_image": "./assets/images/products/slim/slim_74_1200/sku-2.png"
+  },
+  {
+    "key_id": "slim_111_780",
+    "series": "slim",
+    "voltage": 11.1,
+    "capacity": 780,
+    "asset_dir": "./assets/images/products/slim/slim_111_780/",
+    "hero_image": "./assets/images/products/slim/slim_111_780/hero.jpg",
+    "sku_1_image": "./assets/images/products/slim/slim_111_780/sku-1.png",
+    "sku_2_image": "./assets/images/products/slim/slim_111_780/sku-2.png"
+  },
+  {
+    "key_id": "slim_111_950",
+    "series": "slim",
+    "voltage": 11.1,
+    "capacity": 950,
+    "asset_dir": "./assets/images/products/slim/slim_111_950/",
+    "hero_image": "./assets/images/products/slim/slim_111_950/hero.jpg",
+    "sku_1_image": "./assets/images/products/slim/slim_111_950/sku-1.png",
+    "sku_2_image": "./assets/images/products/slim/slim_111_950/sku-2.png"
+  },
+  {
+    "key_id": "slim_111_1000",
+    "series": "slim",
+    "voltage": 11.1,
+    "capacity": 1000,
+    "asset_dir": "./assets/images/products/slim/slim_111_1000/",
+    "hero_image": "./assets/images/products/slim/slim_111_1000/hero.jpg",
+    "sku_1_image": "./assets/images/products/slim/slim_111_1000/sku-1.png",
+    "sku_2_image": "./assets/images/products/slim/slim_111_1000/sku-2.png"
+  },
+  {
+    "key_id": "slim_111_1200",
+    "series": "slim",
+    "voltage": 11.1,
+    "capacity": 1200,
+    "asset_dir": "./assets/images/products/slim/slim_111_1200/",
+    "hero_image": "./assets/images/products/slim/slim_111_1200/hero.jpg",
+    "sku_1_image": "./assets/images/products/slim/slim_111_1200/sku-1.png",
+    "sku_2_image": "./assets/images/products/slim/slim_111_1200/sku-2.png"
+  },
+  {
+    "key_id": "split_74_1000",
+    "series": "split",
+    "voltage": 7.4,
+    "capacity": 1000,
+    "asset_dir": "./assets/images/products/split/split_74_1000/",
+    "hero_image": "./assets/images/products/split/split_74_1000/hero.jpg",
+    "sku_1_image": "./assets/images/products/split/split_74_1000/sku-1.png",
+    "sku_2_image": "./assets/images/products/split/split_74_1000/sku-2.png"
+  },
+  {
+    "key_id": "split_111_950",
+    "series": "split",
+    "voltage": 11.1,
+    "capacity": 950,
+    "asset_dir": "./assets/images/products/split/split_111_950/",
+    "hero_image": "./assets/images/products/split/split_111_950/hero.jpg",
+    "sku_1_image": "./assets/images/products/split/split_111_950/sku-1.png",
+    "sku_2_image": "./assets/images/products/split/split_111_950/sku-2.png"
+  },
+  {
+    "key_id": "split_111_1000",
+    "series": "split",
+    "voltage": 11.1,
+    "capacity": 1000,
+    "asset_dir": "./assets/images/products/split/split_111_1000/",
+    "hero_image": "./assets/images/products/split/split_111_1000/hero.jpg",
+    "sku_1_image": "./assets/images/products/split/split_111_1000/sku-1.png",
+    "sku_2_image": "./assets/images/products/split/split_111_1000/sku-2.png"
+  },
+  {
+    "key_id": "split_111_1200",
+    "series": "split",
+    "voltage": 11.1,
+    "capacity": 1200,
+    "asset_dir": "./assets/images/products/split/split_111_1200/",
+    "hero_image": "./assets/images/products/split/split_111_1200/hero.jpg",
+    "sku_1_image": "./assets/images/products/split/split_111_1200/sku-1.png",
+    "sku_2_image": "./assets/images/products/split/split_111_1200/sku-2.png"
+  },
+  {
+    "key_id": "stick_74_1000",
+    "series": "stick",
+    "voltage": 7.4,
+    "capacity": 1000,
+    "asset_dir": "./assets/images/products/stick/stick_74_1000/",
+    "hero_image": "./assets/images/products/stick/stick_74_1000/hero.jpg",
+    "sku_1_image": "./assets/images/products/stick/stick_74_1000/sku-1.png",
+    "sku_2_image": "./assets/images/products/stick/stick_74_1000/sku-2.png"
+  },
+  {
+    "key_id": "stick_111_1000",
+    "series": "stick",
+    "voltage": 11.1,
+    "capacity": 1000,
+    "asset_dir": "./assets/images/products/stick/stick_111_1000/",
+    "hero_image": "./assets/images/products/stick/stick_111_1000/hero.jpg",
+    "sku_1_image": "./assets/images/products/stick/stick_111_1000/sku-1.png",
+    "sku_2_image": "./assets/images/products/stick/stick_111_1000/sku-2.png"
+  },
+  {
+    "key_id": "twin_74_2000",
+    "series": "twin",
+    "voltage": 7.4,
+    "capacity": 2000,
+    "asset_dir": "./assets/images/products/twin/twin_74_2000/",
+    "hero_image": "./assets/images/products/twin/twin_74_2000/hero.jpg",
+    "sku_1_image": "./assets/images/products/twin/twin_74_2000/sku-1.png",
+    "sku_2_image": "./assets/images/products/twin/twin_74_2000/sku-2.png"
+  },
+  {
+    "key_id": "twin_111_2000",
+    "series": "twin",
+    "voltage": 11.1,
+    "capacity": 2000,
+    "asset_dir": "./assets/images/products/twin/twin_111_2000/",
+    "hero_image": "./assets/images/products/twin/twin_111_2000/hero.jpg",
+    "sku_1_image": "./assets/images/products/twin/twin_111_2000/sku-1.png",
+    "sku_2_image": "./assets/images/products/twin/twin_111_2000/sku-2.png"
+  }
+]

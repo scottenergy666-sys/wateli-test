@@ -1,0 +1,6 @@
+{
+  "current_voltage": 11.1,
+  "selector_min_items": 2,
+  "hide_selector_if_single": true,
+  "title_source": "sku_id"
+}

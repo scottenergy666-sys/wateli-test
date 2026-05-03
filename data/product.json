@@ -1,0 +1,26 @@
+{
+  "TW-111": {
+    "product_id": "TW-111",
+    "series": "Twin",
+    "lead": {
+      "zh": "分體式設計，適合需要穩定輸出、清楚配線與整齊安裝的配置。",
+      "en": "Split design for stable output, organized wiring, and clean installation integration."
+    },
+    "description": {
+      "zh": "Twin 結構設計，適合需要穩定供電、整齊配線與有效利用安裝空間的配置。",
+      "en": "Twin-format structure for stable output, cleaner wiring, and efficient use of installation space."
+    }
+  },
+  "TW-74": {
+    "product_id": "TW-74",
+    "series": "Twin",
+    "lead": {
+      "zh": "分體式設計，適合 7.4V 架構下的容量切換測試。",
+      "en": "Split design for 7.4V page capacity switching tests."
+    },
+    "description": {
+      "zh": "TW-74 最小資料頁，用於雙電壓頁架構驗證。",
+      "en": "Minimal TW-74 data page for dual-voltage architecture validation."
+    }
+  }
+}

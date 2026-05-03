@@ -1,0 +1,517 @@
+/* WATELI HOME v2.0.0 R1 - production homepage CSS
+   Based on accepted R14B. Clean replacement for old index homepage.
+   Does not depend on old home.css.
+*/
+
+/* WATELI HOME v2 v1.1.0 R14 - FINAL CLEAN CANDIDATE
+   Clean final homepage candidate based on accepted R13B/R12B state.
+   One page-scoped CSS file for final homepage homepage verification.
+   Does not load home.css, to avoid header interference.
+*/
+
+/* ===== From home-v2.css ===== */
+/* HOME v2 HERO REAL R1
+   Uses real brand image + real product image.
+   No placeholder. No overlay text. No buttons.
+*/
+.page-template--home-v2 {
+  background: #000;
+}
+
+.home-v2 {
+  background: #000;
+}
+
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  overflow: hidden;
+  background: #000;
+}
+
+.home-hero__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+.home-hero__slide.is-active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: 100dvh;
+  }
+}
+
+/* HOME v2 PRODUCT FRAME R2 BASE CORRECT
+   Base: WATELI-HOME-SANDBOX-PRODUCT-FRAME-R1.
+   Goal: keep R1 product-frame structure, align with original homepage dark background system.
+   Scope: homepage classes only. No body/a/button/:root/template color overrides.
+*/
+.home-v2 {
+  background:
+    radial-gradient(circle at 68% 12%, rgba(39, 88, 168, 0.16) 0%, rgba(39, 88, 168, 0) 24%),
+    linear-gradient(180deg, #07111f 0%, #081527 42%, #081423 100%);
+  color: var(--site-text-main);
+}
+
+.home-product-series {
+  background: transparent;
+  color: var(--site-text-main);
+  padding: 56px 0 96px;
+}
+
+.home-product-series__container { width: min(100% - 48px, 1200px); margin: 0 auto; }
+.home-product-series__header { max-width: 720px; margin: 0 0 32px; }
+.home-product-series__eyebrow { margin: 0 0 10px; font-size: 12px; line-height: 1.2; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--site-text-muted); }
+.home-product-series__title { margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.04em; color: var(--site-text-main); }
+.home-product-series__lead { margin: 18px 0 0; max-width: 620px; font-size: 16px; line-height: 1.7; color: var(--site-text-secondary); }
+.home-product-series__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.home-product-series__card { display: block; min-width: 0; background: transparent; border: 0; border-radius: 0; overflow: visible; text-decoration: none; cursor: pointer; transition: opacity 180ms ease; }
+.home-product-series__image-wrap { display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; padding: 0; background: transparent; overflow: visible; }
+.home-product-series__image { display: block; width: 100%; height: auto; }
+.home-product-series__body { padding: 20px 22px 22px; border-top: 1px solid rgba(255,255,255,0.08); background: transparent; }
+.home-product-series__card-title { margin: 0; font-size: 20px; line-height: 1.25; letter-spacing: -0.02em; color: var(--site-text-main); }
+.home-product-series__meta { margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: var(--site-text-secondary); }
+@media (max-width: 900px) { .home-product-series__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .home-product-series { padding: 40px 0 72px; } .home-product-series__container { width: min(100% - 32px, 1200px); } .home-product-series__grid { grid-template-columns: 1fr; gap: 18px; } }
+
+/* HOME v2 W2B R4 MODULE
+   Base: WATELI-HOME-SANDBOX-PRODUCT-FRAME-R2-BASE-CORRECT.
+   Goal: test image-level de-emphasized Where to Buy module.
+   Scope: homepage classes only. No background/button/token/global overrides.
+*/
+.home-where-to-buy {
+  padding: 0 0 96px;
+  background: transparent;
+}
+
+.home-where-to-buy__container {
+  width: min(100% - 48px, 1200px);
+  margin: 0 auto;
+}
+
+.home-where-to-buy__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+@media (max-width: 640px) {
+  .home-where-to-buy {
+    padding: 0 0 72px;
+  }
+  .home-where-to-buy__container {
+    width: min(100% - 32px, 1200px);
+  }
+  .home-where-to-buy__image {
+    border-radius: 14px;
+  }
+}
+
+/* PRODUCT ENTRY R7: interaction-only refinement
+   Scope: product entry anchors only.
+   No image crop/mask/radius/color/background/layout changes.
+*/
+.home-product-series__card {
+  cursor: pointer;
+  transition: transform 180ms ease;
+}
+
+.home-product-series__image {
+  transition: filter 180ms ease;
+}
+
+.home-product-series__card:hover {
+  transform: translateY(-2px);
+}
+
+.home-product-series__card:hover .home-product-series__image {
+  filter: brightness(1.06);
+}
+
+.home-product-series__card:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.55);
+  outline-offset: 4px;
+}
+
+/* PRODUCT ENTRY R8: spacing-only refinement
+   Scope: product entry layout rhythm only.
+   No image crop/radius/filter/background/color/button/W2B/HERO changes.
+*/
+.home-product-series {
+  padding-top: 72px;
+  padding-bottom: 104px;
+}
+
+.home-product-series__container {
+  width: min(100% - 64px, 1200px);
+}
+
+.home-product-series__header {
+  margin-bottom: 40px;
+}
+
+.home-product-series__grid {
+  gap: 34px;
+}
+
+@media (max-width: 900px) {
+  .home-product-series__grid {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-product-series {
+    padding-top: 56px;
+    padding-bottom: 84px;
+  }
+
+  .home-product-series__container {
+    width: min(100% - 40px, 1200px);
+  }
+
+  .home-product-series__header {
+    margin-bottom: 30px;
+  }
+
+  .home-product-series__grid {
+    gap: 22px;
+  }
+}
+
+/* HOME v2 W2B R9: image-click entry
+   Scope: W2B module only. No extra CTA text, no button-system override.
+*/
+.home-where-to-buy__image-link {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.home-where-to-buy__image-link .home-where-to-buy__image {
+  transition: filter 180ms ease, transform 180ms ease;
+}
+
+.home-where-to-buy__image-link:hover .home-where-to-buy__image {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+
+.home-where-to-buy__image-link:focus-visible {
+  outline: 2px solid rgba(255,255,255,0.45);
+  outline-offset: 4px;
+}
+
+/* HOME v2 W2B R10: minimal destination caption
+   Scope: W2B module only. Image remains clickable. No button-system override.
+*/
+.home-where-to-buy__caption {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.home-where-to-buy__caption a {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 2px;
+  transition: opacity 180ms ease;
+}
+
+.home-where-to-buy__caption a:hover {
+  opacity: 1;
+}
+
+
+/* HERO MOBILE R13: mobile HERO is source-led and non-cropped.
+   Scope: HERO carousel only. No JS/product-entry/W2B/main-site changes.
+   Rule: no cover-based cropping; mobile sources must be dedicated images. */
+.home-hero__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.home-hero__slide > img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: 100dvh;
+    height: 100dvh;
+  }
+}
+
+
+/* ===== From home-homepage-v110-r12-content-final-clean.css ===== */
+/* WATELI HOME v2 v1.1.0 R12 - CONTENT FINAL CLEAN
+   Scope: final content-check homepage page only.
+   Consolidates accepted rules from R10D/R10E/R11B into one page-scoped CSS file.
+   Does not load home.css, to avoid header interference.
+*/
+
+/* Header stability: single shared header system with page-scoped stabilization. */
+.page-template--home-v2 .site-header {
+  background: rgba(12,16,22,.78);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(12px);
+}
+
+.page-template--home-v2 .site-header__actions {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+}
+
+.page-template--home-v2 .site-nav--desktop a {
+  color: rgba(245,247,250,.82);
+}
+
+.page-template--home-v2 .site-nav--desktop a:hover,
+.page-template--home-v2 .site-nav--desktop a.is-active {
+  color: var(--text-on-dark);
+}
+
+.page-template--home-v2 .lang-switch button {
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.04);
+  color: rgba(245,247,250,.84);
+}
+
+.page-template--home-v2 .lang-switch button:hover {
+  border-color: rgba(255,255,255,.32);
+  background: rgba(255,255,255,.12);
+  color: var(--text-on-dark);
+}
+
+.page-template--home-v2 .lang-switch button.is-active {
+  color: #0d1117;
+  background: rgba(255,255,255,.92);
+  border-color: rgba(255,255,255,.92);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+.page-template--home-v2 .menu-toggle {
+  border-color: rgba(255,255,255,.18);
+  background: rgba(255,255,255,.04);
+  color: rgba(245,247,250,.90);
+}
+
+.page-template--home-v2 .menu-toggle:hover {
+  border-color: rgba(255,255,255,.32);
+  background: rgba(255,255,255,.12);
+  color: var(--text-on-dark);
+}
+
+/* Responsive HERO independence. */
+.page-template--home-v2 .home-mobile-hero {
+  display: none;
+}
+
+.page-template--home-v2 .home-desktop-hero {
+  display: block;
+}
+
+.page-template--home-v2 .home-desktop-hero .home-hero__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.page-template--home-v2 .home-desktop-hero .home-hero__slide > img,
+.page-template--home-v2 .home-desktop-hero .home-hero__slide > picture,
+.page-template--home-v2 .home-desktop-hero .home-hero__slide > picture > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .page-template--home-v2 .home-desktop-hero {
+    display: none;
+  }
+
+  .page-template--home-v2 .home-mobile-hero {
+    display: block;
+    width: 100%;
+    background: #000;
+    line-height: 0;
+  }
+
+  .page-template--home-v2 .home-mobile-hero picture,
+  .page-template--home-v2 .home-mobile-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+/* Product series typography. */
+.page-template--home-v2 .home-product-series__eyebrow {
+  color: rgba(232, 236, 241, .62);
+  letter-spacing: .20em;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.page-template--home-v2 .home-product-series__title {
+  color: rgba(244, 247, 250, .96);
+  letter-spacing: -.045em;
+  text-shadow: 0 1px 0 rgba(255,255,255,.08), 0 18px 34px rgba(0,0,0,.18);
+}
+
+.page-template--home-v2 .home-product-series__lead {
+  margin-top: 14px;
+  color: rgba(214, 221, 229, .72);
+  font-size: clamp(15px, 1.45vw, 18px);
+  letter-spacing: .02em;
+  line-height: 1.75;
+}
+
+.page-template--home-v2 .home-where-to-buy__caption a {
+  color: rgba(230,235,241,.74);
+  letter-spacing: .13em;
+  border-bottom-color: rgba(174, 34, 42, .42);
+}
+
+.page-template--home-v2 .home-where-to-buy__caption a:hover {
+  color: rgba(255,255,255,.92);
+  border-bottom-color: rgba(174, 34, 42, .78);
+}
+
+/* Mobile product-entry native horizontal swipe. */
+@media (max-width: 640px) {
+  .page-template--home-v2 .home-product-series__container {
+    width: 100%;
+  }
+
+  .page-template--home-v2 .home-product-series__header {
+    width: min(100% - 40px, 1200px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-template--home-v2 .home-product-series__grid {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(78vw, 320px);
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 20px 6px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .page-template--home-v2 .home-product-series__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-template--home-v2 .home-product-series__card {
+    scroll-snap-align: start;
+    width: 100%;
+  }
+
+  .page-template--home-v2 .home-product-series__image-wrap {
+    width: 100%;
+  }
+}
+
+
+/* ===== From home-homepage-v110-r12b-desktop-hero-height-fit-fix.css ===== */
+/* R12B: Desktop HERO height / 16:9 fit fix
+   Scope: R12B test page desktop HERO only.
+   Goal: remove remaining black gap caused by 100vh container vs 16:9 assets.
+   No object-fit: cover, no crop, no image filter/mask.
+*/
+
+@media (min-width: 769px) {
+  .page-template--home-v2 .home-desktop-hero {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    max-height: 100vh;
+  }
+
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide,
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide > img,
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide > picture,
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide > img,
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide img {
+    display: block;
+    object-fit: contain;
+  }
+}
+
+
+/* R14B: Mobile Product Series Typography Balance
+   Scope: mobile Product Series text only.
+   Desktop, HERO, Header, Where to Buy, images, and i18n logic untouched.
+*/
+
+@media (max-width: 640px) {
+  .page-template--home-v2 .home-product-series {
+    padding-top: 48px;
+  }
+
+  .page-template--home-v2 .home-product-series__header {
+    margin-bottom: 24px;
+  }
+
+  .page-template--home-v2 .home-product-series__eyebrow {
+    margin-bottom: 9px;
+    font-size: 11px;
+    line-height: 1.2;
+    letter-spacing: 0.115em;
+    color: rgba(222, 229, 238, 0.72);
+  }
+
+  .page-template--home-v2 .home-product-series__title {
+    max-width: 10em;
+    font-size: clamp(30px, 8.2vw, 36px);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    white-space: pre-line;
+  }
+
+  .page-template--home-v2 .home-product-series__lead {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}

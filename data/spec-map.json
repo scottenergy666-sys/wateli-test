@@ -1,0 +1,50 @@
+[
+  {
+    "key": "voltage",
+    "label_zh": "電壓",
+    "label_en": "Voltage",
+    "unit": "V",
+    "visible": true,
+    "order": 1
+  },
+  {
+    "key": "capacity",
+    "label_zh": "容量",
+    "label_en": "Capacity",
+    "unit": "mAh",
+    "visible": true,
+    "order": 2
+  },
+  {
+    "key": "battery_type",
+    "label_zh": "電池類型",
+    "label_en": "Battery Type",
+    "unit": "",
+    "visible": true,
+    "order": 3
+  },
+  {
+    "key": "connector",
+    "label_zh": "接頭類型",
+    "label_en": "Connector",
+    "unit": "",
+    "visible": true,
+    "order": 4
+  },
+  {
+    "key": "discharge_rate",
+    "label_zh": "放電倍率",
+    "label_en": "Discharge",
+    "unit": "",
+    "visible": true,
+    "order": 5
+  },
+  {
+    "key": "dimension",
+    "label_zh": "尺寸",
+    "label_en": "Size",
+    "unit": "",
+    "visible": true,
+    "order": 6
+  }
+]

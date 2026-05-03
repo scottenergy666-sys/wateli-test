@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WATELI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/core/tokens.css" />
+  <link rel="stylesheet" href="assets/css/core/base.css" />
+  <link rel="stylesheet" href="assets/css/core/layout.css" />
+  <link rel="stylesheet" href="assets/css/components/buttons.css" />
+  <link rel="stylesheet" href="assets/css/components/sections.css" />
+  <link rel="stylesheet" href="assets/css/components/cta-system.css" />
+  <link rel="stylesheet" href="assets/css/pages/placeholder.css" />
+</head>
+<body class="page-template page-template--placeholder" data-page="resources">
+  <div id="site-header"></div>
+  <main class="placeholder-shell">
+    <div class="container">
+      <section class="panel placeholder-panel">
+        <div class="eyebrow">V23 PAGE</div>
+        <h1>Resources</h1>
+        <p class="placeholder-lead">Resources 頁已預留為 v23 正式頁。</p>
+      </section>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script defer src="assets/data/i18n/translations.js"></script>
+  <script defer src="assets/js/core/utils.js"></script>
+  <script defer src="assets/js/core/site-layout.js"></script>
+  <script defer src="assets/js/core/i18n.js"></script>
+  <script defer src="assets/js/core/mobile-menu.js"></script>
+
+<script>
+const CURRENT_VOLTAGE = "11.1";
+
+function initSkuV2(page){
+  const variants = page.items.filter(v => String(v.voltage) === CURRENT_VOLTAGE);
+
+  const selector = document.getElementById("wateli-sku-v2-capacity-options");
+  const selectorWrap = document.querySelector(".wateli-sku-v2__selector");
+
+  if(!variants || variants.length===0) return;
+
+  if(variants.length < 2){
+    if(selectorWrap) selectorWrap.style.display = "none";
+  } else {
+    if(selectorWrap) selectorWrap.style.display = "";
+    selector.innerHTML = "";
+    variants.forEach(v=>{
+      const btn = document.createElement("button");
+      btn.textContent = v.capacity;
+      btn.onclick = ()=>selectSKU(v.sku_id, variants);
+      selector.appendChild(btn);
+    });
+  }
+
+  selectSKU(variants[0].sku_id, variants);
+}
+
+function selectSKU(sku_id, variants){
+  const v = variants.find(x=>x.sku_id===sku_id);
+  if(!v) return;
+
+  document.getElementById("wateli-sku-v2-hero-title").textContent = sku_id;
+  document.getElementById("wateli-sku-v2-spec-capacity").textContent = v.capacity;
+  document.getElementById("wateli-sku-v2-spec-voltage").textContent = v.voltage;
+}
+
+window.addEventListener("DOMContentLoaded", function(){
+  if(window.page){
+    initSkuV2(window.page);
+  }
+});
+</script>
+
+</body>
+</html>

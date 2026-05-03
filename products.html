@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-head="products_meta_title">WATELI | Products</title>
+  <meta name="description" content="Browse WATELI battery series by shape and fit." data-i18n-attr="content:products_meta_description" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="assets/css/core/tokens.css" />
+  <link rel="stylesheet" href="assets/css/core/base.css" />
+  <link rel="stylesheet" href="assets/css/core/layout.css" />
+  <link rel="stylesheet" href="assets/css/components/buttons.css" />
+  <link rel="stylesheet" href="assets/css/components/sections.css" />
+  <link rel="stylesheet" href="assets/css/components/cta-system.css" />
+  <link rel="stylesheet" href="assets/css/pages/products.css" />
+  <style>
+    .page-template--products .products-page {
+      padding: calc(var(--header-h) + 8px) 0 72px !important;
+    }
+    .page-template--products .products-overview {
+      margin-top: 0 !important;
+    }
+    .page-template--products .products-overview > .container {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .page-template--products .products-overview__title {
+      margin: 0;
+      color: var(--text-on-dark);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      text-align: center;
+    }
+    @media (max-width: 680px) {
+      .page-template--products .products-page {
+        padding: calc(var(--header-h) + 4px) 0 56px !important;
+      }
+      .page-template--products .products-overview > .container {
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body class="page-template page-template--products" data-page="products">
+  <div id="site-header"></div>
+
+  <main class="products-page">
+
+    <section class="products-overview">
+      <div class="container">
+        <h1 class="products-overview__title" data-i18n="products_entry_heading">Select Suitable Type</h1>
+        <div class="products-grid">
+          <a class="panel type-card" href="products-block.html">
+            <div class="card-image">
+              <img src="assets/images/products/entry/entry-block.png" alt="" data-i18n-attr="alt:products_card_block_image_alt" loading="lazy" decoding="async">
+            </div>
+            <div class="card-content">
+              <div class="type-card__title" data-i18n="products_entry_block_title">Block</div>
+            </div>
+          </a>
+
+          <a class="panel type-card" href="products-slim.html">
+            <div class="card-image">
+              <img src="assets/images/products/entry/entry-slim.png" alt="" data-i18n-attr="alt:products_card_slim_image_alt" loading="lazy" decoding="async">
+            </div>
+            <div class="card-content">
+              <div class="type-card__title" data-i18n="products_entry_slim_title">Slim</div>
+            </div>
+          </a>
+
+          <a class="panel type-card" href="products-split.html">
+            <div class="card-image">
+              <img src="assets/images/products/entry/entry-split.png" alt="" data-i18n-attr="alt:products_card_split_image_alt" loading="lazy" decoding="async">
+            </div>
+            <div class="card-content">
+              <div class="type-card__title" data-i18n="products_entry_split_title">Split</div>
+            </div>
+          </a>
+
+          <a class="panel type-card" href="products-stick.html">
+            <div class="card-image">
+              <img src="assets/images/products/entry/entry-stick.png" alt="" data-i18n-attr="alt:products_card_stick_image_alt" loading="lazy" decoding="async">
+            </div>
+            <div class="card-content">
+              <div class="type-card__title" data-i18n="products_entry_stick_title">Stick</div>
+            </div>
+          </a>
+
+          <a class="panel type-card" href="products-twin.html">
+            <div class="card-image">
+              <img src="assets/images/products/entry/entry-twin.png" alt="" data-i18n-attr="alt:products_card_twin_image_alt" loading="lazy" decoding="async">
+            </div>
+            <div class="card-content">
+              <div class="type-card__title" data-i18n="products_entry_twin_title">Twin</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script defer src="assets/data/i18n/translations.js"></script>
+  <script defer src="assets/js/core/utils.js"></script>
+  <script defer src="assets/js/core/site-layout.js"></script>
+  <script defer src="assets/js/core/i18n.js"></script>
+  <script defer src="assets/js/core/mobile-menu.js"></script>
+
+<script>
+const CURRENT_VOLTAGE = "11.1";
+
+function initSkuV2(page){
+  const variants = page.items.filter(v => String(v.voltage) === CURRENT_VOLTAGE);
+
+  const selector = document.getElementById("wateli-sku-v2-capacity-options");
+  const selectorWrap = document.querySelector(".wateli-sku-v2__selector");
+
+  if(!variants || variants.length===0) return;
+
+  if(variants.length < 2){
+    if(selectorWrap) selectorWrap.style.display = "none";
+  } else {
+    if(selectorWrap) selectorWrap.style.display = "";
+    selector.innerHTML = "";
+    variants.forEach(v=>{
+      const btn = document.createElement("button");
+      btn.textContent = v.capacity;
+      btn.onclick = ()=>selectSKU(v.sku_id, variants);
+      selector.appendChild(btn);
+    });
+  }
+
+  selectSKU(variants[0].sku_id, variants);
+}
+
+function selectSKU(sku_id, variants){
+  const v = variants.find(x=>x.sku_id===sku_id);
+  if(!v) return;
+
+  document.getElementById("wateli-sku-v2-hero-title").textContent = sku_id;
+  document.getElementById("wateli-sku-v2-spec-capacity").textContent = v.capacity;
+  document.getElementById("wateli-sku-v2-spec-voltage").textContent = v.voltage;
+}
+
+window.addEventListener("DOMContentLoaded", function(){
+  if(window.page){
+    initSkuV2(window.page);
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* v4.7 CTA System
+   Purpose: provide a reusable CTA layer without changing the legacy .btn system.
+   Rule: new pages should prefer .cta-* classes; legacy pages can adopt them incrementally.
+   Scope: v4.7.1 restricts CTA system rendering to the Contact page to avoid cross-page leakage.
+*/
+
+[data-page="contact"] .cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  width: auto;
+  max-width: 100%;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease, color .2s ease, border-color .2s ease;
+}
+
+[data-page="contact"] .cta-primary:hover {
+  transform: translateY(-20px);
+}
+
+[data-page="contact"] .cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: auto;
+  min-width: 0;
+  width: auto;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+[data-page="contact"] .cta-link::after {
+  content: "→";
+  font-size: .95rem;
+  opacity: .8;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+[data-page="contact"] .cta-link:hover {
+  color: var(--brand);
+}
+
+[data-page="contact"] .cta-link:hover::after {
+  transform: translateX(10%);
+  opacity: 1;
+}
+
+[data-page="contact"] .cta-muted {
+  color: var(--muted);
+}
+
+/* v10.7.4 mobile nav overlay fix */
+@media (max-width: 860px){
+  .mobile-nav,
+  .nav-drawer,
+  .menu-overlay{
+    position: fixed !important;
+    inset: 0;
+    z-index: 9999 !important;
+    background: rgba(6,10,18,0.96) !important;
+    backdrop-filter: blur(6px);
+  }
+
+  body.menu-open,
+  body.nav-open{
+    overflow: hidden;
+  }
+
+  .page-hero--brand{
+    z-index: 1 !important;
+  }
+}

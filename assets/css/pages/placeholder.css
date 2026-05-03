@@ -1,0 +1,15 @@
+.page-template--placeholder .placeholder-shell {
+  padding: calc(var(--header-h) + 56px) 0 84px;
+  background: var(--bg-light);
+  min-height: 70vh;
+}
+
+.page-template--placeholder .placeholder-panel {
+  padding: 40px;
+}
+
+.page-template--placeholder .placeholder-lead {
+  margin-top: 12px;
+  color: var(--muted);
+  max-width: 58ch;
+}
