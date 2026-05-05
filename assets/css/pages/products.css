@@ -4367,3 +4367,304 @@ body.page-template--product-series .series-side-nav__back .back-btn:hover {
     margin:0;
   }
 }
+
+
+/* PRODUCTS R3: i18n boot stability guard
+   Uses the existing html[data-lang-switching] state set by assets/js/core/i18n.js.
+   Scope: Products overview + product series pages only.
+   Purpose: avoid showing fallback language before i18n applies the stored language.
+*/
+html:not([data-lang-switching="0"]) body.page-template--products main.products-page {
+  opacity: 0;
+  visibility: hidden;
+}
+
+html[data-lang-switching="0"] body.page-template--products main.products-page {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 120ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-lang-switching="0"] body.page-template--products main.products-page {
+    transition: none;
+  }
+}
+
+
+/* WATELI R14 trace:
+   Product series mobile-first consistency is applied inside the existing
+   product-series page-local style block because those pages already load
+   page-local overrides after this stylesheet.
+*/
+
+
+/* WATELI R14B trace:
+   Product series bottom CTA tone is overridden inside the existing
+   five product-series page-local style blocks. products.html overview is not changed.
+*/
+
+
+/* WATELI R14C trace:
+   Product series primary CTA now points to where-to-buy.html and uses
+   Where to Buy / 哪裡購買 wording instead of Dealer wording.
+*/
+
+
+/* ===== WATELI R22D / mobile voltage tabs + original SKU card rail =====
+   Base: R20D clean mother package.
+   Scope: five product series pages only.
+   Rule: no new SKU card system; existing .sku-card structure is reused.
+*/
+.wateli-series-mobile-head,
+.wateli-voltage-tabs,
+.wateli-voltage-tabs__input {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  html body.page-template--product-series .wateli-series-mobile-head {
+    display: block;
+    margin: 0 0 16px;
+  }
+
+  html body.page-template--product-series .wateli-series-mobile-head .eyebrow {
+    margin: 0 0 8px;
+    color: rgba(214, 221, 229, .62);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  html body.page-template--product-series .wateli-series-mobile-head h2 {
+    margin: 0;
+    color: rgba(255,255,255,.98);
+    font-size: clamp(34px, 10vw, 46px);
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -.05em;
+  }
+
+  html body.page-template--product-series .wateli-series-mobile-head p {
+    margin: 10px 0 0;
+    color: rgba(221, 230, 242, .76);
+    font-size: 15px;
+    font-weight: 560;
+    line-height: 1.55;
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs__input {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0 0 18px;
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs--single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs__title {
+    grid-column: 1 / -1;
+    color: rgba(214, 221, 229, .62);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    line-height: 1.2;
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs__label {
+    min-height: 58px;
+    border: 1px solid rgba(136,164,208,.16);
+    border-radius: 999px;
+    background: rgba(255,255,255,.028);
+    color: rgba(232,240,255,.72);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs__input--74:checked ~ .wateli-voltage-tabs .wateli-voltage-tabs__label--74,
+  html body.page-template--product-series .wateli-voltage-tabs__input--111:checked ~ .wateli-voltage-tabs .wateli-voltage-tabs__label--111 {
+    border-color: rgba(95,157,255,.58);
+    background: linear-gradient(180deg, rgba(95,157,255,.20), rgba(95,157,255,.10));
+    color: rgba(255,255,255,.98);
+    box-shadow: inset 0 0 0 1px rgba(95,157,255,.12);
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs__input--74:checked ~ .series-groups > .series-group:not(.series-group--primary) {
+    display: none !important;
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs__input--111:checked ~ .series-groups > .series-group.series-group--primary {
+    display: none !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups,
+  html body.page-template--product-series .series-section .series-groups--single {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group,
+  html body.page-template--product-series .series-section .series-groups > .series-group.panel {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__head {
+    margin: 0 0 12px !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group h3 {
+    margin: 0 !important;
+    color: rgba(214,221,229,.72) !important;
+    font-size: 15px !important;
+    font-weight: 900 !important;
+    letter-spacing: .08em !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .eyebrow {
+    display: none !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 2px 12px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x proximity !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x !important;
+    scrollbar-width: none;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:hover,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:active,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:focus,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card.is-active {
+    flex: 0 0 min(82vw, 318px) !important;
+    width: min(82vw, 318px) !important;
+    min-width: min(82vw, 318px) !important;
+    max-width: min(82vw, 318px) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    scroll-snap-align: start !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual img {
+    display: block;
+    object-fit: contain !important;
+  }
+
+  html body.page-template--product-series .series-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/* ===== WATELI R22E / mobile PDI vertical tune + return affordance =====
+   Base: R22D clean original SKU card rail.
+   Scope: five product series pages only.
+   Purpose: move mobile PDI content upward and expose a return button without
+   creating a second card system or touching SKU pages.
+*/
+.wateli-mobile-series-back {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  html body.page-template--product-series main.products-page {
+    padding-top: 18px !important;
+  }
+
+  html body.page-template--product-series .wateli-series-mobile-head {
+    margin-bottom: 12px !important;
+  }
+
+  html body.page-template--product-series .wateli-mobile-series-back {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 38px;
+    margin: 0 0 14px;
+    padding: 0 14px;
+    border: 1px solid rgba(136,164,208,.18);
+    border-radius: 999px;
+    background: rgba(255,255,255,.035);
+    color: rgba(232,240,255,.82);
+    font-size: 13px;
+    font-weight: 760;
+    line-height: 1;
+    letter-spacing: .02em;
+    text-decoration: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.045);
+  }
+
+  html body.page-template--product-series .wateli-mobile-series-back::before {
+    content: '‹';
+    display: inline-block;
+    margin-right: 7px;
+    font-size: 19px;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
+  html body.page-template--product-series .wateli-voltage-tabs {
+    margin-bottom: 12px !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__head {
+    margin-bottom: 10px !important;
+  }
+}

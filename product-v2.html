@@ -440,6 +440,435 @@
         gap: 24px;
       }
     }
+  
+    /* ===== WATELI R20 / SKU V2 MOBILE IMAGE VIEW & SWITCH ONLY =====
+       Scope: product-v2 / product-v2-74 mobile image viewing only.
+       No SKU data, voltage/capacity logic, product paths, PDI, or desktop refactor.
+    */
+    .wateli-sku-v2-mobile-viewer[hidden] {
+      display: none !important;
+    }
+
+    .wateli-sku-v2-mobile-viewer {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      gap: 12px;
+      padding: max(18px, env(safe-area-inset-top)) 14px max(18px, env(safe-area-inset-bottom));
+      background: rgba(3, 8, 16, .94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s ease;
+    }
+
+    .wateli-sku-v2-mobile-viewer.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .wateli-sku-v2-mobile-viewer__top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      min-height: 42px;
+    }
+
+    .wateli-sku-v2-mobile-viewer__close,
+    .wateli-sku-v2-mobile-viewer__nav {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.94);
+      cursor: pointer;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.055);
+    }
+
+    .wateli-sku-v2-mobile-viewer__close {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .wateli-sku-v2-mobile-viewer__stage {
+      min-height: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .wateli-sku-v2-mobile-viewer__image {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: calc(100vw - 28px);
+      max-height: min(72vh, 680px);
+      object-fit: contain;
+      background: transparent;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .wateli-sku-v2-mobile-viewer__bottom {
+      display: grid;
+      gap: 12px;
+    }
+
+    .wateli-sku-v2-mobile-viewer__caption {
+      min-height: 18px;
+      margin: 0;
+      color: rgba(230,235,241,.72);
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .wateli-sku-v2-mobile-viewer__navs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .wateli-sku-v2-mobile-viewer__nav {
+      min-height: 44px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 760;
+      letter-spacing: .02em;
+    }
+
+    .wateli-sku-v2-mobile-viewer__nav:disabled {
+      opacity: .35;
+      pointer-events: none;
+    }
+
+    body.wateli-sku-v2-viewer-open {
+      overflow: hidden;
+    }
+
+    @media (min-width: 761px) {
+      .wateli-sku-v2-mobile-viewer {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .wateli-sku-v2 {
+        padding: calc(var(--header-h, 72px) + 14px) 0 58px;
+      }
+
+      .wateli-sku-v2 .container {
+        width: min(100vw - 24px, 1280px);
+      }
+
+      .wateli-sku-v2__core {
+        gap: 18px;
+      }
+
+      .wateli-sku-v2__media {
+        gap: 12px;
+      }
+
+      .wateli-sku-v2__hero-frame {
+        position: relative;
+        border: 1px solid rgba(136,164,208,.18);
+        background: rgba(255,255,255,.018);
+        cursor: zoom-in;
+      }
+
+      .wateli-sku-v2__hero-frame::after {
+        content: "VIEW";
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        min-height: 28px;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 10px;
+        border: 1px solid rgba(255,255,255,.16);
+        border-radius: 999px;
+        background: rgba(4,10,20,.56);
+        color: rgba(255,255,255,.78);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: .1em;
+        pointer-events: none;
+      }
+
+      .wateli-sku-v2__hero-image {
+        cursor: zoom-in;
+      }
+
+      .wateli-sku-v2__thumbs {
+        display: flex;
+        grid-template-columns: none;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 1px 4px;
+        scroll-snap-type: x proximity;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .wateli-sku-v2__thumbs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .wateli-sku-v2__thumb {
+        flex: 0 0 132px;
+        min-height: 94px;
+        padding: 8px;
+        border-radius: 12px;
+        scroll-snap-align: start;
+        background: rgba(255,255,255,.018);
+      }
+
+      .wateli-sku-v2__thumb.is-active {
+        border-color: rgba(123,170,255,.84);
+        background: rgba(123,170,255,.08);
+      }
+
+      .wateli-sku-v2__thumb img {
+        height: 54px;
+        margin-bottom: 6px;
+      }
+
+      .wateli-sku-v2__thumb-label {
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .wateli-sku-v2__hero-title {
+        font-size: clamp(28px, 9.5vw, 38px);
+      }
+
+      .wateli-sku-v2__hero-lead {
+        margin-bottom: 14px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .wateli-sku-v2-mobile-viewer__image {
+        max-height: 68vh;
+      }
+
+      .wateli-sku-v2__thumb {
+        flex-basis: 118px;
+      }
+    }
+
+  
+    /* ===== WATELI R20B / SKU MOBILE CENTER + PAGE BACK FIX =====
+       Scope: product-v2 / product-v2-74 mobile-only visual/return behavior.
+       Fixes:
+       1. mobile viewer image centering
+       2. mobile SKU page close/back affordance
+       No SKU data, product path, capacity/voltage logic, or PDI restructuring.
+    */
+    .wateli-sku-v2__mobile-close {
+      display: none;
+    }
+
+    @media (max-width: 760px) {
+      .wateli-sku-v2-mobile-viewer {
+        align-items: stretch;
+        justify-items: stretch;
+      }
+
+      .wateli-sku-v2-mobile-viewer__stage {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .wateli-sku-v2-mobile-viewer__image {
+        margin: auto;
+        object-fit: contain;
+      }
+
+      .wateli-sku-v2__mobile-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-start;
+        width: auto;
+        max-width: 100%;
+        min-height: 38px;
+        margin: 0 0 14px;
+        padding: 0 14px;
+        border: 1px solid rgba(136,164,208,.18);
+        border-radius: 999px;
+        background: rgba(255,255,255,.035);
+        color: rgba(232,240,255,.82);
+        font-size: 13px;
+        font-weight: 760;
+        line-height: 1;
+        letter-spacing: .02em;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.045);
+      }
+
+      .wateli-sku-v2__mobile-close::before {
+        content: '‹';
+        display: inline-block;
+        margin-right: 7px;
+        font-size: 19px;
+        line-height: 1;
+        transform: translateY(-1px);
+      }
+
+      .wateli-sku-v2__mobile-close:hover,
+      .wateli-sku-v2__mobile-close:focus-visible {
+        color: #fff;
+        border-color: rgba(255,255,255,.22);
+        outline: none;
+      }
+    }
+
+  
+    /* ===== WATELI R20C / SKU MOBILE HERO CENTER + MAGNIFIER HINT FIX =====
+       Scope: product-v2 / product-v2-74 mobile image affordance only.
+       Fixes:
+       1. visual centering of mobile hero image
+       2. replace heavy VIEW label with restrained magnifier hint
+       No SKU data, product paths, capacity/voltage logic, PDI, or desktop refactor.
+    */
+    @media (max-width: 760px) {
+      .wateli-sku-v2__hero-frame {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .wateli-sku-v2__hero-image {
+        display: block !important;
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 100% !important;
+        margin-inline: auto !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+      }
+
+      .wateli-sku-v2__hero-frame::after {
+        content: "⌕" !important;
+        right: 10px !important;
+        bottom: 10px !important;
+        width: 34px !important;
+        height: 34px !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 1px solid rgba(255,255,255,.24) !important;
+        border-radius: 999px !important;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.065)),
+          rgba(5,12,22,.72) !important;
+        color: rgba(255,255,255,.92) !important;
+        font-size: 20px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0 !important;
+        line-height: 1 !important;
+        box-shadow:
+          0 10px 24px rgba(0,0,0,.24),
+          inset 0 1px 0 rgba(255,255,255,.16) !important;
+        pointer-events: none !important;
+      }
+
+      .wateli-sku-v2-mobile-viewer__stage {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      .wateli-sku-v2-mobile-viewer__image {
+        margin: auto !important;
+        object-position: center center !important;
+      }
+    }
+
+  
+    /* ===== WATELI R20D / SKU MOBILE HERO FRAME TRUE CENTER =====
+       Scope: product-v2 / product-v2-74 mobile hero frame alignment only.
+       Fix: hero frame was visually too close to the right edge on mobile.
+       No SKU data, product paths, capacity/voltage logic, PDI, or desktop refactor.
+    */
+    @media (max-width: 760px) {
+      .wateli-sku-v2 {
+        overflow-x: hidden !important;
+      }
+
+      .wateli-sku-v2 .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-inline: 14px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+      }
+
+      .wateli-sku-v2__media {
+        width: 100% !important;
+        max-width: 100% !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .wateli-sku-v2__hero-frame {
+        width: min(100%, calc(100vw - 42px)) !important;
+        max-width: calc(100vw - 42px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        flex: 0 0 auto !important;
+        box-sizing: border-box !important;
+      }
+
+      .wateli-sku-v2__hero-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+      }
+
+      .wateli-sku-v2__thumbs {
+        width: min(100%, calc(100vw - 42px)) !important;
+        max-width: calc(100vw - 42px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+      }
+
+      .wateli-sku-v2__info,
+      .wateli-sku-v2__content,
+      .wateli-sku-v2__support {
+        width: min(100%, calc(100vw - 42px)) !important;
+        max-width: calc(100vw - 42px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+      }
+    }
+
   </style>
 </head>
 <body class="page-template page-template--sku-v2" data-page="products">
@@ -678,6 +1107,201 @@
         activeImageKey: 'hero',
         ready: false
       };
+
+
+      /* ===== WATELI R20 / SKU V2 MOBILE IMAGE VIEW & SWITCH ONLY ===== */
+      const mobileImageViewer = {
+        root: null,
+        img: null,
+        caption: null,
+        prev: null,
+        next: null,
+        close: null,
+        active: false
+      };
+
+      function isMobileImageMode() {
+        return window.matchMedia ? window.matchMedia('(max-width: 760px)').matches : window.innerWidth <= 760;
+      }
+
+      function getCurrentVariant() {
+        return (state.variants || []).find((variant) => variant.sku_id === state.activeSkuId) || state.variants?.[0] || null;
+      }
+
+      function ensureMobileImageViewer() {
+        if (mobileImageViewer.root) return mobileImageViewer.root;
+
+        const root = document.createElement('div');
+        root.className = 'wateli-sku-v2-mobile-viewer';
+        root.hidden = true;
+        root.setAttribute('role', 'dialog');
+        root.setAttribute('aria-modal', 'true');
+        root.setAttribute('aria-label', 'Product image viewer');
+        root.innerHTML = `
+          <div class="wateli-sku-v2-mobile-viewer__top">
+            <button type="button" class="wateli-sku-v2-mobile-viewer__close" aria-label="Close image viewer">×</button>
+          </div>
+          <div class="wateli-sku-v2-mobile-viewer__stage">
+            <img class="wateli-sku-v2-mobile-viewer__image" alt="">
+          </div>
+          <div class="wateli-sku-v2-mobile-viewer__bottom">
+            <p class="wateli-sku-v2-mobile-viewer__caption"></p>
+            <div class="wateli-sku-v2-mobile-viewer__navs">
+              <button type="button" class="wateli-sku-v2-mobile-viewer__nav wateli-sku-v2-mobile-viewer__prev" aria-label="Previous image">Prev</button>
+              <button type="button" class="wateli-sku-v2-mobile-viewer__nav wateli-sku-v2-mobile-viewer__next" aria-label="Next image">Next</button>
+            </div>
+          </div>
+        `;
+
+        document.body.appendChild(root);
+        mobileImageViewer.root = root;
+        mobileImageViewer.img = root.querySelector('.wateli-sku-v2-mobile-viewer__image');
+        mobileImageViewer.caption = root.querySelector('.wateli-sku-v2-mobile-viewer__caption');
+        mobileImageViewer.close = root.querySelector('.wateli-sku-v2-mobile-viewer__close');
+        mobileImageViewer.prev = root.querySelector('.wateli-sku-v2-mobile-viewer__prev');
+        mobileImageViewer.next = root.querySelector('.wateli-sku-v2-mobile-viewer__next');
+
+        mobileImageViewer.close?.addEventListener('click', closeMobileImageViewer);
+        mobileImageViewer.prev?.addEventListener('click', () => moveMobileImage(-1));
+        mobileImageViewer.next?.addEventListener('click', () => moveMobileImage(1));
+        root.addEventListener('click', (event) => {
+          if (event.target === root) closeMobileImageViewer();
+        });
+        document.addEventListener('keydown', (event) => {
+          if (!mobileImageViewer.active) return;
+          if (event.key === 'Escape') closeMobileImageViewer();
+          if (event.key === 'ArrowLeft') moveMobileImage(-1);
+          if (event.key === 'ArrowRight') moveMobileImage(1);
+        });
+
+        return root;
+      }
+
+      function syncMobileImageViewer() {
+        if (!mobileImageViewer.active || !mobileImageViewer.img) return;
+
+        const src = heroImg?.currentSrc || heroImg?.src || '';
+        if (src) {
+          mobileImageViewer.img.src = src;
+          mobileImageViewer.img.alt = heroImg?.alt || '';
+        }
+
+        const current = getCurrentVariant();
+        const images = current ? getVariantImages(current) : [];
+        const canSwitch = images.length > 1;
+
+        if (mobileImageViewer.caption) {
+          const label = heroImg?.alt || '';
+          mobileImageViewer.caption.textContent = label;
+        }
+
+        if (mobileImageViewer.prev) mobileImageViewer.prev.disabled = !canSwitch;
+        if (mobileImageViewer.next) mobileImageViewer.next.disabled = !canSwitch;
+      }
+
+      function openMobileImageViewer() {
+        if (!isMobileImageMode() || !heroImg || !(heroImg.currentSrc || heroImg.src)) return;
+
+        ensureMobileImageViewer();
+        mobileImageViewer.active = true;
+        mobileImageViewer.root.hidden = false;
+        document.body.classList.add('wateli-sku-v2-viewer-open');
+        syncMobileImageViewer();
+        requestAnimationFrame(() => {
+          mobileImageViewer.root.classList.add('is-open');
+          mobileImageViewer.close?.focus?.();
+        });
+      }
+
+      function closeMobileImageViewer() {
+        if (!mobileImageViewer.root) return;
+        mobileImageViewer.active = false;
+        mobileImageViewer.root.classList.remove('is-open');
+        document.body.classList.remove('wateli-sku-v2-viewer-open');
+        window.setTimeout(() => {
+          if (!mobileImageViewer.active && mobileImageViewer.root) {
+            mobileImageViewer.root.hidden = true;
+          }
+        }, 180);
+        heroImg?.focus?.();
+      }
+
+      function moveMobileImage(direction) {
+        const current = getCurrentVariant();
+        if (!current) return;
+        const images = getVariantImages(current);
+        if (images.length < 2) return;
+
+        const currentIndex = Math.max(0, images.findIndex((image) => image.key === state.activeImageKey));
+        const nextIndex = (currentIndex + direction + images.length) % images.length;
+        state.activeImageKey = images[nextIndex].key;
+        renderHeroImage(current);
+        renderThumbs(getCopy(), current);
+      }
+
+      function prepareMobileHeroAccess() {
+        if (!heroImg) return;
+        heroImg.setAttribute('role', 'button');
+        heroImg.setAttribute('tabindex', '0');
+        heroImg.setAttribute('aria-label', 'Open product image viewer');
+        heroImg.addEventListener('click', openMobileImageViewer);
+        heroImg.addEventListener('keydown', (event) => {
+          if (event.key !== 'Enter' && event.key !== ' ') return;
+          event.preventDefault();
+          openMobileImageViewer();
+        });
+        heroImg.addEventListener('load', syncMobileImageViewer);
+        window.addEventListener('resize', () => {
+          if (mobileImageViewer.active && !isMobileImageMode()) closeMobileImageViewer();
+        });
+      }
+
+      prepareMobileHeroAccess();
+
+
+      /* ===== WATELI R20B / SKU MOBILE CENTER + PAGE BACK FIX ===== */
+      function getSkuReturnTarget() {
+        const params = new URLSearchParams(window.location.search);
+        const from = params.get('from') || params.get('source') || '';
+        const allowed = [
+          'products-block.html',
+          'products-slim.html',
+          'products-split.html',
+          'products-stick.html',
+          'products-twin.html',
+          'products.html'
+        ];
+
+        if (allowed.includes(from)) return from;
+
+        try {
+          const ref = document.referrer ? new URL(document.referrer, window.location.href) : null;
+          const file = ref ? ref.pathname.split('/').pop() : '';
+          if (allowed.includes(file)) return file;
+        } catch (error) {}
+
+        return 'products.html';
+      }
+
+      function prepareSkuMobileBackControl() {
+        const root = document.querySelector('.wateli-sku-v2 .container');
+        if (!root || document.querySelector('.wateli-sku-v2__mobile-close')) return;
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'wateli-sku-v2__mobile-close';
+        button.textContent = getLang() === 'zh' ? '返回產品選擇' : 'Back to Products';
+        button.addEventListener('click', () => {
+          const target = getSkuReturnTarget();
+          window.location.href = target;
+        });
+
+        root.insertBefore(button, root.firstElementChild);
+      }
+
+      prepareSkuMobileBackControl();
+
+
 
       function getLang() {
         return window.WATELI?.utils?.getStoredLang?.() || (document.documentElement.lang === 'zh-Hant' ? 'zh' : 'en');

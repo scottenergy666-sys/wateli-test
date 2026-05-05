@@ -15,20 +15,19 @@
   <link rel="stylesheet" href="assets/css/components/buttons.css" />
   <link rel="stylesheet" href="assets/css/components/sections.css" />
   <link rel="stylesheet" href="assets/css/components/cta-system.css" />
-  <link rel="stylesheet" href="assets/css/pages/dealer.css" />
   <link rel="stylesheet" href="assets/css/pages/where-to-buy.css" />
 </head>
-<body class="page-template page-template--dealer">
+<body class="page-template page-template--where-to-buy" data-page="where-to-buy">
   <div id="site-header"></div>
 
-  <main class="dealer-page wateli-where-buy">
+  <main class="wateli-where-buy">
     <section class="wateli-where-buy-hero section">
       <div class="container wateli-where-buy-hero__inner">
         <div class="wateli-where-buy-hero__copy">
-          <p class="wateli-where-buy-kicker">WHERE TO BUY</p>
-          <h1>WATELI</h1>
-          <p class="wateli-where-buy-lead">依所在地區查找 WATELI 合作門市。</p>
-          <p class="wateli-where-buy-note">高放電鋰電池之性能與安全使用建議，可由合作門市提供進一步協助。</p>
+          <p class="wateli-where-buy-kicker" data-i18n="w2b_v3_hero_kicker">WHERE TO BUY</p>
+          <h1 data-i18n="where_to_buy_title">哪裡購買</h1>
+          <p class="wateli-where-buy-lead" data-i18n="w2b_v3_hero_lead">透過 WATELI 合作通路取得產品與搭配建議。</p>
+          <p class="wateli-where-buy-note" data-i18n="w2b_v3_hero_note">高放電鋰電池的配置、性能與安全使用，建議由熟悉產品的合作門市協助確認。</p>
         </div>
       </div>
     </section>
@@ -37,10 +36,10 @@
       <div class="container">
         <div class="wateli-where-buy-head">
           <div>
-            <p class="wateli-where-buy-kicker">TAIWAN</p>
-            <h2 id="wateli-store-title">台灣經銷據點</h2>
+            <p class="wateli-where-buy-kicker" data-i18n="w2b_v3_list_kicker">TAIWAN DEALERS</p>
+            <h2 id="wateli-store-title" data-i18n="w2b_v3_list_title">台灣合作門市</h2>
           </div>
-          <div class="wateli-region-filter" aria-label="選擇地區">
+          <div class="wateli-region-filter" aria-label="選擇地區" data-i18n-attr="aria-label:w2b_v3_region_filter_aria">
             <button type="button" class="is-active" data-region="all" data-i18n="region_all">全部</button>
             <button type="button" data-region="north" data-i18n="region_north">北部</button>
             <button type="button" data-region="central" data-i18n="region_central">中部</button>
@@ -52,7 +51,7 @@
           <section class="wateli-area-section" data-region="north" aria-labelledby="wateli-area-north">
             <div class="wateli-area-title-row">
               <h3 id="wateli-area-north" data-i18n="region_north">北部</h3>
-              <span>North Taiwan</span>
+              <span data-i18n="w2b_v3_region_north_en">North Taiwan</span>
             </div>
 
             <div class="wateli-city-group">
@@ -112,7 +111,7 @@
           <section class="wateli-area-section" data-region="central" aria-labelledby="wateli-area-central">
             <div class="wateli-area-title-row">
               <h3 id="wateli-area-central" data-i18n="region_central">中部</h3>
-              <span>Central Taiwan</span>
+              <span data-i18n="w2b_v3_region_central_en">Central Taiwan</span>
             </div>
 
             <div class="wateli-city-group">
@@ -166,7 +165,7 @@
           <section class="wateli-area-section" data-region="south" aria-labelledby="wateli-area-south">
             <div class="wateli-area-title-row">
               <h3 id="wateli-area-south" data-i18n="region_south">南部</h3>
-              <span>South Taiwan</span>
+              <span data-i18n="w2b_v3_region_south_en">South Taiwan</span>
             </div>
 
             <div class="wateli-city-group">

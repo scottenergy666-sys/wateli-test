@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n-head="products_meta_title">WATELI | Products</title>
-  <meta name="description" content="Browse WATELI battery series by shape and fit." data-i18n-attr="content:products_meta_description" />
+  <title data-i18n-head="products_meta_title">WATELI｜產品總覽</title>
+  <meta name="description" content="依外型與配置瀏覽 WATELI 電池系列。" data-i18n-attr="content:products_meta_description" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;800&display=swap"></noscript>
+  <script>
+    document.documentElement.dataset.langSwitching = '1';
+  </script>
   <link rel="stylesheet" href="assets/css/core/tokens.css" />
   <link rel="stylesheet" href="assets/css/core/base.css" />
   <link rel="stylesheet" href="assets/css/core/layout.css" />
@@ -17,6 +20,9 @@
   <link rel="stylesheet" href="assets/css/components/sections.css" />
   <link rel="stylesheet" href="assets/css/components/cta-system.css" />
   <link rel="stylesheet" href="assets/css/pages/products.css" />
+  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-block-1024.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-slim-1024.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-split-1024.webp" type="image/webp" />
   <style>
     .page-template--products .products-page {
       padding: calc(var(--header-h) + 8px) 0 72px !important;
@@ -54,50 +60,50 @@
 
     <section class="products-overview">
       <div class="container">
-        <h1 class="products-overview__title" data-i18n="products_entry_heading">Select Suitable Type</h1>
+        <h1 class="products-overview__title" data-i18n="products_entry_heading">選擇適用類型</h1>
         <div class="products-grid">
           <a class="panel type-card" href="products-block.html">
             <div class="card-image">
-              <img src="assets/images/products/entry/entry-block.png" alt="" data-i18n-attr="alt:products_card_block_image_alt" loading="lazy" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-block-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_block_image_alt" loading="eager" decoding="async" fetchpriority="high">
             </div>
             <div class="card-content">
-              <div class="type-card__title" data-i18n="products_entry_block_title">Block</div>
+              <div class="type-card__title" data-i18n="products_entry_block_title">方塊型</div>
             </div>
           </a>
 
           <a class="panel type-card" href="products-slim.html">
             <div class="card-image">
-              <img src="assets/images/products/entry/entry-slim.png" alt="" data-i18n-attr="alt:products_card_slim_image_alt" loading="lazy" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-slim-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_slim_image_alt" loading="eager" decoding="async">
             </div>
             <div class="card-content">
-              <div class="type-card__title" data-i18n="products_entry_slim_title">Slim</div>
+              <div class="type-card__title" data-i18n="products_entry_slim_title">單體型</div>
             </div>
           </a>
 
           <a class="panel type-card" href="products-split.html">
             <div class="card-image">
-              <img src="assets/images/products/entry/entry-split.png" alt="" data-i18n-attr="alt:products_card_split_image_alt" loading="lazy" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-split-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_split_image_alt" loading="eager" decoding="async">
             </div>
             <div class="card-content">
-              <div class="type-card__title" data-i18n="products_entry_split_title">Split</div>
+              <div class="type-card__title" data-i18n="products_entry_split_title">三片式</div>
             </div>
           </a>
 
           <a class="panel type-card" href="products-stick.html">
             <div class="card-image">
-              <img src="assets/images/products/entry/entry-stick.png" alt="" data-i18n-attr="alt:products_card_stick_image_alt" loading="lazy" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-stick-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_stick_image_alt" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
-              <div class="type-card__title" data-i18n="products_entry_stick_title">Stick</div>
+              <div class="type-card__title" data-i18n="products_entry_stick_title">細長型</div>
             </div>
           </a>
 
           <a class="panel type-card" href="products-twin.html">
             <div class="card-image">
-              <img src="assets/images/products/entry/entry-twin.png" alt="" data-i18n-attr="alt:products_card_twin_image_alt" loading="lazy" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-twin-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_twin_image_alt" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
-              <div class="type-card__title" data-i18n="products_entry_twin_title">Twin</div>
+              <div class="type-card__title" data-i18n="products_entry_twin_title">雙胞胎</div>
             </div>
           </a>
         </div>

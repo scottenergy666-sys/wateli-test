@@ -20,7 +20,7 @@
 <body class="page-template page-template--dealer" data-page="dealer">
   <div id="site-header"></div>
 
-  <main class="dealer-page">
+  <main class="dealer-page dealer-page--r9">
     <section class="dealer-hero section">
       <div class="container dealer-hero__inner">
         <div class="dealer-hero__copy">
@@ -47,40 +47,7 @@
       </div>
     </section>
 
-    <section class="dealer-system section">
-      <div class="container">
-        <div class="section-head dealer-section-head dealer-section-head--center">
-          <div class="eyebrow" data-i18n="dealer_system_eyebrow">SYSTEM</div>
-          <h2 data-i18n="dealer_system_title">WATELI SYSTEM</h2>
-          <p class="page-copy" data-i18n="dealer_system_intro">以專業通路為核心，建立從產品、搭配到銷售的完整體系。</p>
-        </div>
-
-        <div class="dealer-system__grid">
-          <article class="dealer-system__item panel">
-            <h3 data-i18n="dealer_system_item_1_title">市場驗證</h3>
-            <p data-i18n="dealer_system_item_1_desc">12 年品牌經驗</p>
-          </article>
-          <article class="dealer-system__item panel">
-            <h3 data-i18n="dealer_system_item_2_title">安全認證</h3>
-            <p data-i18n="dealer_system_item_2_desc">BSMI 認證標準</p>
-          </article>
-          <article class="dealer-system__item panel">
-            <h3 data-i18n="dealer_system_item_3_title">SKU 系統</h3>
-            <p data-i18n="dealer_system_item_3_desc">穩定供應與清楚分類</p>
-          </article>
-          <article class="dealer-system__item panel">
-            <h3 data-i18n="dealer_system_item_4_title">專業搭配</h3>
-            <p data-i18n="dealer_system_item_4_desc">由專門店提供建議</p>
-          </article>
-        </div>
-
-        <p class="dealer-system__note" data-i18n="dealer_system_note">只透過專門店銷售，確保每一項產品被正確使用。</p>
-      </div>
-    </section>
-
-    
-
-    <section class="dealer-why section">
+<section class="dealer-why section">
       <div class="container dealer-why__inner">
         <div class="dealer-why__copy">
           <div class="eyebrow" data-i18n="dealer_why_eyebrow">WHY SPECIALTY STORES</div>
@@ -125,56 +92,5 @@
   <script defer src="assets/js/core/site-layout.js"></script>
   <script defer src="assets/js/core/i18n.js"></script>
   <script defer src="assets/js/core/mobile-menu.js"></script>
-
-<!-- Dealer Access v2 -->
-
-
-<!-- Dealer Request v2 -->
-
-
-
-<script>
-const CURRENT_VOLTAGE = "11.1";
-
-function initSkuV2(page){
-  const variants = page.items.filter(v => String(v.voltage) === CURRENT_VOLTAGE);
-
-  const selector = document.getElementById("wateli-sku-v2-capacity-options");
-  const selectorWrap = document.querySelector(".wateli-sku-v2__selector");
-
-  if(!variants || variants.length===0) return;
-
-  if(variants.length < 2){
-    if(selectorWrap) selectorWrap.style.display = "none";
-  } else {
-    if(selectorWrap) selectorWrap.style.display = "";
-    selector.innerHTML = "";
-    variants.forEach(v=>{
-      const btn = document.createElement("button");
-      btn.textContent = v.capacity;
-      btn.onclick = ()=>selectSKU(v.sku_id, variants);
-      selector.appendChild(btn);
-    });
-  }
-
-  selectSKU(variants[0].sku_id, variants);
-}
-
-function selectSKU(sku_id, variants){
-  const v = variants.find(x=>x.sku_id===sku_id);
-  if(!v) return;
-
-  document.getElementById("wateli-sku-v2-hero-title").textContent = sku_id;
-  document.getElementById("wateli-sku-v2-spec-capacity").textContent = v.capacity;
-  document.getElementById("wateli-sku-v2-spec-voltage").textContent = v.voltage;
-}
-
-window.addEventListener("DOMContentLoaded", function(){
-  if(window.page){
-    initSkuV2(window.page);
-  }
-});
-</script>
-
 </body>
 </html>
