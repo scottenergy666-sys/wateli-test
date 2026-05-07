@@ -421,12 +421,13 @@
     display: grid;
     grid-template-columns: none;
     grid-auto-flow: column;
-    grid-auto-columns: min(78vw, 320px);
-    gap: 18px;
+    grid-auto-columns: min(84vw, 340px);
+    gap: 14px;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0 20px 6px;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
     scrollbar-width: none;
@@ -439,6 +440,7 @@
 
   .page-template--home-v2 .home-product-series__card {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     width: 100%;
   }
 
