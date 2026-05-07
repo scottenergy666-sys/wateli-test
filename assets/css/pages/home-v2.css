@@ -517,3 +517,34 @@
     line-height: 1.55;
   }
 }
+
+/* R22M: Mobile Product Series Title Rhythm
+   Scope: homepage mobile Product Series heading/subtitle only.
+   Goal: title behaves as navigation, not HERO; images remain the focus.
+   Does not change product entry images, mobile swipe grid, HERO, W2B, or desktop layout.
+*/
+@media (max-width: 640px) {
+  .page-template--home-v2 .home-product-series {
+    padding-top: 36px;
+  }
+
+  .page-template--home-v2 .home-product-series__header {
+    margin-bottom: 16px;
+  }
+
+  .page-template--home-v2 .home-product-series__title {
+    max-width: none;
+    font-size: clamp(26px, 7.2vw, 30px);
+    line-height: 1.16;
+    letter-spacing: -0.025em;
+    text-shadow: none;
+  }
+
+  .page-template--home-v2 .home-product-series__lead {
+    max-width: 18em;
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 1.45;
+    color: rgba(214, 221, 229, 0.68);
+  }
+}
