@@ -787,7 +787,7 @@
   padding-inline: 2px;
   overscroll-behavior-x: contain;
   overscroll-behavior-y: auto;
-  touch-action: pan-x;
+  touch-action: auto;
   contain: layout paint;
 }
 
@@ -4572,7 +4572,7 @@ html[data-lang-switching="0"] body.page-template--products main.products-page {
     scroll-snap-type: x proximity !important;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
-    touch-action: pan-x !important;
+    touch-action: auto !important;
     scrollbar-width: none;
   }
 
@@ -4666,5 +4666,56 @@ html[data-lang-switching="0"] body.page-template--products main.products-page {
 
   html body.page-template--product-series .series-section .series-groups > .series-group .series-group__head {
     margin-bottom: 10px !important;
+  }
+}
+
+
+/* ===== WATELI R22I / PDI mobile clean display logic =====
+   Base: R22H accepted 1200x900 / 4:3 image canvas.
+   Purpose: remove runtime/per-capacity image compensation and avoid vertical scroll lock on mobile rails.
+   Scope: five product series pages only. */
+@media (max-width: 760px) {
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards {
+    scroll-snap-type: none !important;
+    touch-action: auto !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual img {
+    touch-action: auto !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:hover,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:active,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:focus,
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card.is-active {
+    min-height: 0 !important;
+    scroll-snap-align: none !important;
+    --sku-image-scale: 100% !important;
+    --sku-auto-scale: 1 !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual {
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  html body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
   }
 }
