@@ -4719,3 +4719,96 @@ html[data-lang-switching="0"] body.page-template--products main.products-page {
     transform: none !important;
   }
 }
+
+/* R22N products entry card layer flat
+   Scope: products.html entry cards only.
+   Purpose: let prepared 1:1 entry artwork become the primary visual while reducing the outer card/container layer.
+   Protected: no image file, preload, src/srcset/sizes/width/height changes. */
+.page-template--products .products-grid {
+  align-items: start;
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.page-template--products .products-grid > .type-card.panel,
+.page-template--products .products-grid > .type-card.panel:hover,
+.page-template--products .products-grid > .type-card.panel:active,
+.page-template--products .products-grid > .type-card.panel:focus {
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+
+.page-template--products .products-grid > .type-card > .card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.page-template--products .products-grid > .type-card > .card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.page-template--products .products-grid > .type-card > .card-content {
+  margin-top: 10px;
+  padding: 0 4px;
+  text-align: center;
+}
+
+.page-template--products .products-grid > .type-card .type-card__title {
+  color: rgba(232, 240, 255, 0.70);
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+}
+
+.page-template--products .products-grid > .type-card:hover > .card-image,
+.page-template--products .products-grid > .type-card:focus-visible > .card-image {
+  transform: translateY(-2px);
+  transition: transform 160ms ease;
+}
+
+@media (max-width: 680px) {
+  .page-template--products .products-grid {
+    gap: 16px;
+  }
+
+  .page-template--products .products-grid > .type-card > .card-content {
+    margin-top: 8px;
+  }
+
+  .page-template--products .products-grid > .type-card .type-card__title {
+    font-size: 14px;
+  }
+}
+
+/* R22N-B products entry card shadow residue fix
+   Scope: products.html five entry cards only.
+   Purpose: remove old .type-card.panel shadow/frame residue without touching images, preload, or entry markup. */
+.page-template--products .products-grid > .type-card.panel,
+.page-template--products .products-grid > .type-card.panel:hover,
+.page-template--products .products-grid > .type-card.panel:active,
+.page-template--products .products-grid > .type-card.panel:focus {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.page-template--products .products-grid > .type-card > .card-image {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+

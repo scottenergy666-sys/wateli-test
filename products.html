@@ -35,14 +35,6 @@
       flex-direction: column;
       gap: 18px;
     }
-    .page-template--products .products-overview__header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-      text-align: center;
-    }
     .page-template--products .products-overview__title {
       margin: 0;
       color: var(--text-on-dark);
@@ -51,14 +43,14 @@
       line-height: 1.15;
       text-align: center;
     }
-    .page-template--products .products-overview__subtitle {
-      margin: 0;
+    .page-template--products .products-overview__lead {
+      margin: -6px auto 0;
+      max-width: 34em;
       color: rgba(214, 221, 229, 0.68);
       font-size: 15px;
-      font-weight: 500;
       line-height: 1.55;
-      letter-spacing: 0.02em;
       text-align: center;
+      letter-spacing: 0.01em;
     }
     @media (max-width: 680px) {
       .page-template--products .products-page {
@@ -67,19 +59,17 @@
       .page-template--products .products-overview > .container {
         gap: 12px;
       }
-      .page-template--products .products-overview__header {
-        gap: 6px;
-        margin-bottom: 2px;
-      }
       .page-template--products .products-overview__title {
-        font-size: clamp(26px, 7.2vw, 30px);
-        line-height: 1.16;
+        font-size: clamp(26px, 7.4vw, 30px);
+        line-height: 1.14;
         letter-spacing: -0.025em;
       }
-      .page-template--products .products-overview__subtitle {
-        max-width: 18em;
+      .page-template--products .products-overview__lead {
+        margin-top: -4px;
+        max-width: 22em;
         font-size: 14px;
         line-height: 1.45;
+        color: rgba(214, 221, 229, 0.62);
       }
     }
   </style>
@@ -91,10 +81,8 @@
 
     <section class="products-overview">
       <div class="container">
-        <header class="products-overview__header">
-          <h1 class="products-overview__title" data-i18n="products_entry_heading">選擇電池款式</h1>
-          <p class="products-overview__subtitle" data-i18n="products_entry_subtitle">依外型與安裝空間選擇適合系列</p>
-        </header>
+        <h1 class="products-overview__title" data-i18n="products_entry_heading">選擇電池款式</h1>
+        <p class="products-overview__lead" data-i18n="home_v110_series_eyebrow">依外型與安裝空間選擇適合系列</p>
         <div class="products-grid">
           <a class="panel type-card" href="products-block.html">
             <div class="card-image">

@@ -518,14 +518,13 @@
   }
 }
 
-/* R22M: Mobile Product Series Title Rhythm
-   Scope: homepage mobile Product Series heading/subtitle only.
-   Goal: title behaves as navigation, not HERO; images remain the focus.
-   Does not change product entry images, mobile swipe grid, HERO, W2B, or desktop layout.
+/* R22M-D: Mobile Product Series title rhythm manifest-lock
+   Scope: mobile product-series title text only.
+   Protected: entry images, grid swipe, image sources, preload and SKU/PDI flows untouched.
 */
 @media (max-width: 640px) {
   .page-template--home-v2 .home-product-series {
-    padding-top: 36px;
+    padding-top: 42px;
   }
 
   .page-template--home-v2 .home-product-series__header {
@@ -534,17 +533,20 @@
 
   .page-template--home-v2 .home-product-series__title {
     max-width: none;
-    font-size: clamp(26px, 7.2vw, 30px);
-    line-height: 1.16;
+    font-size: clamp(26px, 7.4vw, 30px);
+    font-weight: 760;
+    line-height: 1.14;
     letter-spacing: -0.025em;
+    white-space: normal;
     text-shadow: none;
   }
 
   .page-template--home-v2 .home-product-series__lead {
-    max-width: 18em;
     margin-top: 7px;
+    max-width: 22em;
     font-size: 14px;
     line-height: 1.45;
-    color: rgba(214, 221, 229, 0.68);
+    letter-spacing: 0.01em;
+    color: rgba(214, 221, 229, 0.62);
   }
 }
