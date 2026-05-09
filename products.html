@@ -20,9 +20,9 @@
   <link rel="stylesheet" href="assets/css/components/sections.css" />
   <link rel="stylesheet" href="assets/css/components/cta-system.css" />
   <link rel="stylesheet" href="assets/css/pages/products.css" />
-  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-block-1024.webp" type="image/webp" />
-  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-slim-1024.webp" type="image/webp" />
-  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-split-1024.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-block-1024.webp" imagesrcset="assets/images/products/entry-optimized/entry-block-768.webp 768w, assets/images/products/entry-optimized/entry-block-1024.webp 1024w" imagesizes="(max-width: 768px) 86vw, 1024px" type="image/webp" />
+  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-slim-1024.webp" imagesrcset="assets/images/products/entry-optimized/entry-slim-768.webp 768w, assets/images/products/entry-optimized/entry-slim-1024.webp 1024w" imagesizes="(max-width: 768px) 86vw, 1024px" type="image/webp" />
+  <link rel="preload" as="image" href="assets/images/products/entry-optimized/entry-split-1024.webp" imagesrcset="assets/images/products/entry-optimized/entry-split-768.webp 768w, assets/images/products/entry-optimized/entry-split-1024.webp 1024w" imagesizes="(max-width: 768px) 86vw, 1024px" type="image/webp" />
   <style>
     .page-template--products .products-page {
       padding: calc(var(--header-h) + 8px) 0 72px !important;
@@ -43,12 +43,33 @@
       line-height: 1.15;
       text-align: center;
     }
+    .page-template--products .products-overview__lead {
+      margin: -6px auto 0;
+      max-width: 34em;
+      color: rgba(214, 221, 229, 0.68);
+      font-size: 15px;
+      line-height: 1.55;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
     @media (max-width: 680px) {
       .page-template--products .products-page {
         padding: calc(var(--header-h) + 4px) 0 56px !important;
       }
       .page-template--products .products-overview > .container {
-        gap: 14px;
+        gap: 12px;
+      }
+      .page-template--products .products-overview__title {
+        font-size: clamp(26px, 7.4vw, 30px);
+        line-height: 1.14;
+        letter-spacing: -0.025em;
+      }
+      .page-template--products .products-overview__lead {
+        margin-top: -4px;
+        max-width: 22em;
+        font-size: 14px;
+        line-height: 1.45;
+        color: rgba(214, 221, 229, 0.62);
       }
     }
   </style>
@@ -60,11 +81,12 @@
 
     <section class="products-overview">
       <div class="container">
-        <h1 class="products-overview__title" data-i18n="products_entry_heading">選擇適用類型</h1>
+        <h1 class="products-overview__title" data-i18n="products_entry_heading">選擇電池款式</h1>
+        <p class="products-overview__lead" data-i18n="home_v110_series_eyebrow">依外型與安裝空間選擇適合系列</p>
         <div class="products-grid">
           <a class="panel type-card" href="products-block.html">
             <div class="card-image">
-              <img src="assets/images/products/entry-optimized/entry-block-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_block_image_alt" loading="eager" decoding="async" fetchpriority="high">
+              <img src="assets/images/products/entry-optimized/entry-block-1024.webp" srcset="assets/images/products/entry-optimized/entry-block-768.webp 768w, assets/images/products/entry-optimized/entry-block-1024.webp 1024w" sizes="(max-width: 768px) 86vw, 1024px" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_block_image_alt" loading="eager" decoding="async" fetchpriority="high">
             </div>
             <div class="card-content">
               <div class="type-card__title" data-i18n="products_entry_block_title">方塊型</div>
@@ -73,7 +95,7 @@
 
           <a class="panel type-card" href="products-slim.html">
             <div class="card-image">
-              <img src="assets/images/products/entry-optimized/entry-slim-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_slim_image_alt" loading="eager" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-slim-1024.webp" srcset="assets/images/products/entry-optimized/entry-slim-768.webp 768w, assets/images/products/entry-optimized/entry-slim-1024.webp 1024w" sizes="(max-width: 768px) 86vw, 1024px" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_slim_image_alt" loading="eager" decoding="async">
             </div>
             <div class="card-content">
               <div class="type-card__title" data-i18n="products_entry_slim_title">單體型</div>
@@ -82,7 +104,7 @@
 
           <a class="panel type-card" href="products-split.html">
             <div class="card-image">
-              <img src="assets/images/products/entry-optimized/entry-split-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_split_image_alt" loading="eager" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-split-1024.webp" srcset="assets/images/products/entry-optimized/entry-split-768.webp 768w, assets/images/products/entry-optimized/entry-split-1024.webp 1024w" sizes="(max-width: 768px) 86vw, 1024px" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_split_image_alt" loading="eager" decoding="async">
             </div>
             <div class="card-content">
               <div class="type-card__title" data-i18n="products_entry_split_title">三片式</div>
@@ -91,7 +113,7 @@
 
           <a class="panel type-card" href="products-stick.html">
             <div class="card-image">
-              <img src="assets/images/products/entry-optimized/entry-stick-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_stick_image_alt" loading="lazy" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-stick-1024.webp" srcset="assets/images/products/entry-optimized/entry-stick-768.webp 768w, assets/images/products/entry-optimized/entry-stick-1024.webp 1024w" sizes="(max-width: 768px) 86vw, 1024px" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_stick_image_alt" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
               <div class="type-card__title" data-i18n="products_entry_stick_title">細長型</div>
@@ -100,7 +122,7 @@
 
           <a class="panel type-card" href="products-twin.html">
             <div class="card-image">
-              <img src="assets/images/products/entry-optimized/entry-twin-1024.webp" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_twin_image_alt" loading="lazy" decoding="async">
+              <img src="assets/images/products/entry-optimized/entry-twin-1024.webp" srcset="assets/images/products/entry-optimized/entry-twin-768.webp 768w, assets/images/products/entry-optimized/entry-twin-1024.webp 1024w" sizes="(max-width: 768px) 86vw, 1024px" width="1024" height="1024" alt="" data-i18n-attr="alt:products_card_twin_image_alt" loading="lazy" decoding="async">
             </div>
             <div class="card-content">
               <div class="type-card__title" data-i18n="products_entry_twin_title">雙胞胎</div>

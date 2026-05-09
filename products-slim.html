@@ -708,6 +708,62 @@
     }
 
 </style>
+
+<style id="wateli-r22i-pdi-mobile-clean-display">
+/* WATELI R22I: PDI mobile clean display logic.
+   Image baseline is R22H 1200x900 / 4:3 canvas.
+   No per-capacity or per-image scale compensation. */
+@media (max-width: 760px) {
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards {
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: none !important;
+    touch-action: auto !important;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: auto;
+  }
+
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card,
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual,
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual img {
+    touch-action: auto !important;
+  }
+
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card,
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:hover,
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:active,
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card:focus,
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card.is-active {
+    min-height: 0 !important;
+    scroll-snap-align: none !important;
+    --sku-image-scale: 100% !important;
+    --sku-auto-scale: 1 !important;
+  }
+
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual {
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3 !important;
+    padding: 0 !important;
+    margin: 0 0 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+
+  body.page-template--product-series .series-section .series-groups > .series-group .series-group__cards .sku-card__visual img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+  }
+}
+</style>
 </head>
 <body class="page-template page-template--products page-template--product-series" data-page="products">
 <div id="site-header"></div>
@@ -756,17 +812,17 @@
 <h3 data-i18n="common_voltage_74">7.4V</h3>
 </div>
 <div class="series-group__cards" data-rail-track="">
-<article class="sku-card" data-capacity-visual="small" data-key-id="slim_74_950" data-target="product-v2-74.html" data-voltage="7.4">
+<article class="sku-card" data-key-id="slim_74_950" data-target="product-v2-74.html" data-voltage="7.4">
 <div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_950/hero.jpg"/></div>
 <div class="sku-card__sku">SL-74-950</div>
 <div class="sku-card__capacity">950mAh</div>
 </article>
-<article class="sku-card" data-capacity-visual="medium" data-key-id="slim_74_1000" data-target="product-v2-74.html" data-voltage="7.4">
+<article class="sku-card" data-key-id="slim_74_1000" data-target="product-v2-74.html" data-voltage="7.4">
 <div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_1000/hero.jpg"/></div>
 <div class="sku-card__sku">SL-74-1000</div>
 <div class="sku-card__capacity">1000mAh</div>
 </article>
-<article class="sku-card" data-capacity-visual="large" data-key-id="slim_74_1200" data-target="product-v2-74.html" data-voltage="7.4">
+<article class="sku-card" data-key-id="slim_74_1200" data-target="product-v2-74.html" data-voltage="7.4">
 <div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_1200/hero.jpg"/></div>
 <div class="sku-card__sku">SL-74-1200</div>
 <div class="sku-card__capacity">1200mAh</div>
@@ -778,22 +834,22 @@
 <h3 data-i18n="common_voltage_111">11.1V</h3>
 </div>
 <div class="series-group__cards" data-rail-track="">
-<article class="sku-card" data-capacity-visual="small" data-key-id="slim_111_780" data-target="product-v2.html" data-voltage="11.1">
+<article class="sku-card" data-key-id="slim_111_780" data-target="product-v2.html" data-voltage="11.1">
 <div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_780/hero.jpg"/></div>
 <div class="sku-card__sku">SL-111-780</div>
 <div class="sku-card__capacity">780mAh</div>
 </article>
-<article class="sku-card" data-capacity-visual="small" data-key-id="slim_111_950" data-target="product-v2.html" data-voltage="11.1">
+<article class="sku-card" data-key-id="slim_111_950" data-target="product-v2.html" data-voltage="11.1">
 <div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_950/hero.jpg"/></div>
 <div class="sku-card__sku">SL-111-950</div>
 <div class="sku-card__capacity">950mAh</div>
 </article>
-<article class="sku-card" data-capacity-visual="medium" data-key-id="slim_111_1000" data-target="product-v2.html" data-voltage="11.1">
+<article class="sku-card" data-key-id="slim_111_1000" data-target="product-v2.html" data-voltage="11.1">
 <div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_1000/hero.jpg"/></div>
 <div class="sku-card__sku">SL-111-1000</div>
 <div class="sku-card__capacity">1000mAh</div>
 </article>
-<article class="sku-card" data-capacity-visual="large" data-key-id="slim_111_1200" data-target="product-v2.html" data-voltage="11.1">
+<article class="sku-card" data-key-id="slim_111_1200" data-target="product-v2.html" data-voltage="11.1">
 <div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_1200/hero.jpg"/></div>
 <div class="sku-card__sku">SL-111-1200</div>
 <div class="sku-card__capacity">1200mAh</div>

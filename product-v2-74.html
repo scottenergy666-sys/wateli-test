@@ -1283,6 +1283,16 @@
         return 'products.html';
       }
 
+      function getSkuMobileBackLabel() {
+        return getLang() === 'zh' ? '返回產品選擇' : 'Back to Products';
+      }
+
+      function updateSkuMobileBackControlLabel() {
+        const button = document.querySelector('.wateli-sku-v2__mobile-close');
+        if (!button) return;
+        button.textContent = getSkuMobileBackLabel();
+      }
+
       function prepareSkuMobileBackControl() {
         const root = document.querySelector('.wateli-sku-v2 .container');
         if (!root || document.querySelector('.wateli-sku-v2__mobile-close')) return;
@@ -1290,13 +1300,14 @@
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'wateli-sku-v2__mobile-close';
-        button.textContent = getLang() === 'zh' ? '返回產品選擇' : 'Back to Products';
+        button.setAttribute('data-wateli-sku-mobile-back', '1');
         button.addEventListener('click', () => {
           const target = getSkuReturnTarget();
           window.location.href = target;
         });
 
         root.insertBefore(button, root.firstElementChild);
+        updateSkuMobileBackControlLabel();
       }
 
       prepareSkuMobileBackControl();
@@ -2366,6 +2377,7 @@
         const current = state.variants.find((variant) => variant.sku_id === state.activeSkuId) || state.variants[0];
         if (!current) return;
         renderStaticContent(getCopy());
+        updateSkuMobileBackControlLabel();
         renderLead(state.product?.lead?.[getLang()] || '');
         renderProductContent(state.product);
         selectSKU(current.sku_id, state.variants, state.specMap);
@@ -2381,7 +2393,10 @@
       document.addEventListener('click', (event) => {
         const btn = event.target.closest('[data-lang-btn]');
         if (!btn) return;
-        setTimeout(render, 10);
+        setTimeout(() => {
+          updateSkuMobileBackControlLabel();
+          render();
+        }, 10);
       });
 
       window.selectSKU = (sku_id) => selectSKU(sku_id, state.variants, state.specMap);

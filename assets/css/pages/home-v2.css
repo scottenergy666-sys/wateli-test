@@ -421,12 +421,13 @@
     display: grid;
     grid-template-columns: none;
     grid-auto-flow: column;
-    grid-auto-columns: min(78vw, 320px);
-    gap: 18px;
+    grid-auto-columns: min(84vw, 340px);
+    gap: 14px;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0 20px 6px;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
     scrollbar-width: none;
@@ -439,6 +440,7 @@
 
   .page-template--home-v2 .home-product-series__card {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     width: 100%;
   }
 
@@ -513,5 +515,38 @@
     margin-top: 12px;
     font-size: 14px;
     line-height: 1.55;
+  }
+}
+
+/* R22M-D: Mobile Product Series title rhythm manifest-lock
+   Scope: mobile product-series title text only.
+   Protected: entry images, grid swipe, image sources, preload and SKU/PDI flows untouched.
+*/
+@media (max-width: 640px) {
+  .page-template--home-v2 .home-product-series {
+    padding-top: 42px;
+  }
+
+  .page-template--home-v2 .home-product-series__header {
+    margin-bottom: 16px;
+  }
+
+  .page-template--home-v2 .home-product-series__title {
+    max-width: none;
+    font-size: clamp(26px, 7.4vw, 30px);
+    font-weight: 760;
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+    white-space: normal;
+    text-shadow: none;
+  }
+
+  .page-template--home-v2 .home-product-series__lead {
+    margin-top: 7px;
+    max-width: 22em;
+    font-size: 14px;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    color: rgba(214, 221, 229, 0.62);
   }
 }

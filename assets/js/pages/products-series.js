@@ -344,33 +344,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const applyAutoImageScale = (card) => {
-    const visual = card.querySelector('.sku-card__visual');
-    const image = visual ? visual.querySelector('img') : null;
-    if (!visual || !image) return;
-
-    const visualRect = visual.getBoundingClientRect();
-    const visualWidth = visualRect.width || visual.clientWidth || visual.offsetWidth || 0;
-    const visualHeight = visualRect.height || visual.clientHeight || visual.offsetHeight || 0;
-    const naturalWidth = image.naturalWidth || 0;
-    const naturalHeight = image.naturalHeight || 0;
-
-    if (!visualWidth || !visualHeight || !naturalWidth || !naturalHeight) {
-      card.style.removeProperty('--sku-auto-scale');
-      return;
-    }
-
-    const containScale = Math.min(visualWidth / naturalWidth, visualHeight / naturalHeight);
-    const renderedWidth = naturalWidth * containScale;
-    const renderedHeight = naturalHeight * containScale;
-
-    const targetWidth = visualWidth * 0.9;
-    const targetHeight = visualHeight * 0.88;
-
-    const widthFactor = renderedWidth ? targetWidth / renderedWidth : 1;
-    const heightFactor = renderedHeight ? targetHeight / renderedHeight : 1;
-    const autoScale = Math.max(0.88, Math.min(1.22, Math.max(widthFactor, heightFactor, 1)));
-
-    card.style.setProperty('--sku-auto-scale', autoScale.toFixed(3));
+    // R22I: image size is controlled by the normalized 1200x900 source canvas.
+    // Do not calculate per-card runtime scale compensation.
+    if (card) card.style.removeProperty('--sku-auto-scale');
   };
 
   const queueAutoImageScale = (() => {
