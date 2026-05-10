@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 WATELI-SITE-v2.0.0-R24A-STICK-APPLICATION-FIT-MODULE-ONLY
 Base: WATELI-SITE-v2.0.0-R23Z-TWIN-APPLICATION-FIT-MODULE-ONLY.zip
 Change: Adds STICK full-width application fit brand module below product cards, matching accepted BLOCK / SLIM / SPLIT / TWIN module structure.
 No image/JS/products.css/SKU changes.
+=======
+<<<<<<< HEAD
+WATELI-SITE-v2.0.0-R22O-C-ENTRY-CARD-FINAL-FIVE-IMAGE-REPLACE-ONLY
+=======
+WATELI-SITE-v2.0.0-R22O-B-ENTRY-CARD-FINAL-ARTWORK-REPLACE-ONLY
+>>>>>>> 45591e9be9cf61480f9fd4e96abd5a854e53eaf5
+>>>>>>> e537b8a6bdb474d126b5ad87c8d630d602fb8f3f
