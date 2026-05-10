@@ -1,0 +1,56 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23N-BLOCK-SERIES-CARD-CLEAN-ASSET-ROUTE-ONLY.zip",
+  "base": "WATELI-SITE-v2.0.0-R23K-SLIM-SERIES-CARD-ALL-SKU-PICTURE-ROUTE-ONLY.zip",
+  "status": "test package for user validation",
+  "method": "Do not use R23L assets. Add user-provided clean 1200x1200 BLOCK series-card PNG assets and route only desktop/tablet products-block cards to them. Mobile fallback remains hero.jpg.",
+  "new_assets": [
+    {
+      "path": "assets/images/products/block/block_74_1300/series-card.png",
+      "source_upload": "wateli_74v_1300_unified_1200x1200(1).png",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "8bae7f4a7a970818895f8c61643e4fd9fa5e2704ddc1fbf12470f47cadd9e4bf"
+    },
+    {
+      "path": "assets/images/products/block/block_111_1300/series-card.png",
+      "source_upload": "wateli_11v_1300_unified_1200x1200(1).png",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "a35fc6c53bf933c6d8a4125da3e473dd8d674e04446028221d2a5029d2547667"
+    }
+  ],
+  "desktop_tablet_routes": [
+    "assets/images/products/block/block_74_1300/series-card.png",
+    "assets/images/products/block/block_111_1300/series-card.png"
+  ],
+  "mobile_fallback_routes": [
+    "assets/images/products/block/block_74_1300/hero.jpg",
+    "assets/images/products/block/block_111_1300/hero.jpg"
+  ],
+  "protected_file_byte_check": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products-slim.html": true,
+    "products-split.html": true,
+    "products-stick.html": true,
+    "products-twin.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "missing_refs_in_products_block": [],
+  "actual_changed_files": [
+    "assets/images/products/block/block_111_1300/series-card.png",
+    "assets/images/products/block/block_74_1300/series-card.png",
+    "products-block.html",
+    "version.txt",
+    "reports/R23N-BLOCK-SERIES-CARD-CLEAN-ASSET-ROUTE-ONLY-REPORT.txt",
+    "reports/R23N-BLOCK-SERIES-CARD-CLEAN-ASSET-ROUTE-ONLY.json"
+  ]
+}

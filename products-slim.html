@@ -707,6 +707,129 @@
       color: rgba(255,255,255,.94) !important;
     }
 
+
+    /* R23X — SLIM application fit module.
+       Scope: products-slim.html only. Matches accepted BLOCK module placement; no products.css / JS / image changes. */
+    body.page-template--product-series .wateli-slim-fit {
+      margin-top: clamp(18px, 2.8vw, 32px);
+      padding: clamp(18px, 2.2vw, 28px);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(225, 36, 44, .14) 0%, rgba(225, 36, 44, 0) 38%),
+        linear-gradient(135deg, rgba(12, 18, 30, .92) 0%, rgba(8, 13, 22, .96) 100%);
+      box-shadow: 0 18px 42px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.05);
+      overflow: hidden;
+    }
+
+    body.page-template--product-series .wateli-slim-fit__head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    body.page-template--product-series .wateli-slim-fit__head .eyebrow {
+      margin: 0;
+      color: rgba(244, 71, 78, .92);
+      letter-spacing: .16em;
+    }
+
+    body.page-template--product-series .wateli-slim-fit__head h3 {
+      margin: 0;
+      color: rgba(245, 248, 255, .94);
+      font-size: clamp(22px, 2vw, 30px);
+      line-height: 1.08;
+      letter-spacing: .02em;
+      text-align: right;
+    }
+
+    body.page-template--product-series .wateli-slim-fit__lead {
+      max-width: 860px;
+      margin: 0;
+      color: rgba(226, 234, 246, .78);
+      font-size: clamp(14px, 1.15vw, 16px);
+      line-height: 1.72;
+    }
+
+    body.page-template--product-series .wateli-slim-fit__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    body.page-template--product-series .wateli-slim-fit__chips span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,.045);
+      color: rgba(245,248,255,.86);
+      font-size: 13px;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    body.page-template--product-series .wateli-slim-fit__models {
+      margin: 16px 0 0;
+      color: rgba(177, 190, 210, .82);
+      font-size: 13px;
+      line-height: 1.65;
+      letter-spacing: .035em;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 760px) {
+      body.page-template--product-series .wateli-slim-fit {
+        margin-top: 16px;
+        padding: 18px 16px;
+        border-radius: 20px;
+      }
+
+      body.page-template--product-series .wateli-slim-fit__head {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      body.page-template--product-series .wateli-slim-fit__head h3 {
+        margin-top: 5px;
+        text-align: left;
+        font-size: 22px;
+      }
+
+      body.page-template--product-series .wateli-slim-fit__lead {
+        font-size: 14px;
+        line-height: 1.68;
+      }
+
+      body.page-template--product-series .wateli-slim-fit__chips {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      body.page-template--product-series .wateli-slim-fit__chips span {
+        width: 100%;
+        min-height: 34px;
+        padding: 7px 8px;
+        font-size: 12px;
+        white-space: normal;
+        text-align: center;
+      }
+
+      body.page-template--product-series .wateli-slim-fit__models {
+        margin-top: 13px;
+        font-size: 12px;
+        line-height: 1.72;
+      }
+    }
+
 </style>
 
 <style id="wateli-r22i-pdi-mobile-clean-display">
@@ -796,7 +919,6 @@
 
 <div class="eyebrow">WATELI PDI</div>
 <h2 data-i18n="type_page_slim_title">單體</h2>
-<p data-i18n="type_page_slim_lead">適用於常見單體配置與一般內部路徑</p>
 </div>
 <input checked class="wateli-voltage-tabs__input wateli-voltage-tabs__input--74" id="wateli-voltage-slim-74" name="wateli-voltage-slim" type="radio"/>
 <input class="wateli-voltage-tabs__input wateli-voltage-tabs__input--111" id="wateli-voltage-slim-111" name="wateli-voltage-slim" type="radio"/>
@@ -813,17 +935,17 @@
 </div>
 <div class="series-group__cards" data-rail-track="">
 <article class="sku-card" data-key-id="slim_74_950" data-target="product-v2-74.html" data-voltage="7.4">
-<div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_950/hero.jpg"/></div>
+<div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/slim/slim_74_950/series-card.jpg"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_950/hero.jpg"/></picture></div>
 <div class="sku-card__sku">SL-74-950</div>
 <div class="sku-card__capacity">950mAh</div>
 </article>
 <article class="sku-card" data-key-id="slim_74_1000" data-target="product-v2-74.html" data-voltage="7.4">
-<div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_1000/hero.jpg"/></div>
+<div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/slim/slim_74_1000/series-card.jpg"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_1000/hero.jpg"/></picture></div>
 <div class="sku-card__sku">SL-74-1000</div>
 <div class="sku-card__capacity">1000mAh</div>
 </article>
 <article class="sku-card" data-key-id="slim_74_1200" data-target="product-v2-74.html" data-voltage="7.4">
-<div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_1200/hero.jpg"/></div>
+<div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/slim/slim_74_1200/series-card.jpg"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_74_1200/hero.jpg"/></picture></div>
 <div class="sku-card__sku">SL-74-1200</div>
 <div class="sku-card__capacity">1200mAh</div>
 </article>
@@ -835,28 +957,42 @@
 </div>
 <div class="series-group__cards" data-rail-track="">
 <article class="sku-card" data-key-id="slim_111_780" data-target="product-v2.html" data-voltage="11.1">
-<div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_780/hero.jpg"/></div>
+<div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/slim/slim_111_780/series-card.jpg"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_780/hero.jpg"/></picture></div>
 <div class="sku-card__sku">SL-111-780</div>
 <div class="sku-card__capacity">780mAh</div>
 </article>
 <article class="sku-card" data-key-id="slim_111_950" data-target="product-v2.html" data-voltage="11.1">
-<div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_950/hero.jpg"/></div>
+<div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/slim/slim_111_950/series-card.jpg"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_950/hero.jpg"/></picture></div>
 <div class="sku-card__sku">SL-111-950</div>
 <div class="sku-card__capacity">950mAh</div>
 </article>
 <article class="sku-card" data-key-id="slim_111_1000" data-target="product-v2.html" data-voltage="11.1">
-<div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_1000/hero.jpg"/></div>
+<div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/slim/slim_111_1000/series-card.jpg"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_1000/hero.jpg"/></picture></div>
 <div class="sku-card__sku">SL-111-1000</div>
 <div class="sku-card__capacity">1000mAh</div>
 </article>
 <article class="sku-card" data-key-id="slim_111_1200" data-target="product-v2.html" data-voltage="11.1">
-<div class="sku-card__visual"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_1200/hero.jpg"/></div>
+<div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/slim/slim_111_1200/series-card.jpg"><img alt="" decoding="async" loading="lazy" src="assets/images/products/slim/slim_111_1200/hero.jpg"/></picture></div>
 <div class="sku-card__sku">SL-111-1200</div>
 <div class="sku-card__capacity">1200mAh</div>
 </article>
 </div>
 </section>
 </div>
+<section class="wateli-slim-fit panel" aria-labelledby="wateli-slim-fit-title">
+<div class="wateli-slim-fit__head">
+<div class="eyebrow" data-i18n="type_page_slim_fit_eyebrow">APPLICATION FIT</div>
+<h3 id="wateli-slim-fit-title" data-i18n="type_page_slim_fit_title">適用配置</h3>
+</div>
+<p class="wateli-slim-fit__lead" data-i18n="type_page_slim_fit_lead">針對固定托、前護木空間、緊湊型機匣與外接電池袋／盒等配置，SLIM 系列提供更適合狹長空間與多元安裝路徑的穩定動力選擇。</p>
+<div class="wateli-slim-fit__chips" aria-label="SLIM fitment types">
+<span data-i18n="type_page_slim_fit_chip_fixed">固定托電槍</span>
+<span data-i18n="type_page_slim_fit_chip_handguard">前護木空間</span>
+<span data-i18n="type_page_slim_fit_chip_compact">緊湊型機匣</span>
+<span data-i18n="type_page_slim_fit_chip_pouch">外接電池袋／盒</span>
+</div>
+<p class="wateli-slim-fit__models" data-i18n="type_page_slim_fit_models">M16 / M14 / M1A1 / M82A1 / AK47 / G3 / MP5 A4 / SCAR / FS51 / ARP9 / G&G UMG / M4A1 / M249 / KRISS VECTOR AEG</p>
+</section>
 </div>
 </div>
 </div>

@@ -1,0 +1,53 @@
+WATELI R23O SPLIT SERIES-CARD PICTURE ROUTE ONLY
+
+Base:
+WATELI-SITE-v2.0.0-R23N-BLOCK-SERIES-CARD-CLEAN-ASSET-ROUTE-ONLY.zip
+
+Reference only source:
+WATELI-SITE-v2.0.0-R22R.zip
+
+Purpose:
+Extend the validated series-card routing method to SPLIT only. Desktop/tablet products-split cards use series-card.jpg, while mobile fallback remains hero.jpg.
+
+Important:
+- Base is R23N, not R22R.
+- R22R is used only as a reference/source for the SPLIT 1200x1200 series-card assets.
+- No CSS changes.
+- No JS changes.
+- No changes to SKU/detail/mobile hero flow.
+
+SPLIT SKUs routed:
+- split_74_1000
+- split_111_950
+- split_111_1000
+- split_111_1200
+
+Protected file byte checks:
+- assets/css/pages/products.css: UNCHANGED
+- assets/js/pages/products-series.js: UNCHANGED
+- product-v2.html: UNCHANGED
+- product-v2-74.html: UNCHANGED
+- products-slim.html: UNCHANGED
+- products-block.html: UNCHANGED
+- products-stick.html: UNCHANGED
+- products-twin.html: UNCHANGED
+- products.html: UNCHANGED
+- data/sku.json: UNCHANGED
+- data/key-id-manifest.json: UNCHANGED
+- data/key-id-manifest.csv: UNCHANGED
+
+Missing refs in products-split.html:
+0
+
+Changed files:
+- assets/images/products/split/split_111_1000/series-card.jpg
+- assets/images/products/split/split_111_1200/series-card.jpg
+- assets/images/products/split/split_111_950/series-card.jpg
+- assets/images/products/split/split_74_1000/series-card.jpg
+- products-split.html
+- reports/R23O-SPLIT-SERIES-CARD-PICTURE-ROUTE-ONLY-REPORT.txt
+- reports/R23O-SPLIT-SERIES-CARD-PICTURE-ROUTE-ONLY.json
+- version.txt
+
+Final answer:
+This package applies the confirmed route method to SPLIT only. Desktop/tablet SPLIT series cards use 1200x1200 series-card.jpg assets, and mobile/SKU/detail contexts remain on 1200x900 hero.jpg.

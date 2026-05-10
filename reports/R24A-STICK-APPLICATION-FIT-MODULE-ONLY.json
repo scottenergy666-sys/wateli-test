@@ -1,0 +1,46 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R24A-STICK-APPLICATION-FIT-MODULE-ONLY.zip",
+  "base": "WATELI-SITE-v2.0.0-R23Z-TWIN-APPLICATION-FIT-MODULE-ONLY.zip",
+  "status": "test package for user validation",
+  "goal": "Add STICK application/fitment context as a full-width brand module below product card groups, matching accepted module placement.",
+  "changed_files": [
+    "assets/data/i18n/translations.js",
+    "products-stick.html",
+    "reports/R24A-STICK-APPLICATION-FIT-MODULE-ONLY-REPORT.txt",
+    "reports/R24A-STICK-APPLICATION-FIT-MODULE-ONLY.json",
+    "version.txt"
+  ],
+  "i18n_keys_added": [
+    "type_page_stick_fit_eyebrow",
+    "type_page_stick_fit_title",
+    "type_page_stick_fit_lead",
+    "type_page_stick_fit_chip_ak",
+    "type_page_stick_fit_chip_topcover",
+    "type_page_stick_fit_chip_slimpath",
+    "type_page_stick_fit_chip_stick",
+    "type_page_stick_fit_models"
+  ],
+  "protected_file_byte_check": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "assets/js/core/i18n.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products.html": true,
+    "products-block.html": true,
+    "products-slim.html": true,
+    "products-split.html": true,
+    "products-twin.html": true,
+    "index.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "missing_refs": [],
+  "notes": [
+    "Old STICK title lead paragraph removed from products-stick.html so it does not push the product card area down.",
+    "New full-width module is inserted after the STICK product card groups.",
+    "CSS is scoped inside products-stick.html only; assets/css/pages/products.css is unchanged.",
+    "No images, JS, SKU data, or other series pages changed."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23W-BLOCK-APPLICATION-FIT-MODULE-TEST.zip",
+  "base": "WATELI-SITE-v2.0.0-R23Q-B-RECOVERY-TWIN-ON-SPLIT-STICK-LOCKED.zip",
+  "status": "TEST VERSION for user validation",
+  "goal": "Place BLOCK application/fitment context as a full-width brand module below the product card groups, without putting text inside cards or under the title.",
+  "changed_files": [
+    "assets/data/i18n/translations.js",
+    "products-block.html",
+    "reports/R23W-BLOCK-APPLICATION-FIT-MODULE-TEST-REPORT.txt",
+    "reports/R23W-BLOCK-APPLICATION-FIT-MODULE-TEST.json",
+    "version.txt"
+  ],
+  "i18n_keys_added": [
+    "type_page_block_fit_eyebrow",
+    "type_page_block_fit_title",
+    "type_page_block_fit_lead",
+    "type_page_block_fit_chip_fixed",
+    "type_page_block_fit_chip_handguard",
+    "type_page_block_fit_chip_crane",
+    "type_page_block_fit_chip_pouch",
+    "type_page_block_fit_models"
+  ],
+  "protected_file_byte_check": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "assets/js/core/i18n.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products.html": true,
+    "products-slim.html": true,
+    "products-split.html": true,
+    "products-stick.html": true,
+    "products-twin.html": true,
+    "index.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "missing_refs": [],
+  "notes": [
+    "Old BLOCK title lead paragraph removed from products-block.html so it does not push the product card area down.",
+    "New full-width module is inserted after the product card groups.",
+    "CSS is scoped inside products-block.html only; assets/css/pages/products.css is unchanged.",
+    "No images, JS, SKU data, or other series pages changed."
+  ]
+}

@@ -715,6 +715,129 @@
       color: rgba(255,255,255,.94) !important;
     }
 
+
+    /* R23Z — TWIN application fit module.
+       Scope: products-twin.html only. Matches accepted BLOCK / SLIM / SPLIT module placement; no products.css / JS / image changes. */
+    body.page-template--product-series .wateli-twin-fit {
+      margin-top: clamp(18px, 2.8vw, 32px);
+      padding: clamp(18px, 2.2vw, 28px);
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(225, 36, 44, .14) 0%, rgba(225, 36, 44, 0) 38%),
+        linear-gradient(135deg, rgba(12, 18, 30, .92) 0%, rgba(8, 13, 22, .96) 100%);
+      box-shadow: 0 18px 42px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.05);
+      overflow: hidden;
+    }
+
+    body.page-template--product-series .wateli-twin-fit__head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    body.page-template--product-series .wateli-twin-fit__head .eyebrow {
+      margin: 0;
+      color: rgba(244, 71, 78, .92);
+      letter-spacing: .16em;
+    }
+
+    body.page-template--product-series .wateli-twin-fit__head h3 {
+      margin: 0;
+      color: rgba(245, 248, 255, .94);
+      font-size: clamp(22px, 2vw, 30px);
+      line-height: 1.08;
+      letter-spacing: .02em;
+      text-align: right;
+    }
+
+    body.page-template--product-series .wateli-twin-fit__lead {
+      max-width: 860px;
+      margin: 0;
+      color: rgba(226, 234, 246, .78);
+      font-size: clamp(14px, 1.15vw, 16px);
+      line-height: 1.72;
+    }
+
+    body.page-template--product-series .wateli-twin-fit__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    body.page-template--product-series .wateli-twin-fit__chips span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      background: rgba(255,255,255,.045);
+      color: rgba(245,248,255,.86);
+      font-size: 13px;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    body.page-template--product-series .wateli-twin-fit__models {
+      margin: 16px 0 0;
+      color: rgba(177, 190, 210, .82);
+      font-size: 13px;
+      line-height: 1.65;
+      letter-spacing: .035em;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 760px) {
+      body.page-template--product-series .wateli-twin-fit {
+        margin-top: 16px;
+        padding: 18px 16px;
+        border-radius: 20px;
+      }
+
+      body.page-template--product-series .wateli-twin-fit__head {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      body.page-template--product-series .wateli-twin-fit__head h3 {
+        margin-top: 5px;
+        text-align: left;
+        font-size: 22px;
+      }
+
+      body.page-template--product-series .wateli-twin-fit__lead {
+        font-size: 14px;
+        line-height: 1.68;
+      }
+
+      body.page-template--product-series .wateli-twin-fit__chips {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      body.page-template--product-series .wateli-twin-fit__chips span {
+        width: 100%;
+        min-height: 34px;
+        padding: 7px 8px;
+        font-size: 12px;
+        white-space: normal;
+        text-align: center;
+      }
+
+      body.page-template--product-series .wateli-twin-fit__models {
+        margin-top: 13px;
+        font-size: 12px;
+        line-height: 1.72;
+      }
+    }
+
 </style>
 
 <style id="wateli-r22i-pdi-mobile-clean-display">
@@ -804,7 +927,6 @@
 
 <div class="eyebrow">WATELI PDI</div>
 <h2 data-i18n="type_page_twin_title">雙胞胎</h2>
-<p data-i18n="type_page_twin_lead">適合高容量與穩定輸出需求</p>
 </div>
 <input checked class="wateli-voltage-tabs__input wateli-voltage-tabs__input--74" id="wateli-voltage-twin-74" name="wateli-voltage-twin" type="radio"/>
 <input class="wateli-voltage-tabs__input wateli-voltage-tabs__input--111" id="wateli-voltage-twin-111" name="wateli-voltage-twin" type="radio"/>
@@ -813,7 +935,21 @@
 <label class="wateli-voltage-tabs__label wateli-voltage-tabs__label--74" data-i18n="common_voltage_74" for="wateli-voltage-twin-74">7.4V</label>
 <label class="wateli-voltage-tabs__label wateli-voltage-tabs__label--111" data-i18n="common_voltage_111" for="wateli-voltage-twin-111">11.1V</label>
 </div>
-<div class="series-groups series-groups--single"><section class="series-group panel series-group--primary"><div class="series-group__head"><div class="eyebrow" data-i18n="type_page_twin_catalog_eyebrow"></div><h3 data-i18n="common_voltage_74">7.4V</h3></div><div class="series-group__cards" data-rail-track=""><article class="sku-card" data-key-id="twin_74_2000" data-series="twin" data-target="product-v2-74.html" data-voltage="7.4"><div class="sku-card__visual"><img alt="TW-74-2000" data-direct-hero="true" decoding="async" loading="lazy" src="assets/images/products/twin/twin_74_2000/hero.jpg"/></div><div class="sku-card__voltage">7.4V</div><div class="sku-card__sku">TW-74-2000</div><div class="sku-card__capacity">2000mAh</div></article></div></section><section class="series-group panel"><div class="series-group__head"><h3 data-i18n="common_voltage_111">11.1V</h3></div><div class="series-group__cards" data-rail-track=""><article class="sku-card" data-key-id="twin_111_2000" data-series="twin" data-target="product-v2.html" data-voltage="11.1"><div class="sku-card__visual"><img alt="TW-111-2000" data-direct-hero="true" decoding="async" loading="lazy" src="assets/images/products/twin/twin_111_2000/hero.jpg"/></div><div class="sku-card__voltage">11.1V</div><div class="sku-card__sku">TW-111-2000</div><div class="sku-card__capacity">2000mAh</div></article></div></section></div>
+<div class="series-groups series-groups--single"><section class="series-group panel series-group--primary"><div class="series-group__head"><div class="eyebrow" data-i18n="type_page_twin_catalog_eyebrow"></div><h3 data-i18n="common_voltage_74">7.4V</h3></div><div class="series-group__cards" data-rail-track=""><article class="sku-card" data-key-id="twin_74_2000" data-series="twin" data-target="product-v2-74.html" data-voltage="7.4"><div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/twin/twin_74_2000/series-card.jpg"/><img alt="TW-74-2000" data-direct-hero="true" decoding="async" loading="lazy" src="assets/images/products/twin/twin_74_2000/hero.jpg"/></picture></div><div class="sku-card__sku">TW-74-2000</div><div class="sku-card__capacity">2000mAh</div></article></div></section><section class="series-group panel"><div class="series-group__head"><h3 data-i18n="common_voltage_111">11.1V</h3></div><div class="series-group__cards" data-rail-track=""><article class="sku-card" data-key-id="twin_111_2000" data-series="twin" data-target="product-v2.html" data-voltage="11.1"><div class="sku-card__visual"><picture><source media="(min-width: 769px)" srcset="assets/images/products/twin/twin_111_2000/series-card.jpg"/><img alt="TW-111-2000" data-direct-hero="true" decoding="async" loading="lazy" src="assets/images/products/twin/twin_111_2000/hero.jpg"/></picture></div><div class="sku-card__sku">TW-111-2000</div><div class="sku-card__capacity">2000mAh</div></article></div></section></div>
+<section class="wateli-twin-fit panel" aria-labelledby="wateli-twin-fit-title">
+<div class="wateli-twin-fit__head">
+<div class="eyebrow" data-i18n="type_page_twin_fit_eyebrow">APPLICATION FIT</div>
+<h3 id="wateli-twin-fit-title" data-i18n="type_page_twin_fit_title">適用配置</h3>
+</div>
+<p class="wateli-twin-fit__lead" data-i18n="type_page_twin_fit_lead">針對固定托、前護木空間、海豹托與外接電池袋等配置，TWIN 系列提供兼顧高容量需求與穩定輸出的雙節動力選擇。</p>
+<div class="wateli-twin-fit__chips" aria-label="TWIN fitment types">
+<span data-i18n="type_page_twin_fit_chip_fixed">固定托電槍</span>
+<span data-i18n="type_page_twin_fit_chip_handguard">前護木空間</span>
+<span data-i18n="type_page_twin_fit_chip_crane">海豹托</span>
+<span data-i18n="type_page_twin_fit_chip_pouch">外接電池袋</span>
+</div>
+<p class="wateli-twin-fit__models" data-i18n="type_page_twin_fit_models">M16 / M14 / M1A1 / M82A1 / AK47 / G3 / MP5 A4 / SCAR / FS51 / M4A1 / M249</p>
+</section>
 </div>
 </div>
 </div>

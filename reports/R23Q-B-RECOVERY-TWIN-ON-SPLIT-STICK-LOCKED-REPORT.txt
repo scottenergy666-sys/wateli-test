@@ -1,0 +1,36 @@
+WATELI R23Q-B RECOVERY TWIN ON SPLIT/STICK LOCKED
+
+Base:
+WATELI-SITE-v2.0.0-R23P-STICK-SERIES-CARD-FIRST-SKU-PICTURE-ROUTE-ONLY.zip
+
+Problem fixed:
+The previous R23Q was built from R23N, so SPLIT and STICK route work was lost.
+
+This package:
+- Preserves SLIM route from R23K.
+- Preserves accepted BLOCK route from R23N.
+- Preserves SPLIT route from R23O.
+- Preserves STICK first-SKU route from R23P.
+- Adds TWIN route on top.
+
+TWIN desktop/tablet route:
+- assets/images/products/twin/twin_74_2000/series-card.jpg
+- assets/images/products/twin/twin_111_2000/series-card.jpg
+
+TWIN mobile fallback remains:
+- assets/images/products/twin/twin_74_2000/hero.jpg
+- assets/images/products/twin/twin_111_2000/hero.jpg
+
+Missing refs:
+0
+
+Changed files vs R23P:
+- assets/images/products/twin/twin_111_2000/series-card.jpg
+- assets/images/products/twin/twin_74_2000/series-card.jpg
+- products-twin.html
+- reports/R23Q-B-RECOVERY-TWIN-ON-SPLIT-STICK-LOCKED-REPORT.txt
+- reports/R23Q-B-RECOVERY-TWIN-ON-SPLIT-STICK-LOCKED.json
+- version.txt
+
+Final answer:
+R23Q was wrong-base. R23Q-B corrects it by starting from R23P and adding only TWIN, so SPLIT and STICK do not revert.

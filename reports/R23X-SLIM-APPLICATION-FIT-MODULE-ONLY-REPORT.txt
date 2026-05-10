@@ -1,0 +1,55 @@
+WATELI R23X SLIM APPLICATION FIT MODULE ONLY
+
+Base:
+WATELI-SITE-v2.0.0-R23W-BLOCK-APPLICATION-FIT-MODULE-TEST.zip
+
+Purpose:
+Create the SLIM application/fitment context as a full-width brand module below the SLIM product cards, following the accepted BLOCK module structure.
+
+Changed files:
+- assets/data/i18n/translations.js
+- products-slim.html
+- reports/R23X-SLIM-APPLICATION-FIT-MODULE-ONLY-REPORT.txt
+- reports/R23X-SLIM-APPLICATION-FIT-MODULE-ONLY.json
+- version.txt
+
+Layout:
+- SLIM title area: old lead paragraph removed.
+- Product cards: unchanged.
+- New APPLICATION FIT / 適用配置 module: inserted below the card groups.
+- Desktop: full-width brand card with title, lead sentence, chips, model list.
+- Mobile: full-width vertical card with 2x2 chips and wrapping model list.
+
+i18n:
+- Uses existing data-i18n system.
+- i18n.js unchanged.
+- translations.js only adds new SLIM fitment keys.
+
+Protected file byte checks:
+- assets/css/pages/products.css: UNCHANGED
+- assets/js/pages/products-series.js: UNCHANGED
+- assets/js/core/i18n.js: UNCHANGED
+- product-v2.html: UNCHANGED
+- product-v2-74.html: UNCHANGED
+- products.html: UNCHANGED
+- products-block.html: UNCHANGED
+- products-split.html: UNCHANGED
+- products-stick.html: UNCHANGED
+- products-twin.html: UNCHANGED
+- index.html: UNCHANGED
+- data/sku.json: UNCHANGED
+- data/key-id-manifest.json: UNCHANGED
+- data/key-id-manifest.csv: UNCHANGED
+
+Missing refs:
+0
+
+Not changed:
+- products.css
+- products-series.js
+- i18n.js
+- product-v2.html
+- product-v2-74.html
+- other series pages
+- images
+- SKU data

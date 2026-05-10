@@ -1,0 +1,39 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23P-STICK-SERIES-CARD-FIRST-SKU-PICTURE-ROUTE-ONLY.zip",
+  "base": "WATELI-SITE-v2.0.0-R23O-SPLIT-SERIES-CARD-PICTURE-ROUTE-ONLY.zip",
+  "reference_only_source": "WATELI-SITE-v2.0.0-R22R.zip",
+  "routed_sku": "stick_111_1000",
+  "unchanged_stick_sku": "stick_74_1000",
+  "new_asset": {
+    "path": "assets/images/products/stick/stick_111_1000/series-card.jpg",
+    "size": [
+      1200,
+      1200
+    ],
+    "sha256": "445fcfe5cf41df3c78837ec90c497e998555eeff91ef5c11ddcb33a13d7c9c08"
+  },
+  "desktop_tablet_route": "assets/images/products/stick/stick_111_1000/series-card.jpg",
+  "mobile_fallback_route": "assets/images/products/stick/stick_111_1000/hero.jpg",
+  "protected_file_byte_check": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products-slim.html": true,
+    "products-block.html": true,
+    "products-split.html": true,
+    "products.html": true,
+    "products-twin.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "missing_refs_in_products_stick": [],
+  "actual_changed_files": [
+    "assets/images/products/stick/stick_111_1000/series-card.jpg",
+    "products-stick.html",
+    "reports/R23P-STICK-SERIES-CARD-FIRST-SKU-PICTURE-ROUTE-ONLY-REPORT.txt",
+    "reports/R23P-STICK-SERIES-CARD-FIRST-SKU-PICTURE-ROUTE-ONLY.json",
+    "version.txt"
+  ]
+}

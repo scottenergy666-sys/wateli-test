@@ -1,0 +1,82 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23O-SPLIT-SERIES-CARD-PICTURE-ROUTE-ONLY.zip",
+  "base": "WATELI-SITE-v2.0.0-R23N-BLOCK-SERIES-CARD-CLEAN-ASSET-ROUTE-ONLY.zip",
+  "reference_only_source": "WATELI-SITE-v2.0.0-R22R.zip",
+  "split_skus": [
+    "split_74_1000",
+    "split_111_950",
+    "split_111_1000",
+    "split_111_1200"
+  ],
+  "new_assets": [
+    {
+      "path": "assets/images/products/split/split_74_1000/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "5765b2fd46afcadb50240ef195e0fb7561ba6eb3a6fa6737f250b5ee9eed0396"
+    },
+    {
+      "path": "assets/images/products/split/split_111_950/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "6947bee52abed3ebd4497a0dd791ccf94879a58a30cb4f36ac38f6267c1223ad"
+    },
+    {
+      "path": "assets/images/products/split/split_111_1000/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "58c2995eeb448d82404cba5ee0f5502acd7aac8c17639c6c71c6d1dcb04879e0"
+    },
+    {
+      "path": "assets/images/products/split/split_111_1200/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "1d813336165a131c928bf78f03deada2e2738038cb68a5a0b5a56da7b32ffcba"
+    }
+  ],
+  "desktop_tablet_routes": [
+    "assets/images/products/split/split_74_1000/series-card.jpg",
+    "assets/images/products/split/split_111_950/series-card.jpg",
+    "assets/images/products/split/split_111_1000/series-card.jpg",
+    "assets/images/products/split/split_111_1200/series-card.jpg"
+  ],
+  "mobile_fallback_routes": [
+    "assets/images/products/split/split_74_1000/hero.jpg",
+    "assets/images/products/split/split_111_950/hero.jpg",
+    "assets/images/products/split/split_111_1000/hero.jpg",
+    "assets/images/products/split/split_111_1200/hero.jpg"
+  ],
+  "protected_file_byte_check": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products-slim.html": true,
+    "products-block.html": true,
+    "products-stick.html": true,
+    "products-twin.html": true,
+    "products.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "missing_refs_in_products_split": [],
+  "actual_changed_files": [
+    "assets/images/products/split/split_111_1000/series-card.jpg",
+    "assets/images/products/split/split_111_1200/series-card.jpg",
+    "assets/images/products/split/split_111_950/series-card.jpg",
+    "assets/images/products/split/split_74_1000/series-card.jpg",
+    "products-split.html",
+    "reports/R23O-SPLIT-SERIES-CARD-PICTURE-ROUTE-ONLY-REPORT.txt",
+    "reports/R23O-SPLIT-SERIES-CARD-PICTURE-ROUTE-ONLY.json",
+    "version.txt"
+  ]
+}

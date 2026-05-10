@@ -1,0 +1,43 @@
+WATELI R23P STICK SERIES-CARD FIRST SKU PICTURE ROUTE ONLY
+
+Base:
+WATELI-SITE-v2.0.0-R23O-SPLIT-SERIES-CARD-PICTURE-ROUTE-ONLY.zip
+
+Reference only source:
+WATELI-SITE-v2.0.0-R22R.zip
+
+Purpose:
+Apply the validated picture-route method to STICK in the smallest safe scope. Only stick_111_1000 is routed to series-card.jpg because that is the available 1200x1200 STICK series-card asset in the reference package. stick_74_1000 remains unchanged on hero.jpg.
+
+Routed SKU:
+- stick_111_1000
+
+Unchanged STICK SKU:
+- stick_74_1000
+
+Protected file byte checks:
+- assets/css/pages/products.css: UNCHANGED
+- assets/js/pages/products-series.js: UNCHANGED
+- product-v2.html: UNCHANGED
+- product-v2-74.html: UNCHANGED
+- products-slim.html: UNCHANGED
+- products-block.html: UNCHANGED
+- products-split.html: UNCHANGED
+- products.html: UNCHANGED
+- products-twin.html: UNCHANGED
+- data/sku.json: UNCHANGED
+- data/key-id-manifest.json: UNCHANGED
+- data/key-id-manifest.csv: UNCHANGED
+
+Missing refs in products-stick.html:
+0
+
+Changed files:
+- assets/images/products/stick/stick_111_1000/series-card.jpg
+- products-stick.html
+- reports/R23P-STICK-SERIES-CARD-FIRST-SKU-PICTURE-ROUTE-ONLY-REPORT.txt
+- reports/R23P-STICK-SERIES-CARD-FIRST-SKU-PICTURE-ROUTE-ONLY.json
+- version.txt
+
+Final answer:
+This is a first-SKU STICK route test only. Desktop/tablet products-stick card for stick_111_1000 uses the available 1200x1200 series-card.jpg. Mobile fallback remains hero.jpg. stick_74_1000 is intentionally left unchanged because no corresponding reference series-card asset was available.

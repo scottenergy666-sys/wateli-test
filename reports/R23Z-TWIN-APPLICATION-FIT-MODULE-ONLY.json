@@ -1,0 +1,46 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23Z-TWIN-APPLICATION-FIT-MODULE-ONLY.zip",
+  "base": "WATELI-SITE-v2.0.0-R23Y-SPLIT-APPLICATION-FIT-MODULE-ONLY.zip",
+  "status": "test package for user validation",
+  "goal": "Add TWIN application/fitment context as a full-width brand module below product card groups, matching accepted BLOCK / SLIM / SPLIT placement.",
+  "changed_files": [
+    "assets/data/i18n/translations.js",
+    "products-twin.html",
+    "reports/R23Z-TWIN-APPLICATION-FIT-MODULE-ONLY-REPORT.txt",
+    "reports/R23Z-TWIN-APPLICATION-FIT-MODULE-ONLY.json",
+    "version.txt"
+  ],
+  "i18n_keys_added": [
+    "type_page_twin_fit_eyebrow",
+    "type_page_twin_fit_title",
+    "type_page_twin_fit_lead",
+    "type_page_twin_fit_chip_fixed",
+    "type_page_twin_fit_chip_handguard",
+    "type_page_twin_fit_chip_crane",
+    "type_page_twin_fit_chip_pouch",
+    "type_page_twin_fit_models"
+  ],
+  "protected_file_byte_check": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "assets/js/core/i18n.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products.html": true,
+    "products-block.html": true,
+    "products-slim.html": true,
+    "products-split.html": true,
+    "products-stick.html": true,
+    "index.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "missing_refs": [],
+  "notes": [
+    "Old TWIN title lead paragraph removed from products-twin.html so it does not push the product card area down.",
+    "New full-width module is inserted after the TWIN product card groups.",
+    "CSS is scoped inside products-twin.html only; assets/css/pages/products.css is unchanged.",
+    "No images, JS, SKU data, or other series pages changed."
+  ]
+}

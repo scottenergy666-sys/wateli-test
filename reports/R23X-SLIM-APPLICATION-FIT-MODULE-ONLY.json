@@ -1,0 +1,46 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23X-SLIM-APPLICATION-FIT-MODULE-ONLY.zip",
+  "base": "WATELI-SITE-v2.0.0-R23W-BLOCK-APPLICATION-FIT-MODULE-TEST.zip",
+  "status": "test package for user validation",
+  "goal": "Add SLIM application/fitment context as a full-width brand module below the product card groups, matching accepted BLOCK module placement.",
+  "changed_files": [
+    "assets/data/i18n/translations.js",
+    "products-slim.html",
+    "reports/R23X-SLIM-APPLICATION-FIT-MODULE-ONLY-REPORT.txt",
+    "reports/R23X-SLIM-APPLICATION-FIT-MODULE-ONLY.json",
+    "version.txt"
+  ],
+  "i18n_keys_added": [
+    "type_page_slim_fit_eyebrow",
+    "type_page_slim_fit_title",
+    "type_page_slim_fit_lead",
+    "type_page_slim_fit_chip_fixed",
+    "type_page_slim_fit_chip_handguard",
+    "type_page_slim_fit_chip_compact",
+    "type_page_slim_fit_chip_pouch",
+    "type_page_slim_fit_models"
+  ],
+  "protected_file_byte_check": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "assets/js/core/i18n.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products.html": true,
+    "products-block.html": true,
+    "products-split.html": true,
+    "products-stick.html": true,
+    "products-twin.html": true,
+    "index.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "missing_refs": [],
+  "notes": [
+    "Old SLIM title lead paragraph removed from products-slim.html so it does not push the product card area down.",
+    "New full-width module is inserted after the SLIM product card groups.",
+    "CSS is scoped inside products-slim.html only; assets/css/pages/products.css is unchanged.",
+    "No images, JS, SKU data, or other series pages changed."
+  ]
+}

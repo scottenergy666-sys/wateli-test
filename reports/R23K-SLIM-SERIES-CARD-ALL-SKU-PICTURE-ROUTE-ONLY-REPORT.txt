@@ -1,0 +1,55 @@
+Package: WATELI-SITE-v2.0.0-R23K-SLIM-SERIES-CARD-ALL-SKU-PICTURE-ROUTE-ONLY
+Base: WATELI-SITE-v2.0.0-R23D-IMAGE-SPEC-CLEANUP-ONLY.zip
+Reference: WATELI-SITE-v2.0.0-R22R.zip (SLIM series-card assets only; not used as base; no R22R code copied)
+
+Changed files:
+- products-slim.html
+- assets/images/products/slim/slim_111_1000/series-card.jpg
+- assets/images/products/slim/slim_111_1200/series-card.jpg
+- assets/images/products/slim/slim_111_780/series-card.jpg
+- assets/images/products/slim/slim_111_950/series-card.jpg
+- assets/images/products/slim/slim_74_1000/series-card.jpg
+- assets/images/products/slim/slim_74_1200/series-card.jpg
+- assets/images/products/slim/slim_74_950/series-card.jpg
+- version.txt
+
+Added SLIM series-card assets:
+- assets/images/products/slim/slim_74_950/series-card.jpg size=1200x1200 sha256=48100c284fa1507601d2ca21faa720edf359153402e9f6724e0910d7fc390a28
+- assets/images/products/slim/slim_74_1000/series-card.jpg size=1200x1200 sha256=edd0a5c139ce6ab834071ba29a8b596f819e765e9082f5aa73700724d13e654b
+- assets/images/products/slim/slim_74_1200/series-card.jpg size=1200x1200 sha256=c8b646749c2f685c648b91aed9ff043aedb6c745dba84a729c1bc30d5d89c572
+- assets/images/products/slim/slim_111_780/series-card.jpg size=1200x1200 sha256=bedb50001d8978e7e1255bda5776534120156235f151d2ce2d43de7894d79f2e
+- assets/images/products/slim/slim_111_950/series-card.jpg size=1200x1200 sha256=5740975b49b6b35ca4fd5a040de2d48d3538d202f98152f01dc14f8d98fc7eae
+- assets/images/products/slim/slim_111_1000/series-card.jpg size=1200x1200 sha256=cbfc2d99ca5b0cefe7938342f4294a3aa95af71c0d1f14a64874d5cc5c5a8070
+- assets/images/products/slim/slim_111_1200/series-card.jpg size=1200x1200 sha256=97fa80682190a849e354dc1f2d23f57dd652f12a7a8eaa129728a03ed8882a2d
+
+products-slim.html routing:
+- slim_74_950: desktop/tablet -> assets/images/products/slim/slim_74_950/series-card.jpg; mobile fallback -> assets/images/products/slim/slim_74_950/hero.jpg
+- slim_74_1000: desktop/tablet -> assets/images/products/slim/slim_74_1000/series-card.jpg; mobile fallback -> assets/images/products/slim/slim_74_1000/hero.jpg
+- slim_74_1200: desktop/tablet -> assets/images/products/slim/slim_74_1200/series-card.jpg; mobile fallback -> assets/images/products/slim/slim_74_1200/hero.jpg
+- slim_111_780: desktop/tablet -> assets/images/products/slim/slim_111_780/series-card.jpg; mobile fallback -> assets/images/products/slim/slim_111_780/hero.jpg
+- slim_111_950: desktop/tablet -> assets/images/products/slim/slim_111_950/series-card.jpg; mobile fallback -> assets/images/products/slim/slim_111_950/hero.jpg
+- slim_111_1000: desktop/tablet -> assets/images/products/slim/slim_111_1000/series-card.jpg; mobile fallback -> assets/images/products/slim/slim_111_1000/hero.jpg
+- slim_111_1200: desktop/tablet -> assets/images/products/slim/slim_111_1200/series-card.jpg; mobile fallback -> assets/images/products/slim/slim_111_1200/hero.jpg
+
+Protected unchanged checks:
+- assets/css/pages/products.css: UNCHANGED
+- assets/js/pages/products-series.js: UNCHANGED
+- product-v2.html: UNCHANGED
+- product-v2-74.html: UNCHANGED
+- products.html: UNCHANGED
+- products-block.html: UNCHANGED
+- products-split.html: UNCHANGED
+- products-stick.html: UNCHANGED
+- products-twin.html: UNCHANGED
+- index.html: UNCHANGED
+- assets/js/core/i18n.js: UNCHANGED
+- assets/data/i18n/translations.js: UNCHANGED
+- data/sku.json: UNCHANGED
+
+Missing refs: 0
+
+Final answer:
+- SLIM series-card route has been expanded to all 7 SLIM SKUs only.
+- Desktop/tablet SLIM series cards now have series-card.jpg route.
+- Mobile/SKU/detail contexts continue using hero.jpg.
+- No CSS, JS, product-v2/product-v2-74, SKU data, or image-editing changes were made.

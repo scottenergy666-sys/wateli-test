@@ -1,0 +1,145 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23K-SLIM-SERIES-CARD-ALL-SKU-PICTURE-ROUTE-ONLY",
+  "base_package": "WATELI-SITE-v2.0.0-R23D-IMAGE-SPEC-CLEANUP-ONLY.zip",
+  "reference_package": "WATELI-SITE-v2.0.0-R22R.zip",
+  "mode": "SLIM all-SKU picture route only",
+  "changed_files": [
+    "products-slim.html",
+    "assets/images/products/slim/slim_111_1000/series-card.jpg",
+    "assets/images/products/slim/slim_111_1200/series-card.jpg",
+    "assets/images/products/slim/slim_111_780/series-card.jpg",
+    "assets/images/products/slim/slim_111_950/series-card.jpg",
+    "assets/images/products/slim/slim_74_1000/series-card.jpg",
+    "assets/images/products/slim/slim_74_1200/series-card.jpg",
+    "assets/images/products/slim/slim_74_950/series-card.jpg",
+    "version.txt"
+  ],
+  "copied_assets": [
+    {
+      "path": "assets/images/products/slim/slim_74_950/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "48100c284fa1507601d2ca21faa720edf359153402e9f6724e0910d7fc390a28",
+      "source": "R22R reference asset only"
+    },
+    {
+      "path": "assets/images/products/slim/slim_74_1000/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "edd0a5c139ce6ab834071ba29a8b596f819e765e9082f5aa73700724d13e654b",
+      "source": "R22R reference asset only"
+    },
+    {
+      "path": "assets/images/products/slim/slim_74_1200/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "c8b646749c2f685c648b91aed9ff043aedb6c745dba84a729c1bc30d5d89c572",
+      "source": "R22R reference asset only"
+    },
+    {
+      "path": "assets/images/products/slim/slim_111_780/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "bedb50001d8978e7e1255bda5776534120156235f151d2ce2d43de7894d79f2e",
+      "source": "R22R reference asset only"
+    },
+    {
+      "path": "assets/images/products/slim/slim_111_950/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "5740975b49b6b35ca4fd5a040de2d48d3538d202f98152f01dc14f8d98fc7eae",
+      "source": "R22R reference asset only"
+    },
+    {
+      "path": "assets/images/products/slim/slim_111_1000/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "cbfc2d99ca5b0cefe7938342f4294a3aa95af71c0d1f14a64874d5cc5c5a8070",
+      "source": "R22R reference asset only"
+    },
+    {
+      "path": "assets/images/products/slim/slim_111_1200/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "97fa80682190a849e354dc1f2d23f57dd652f12a7a8eaa129728a03ed8882a2d",
+      "source": "R22R reference asset only"
+    }
+  ],
+  "route_replacements": [
+    {
+      "key": "slim_74_950",
+      "desktop_tablet": "assets/images/products/slim/slim_74_950/series-card.jpg",
+      "mobile_fallback": "assets/images/products/slim/slim_74_950/hero.jpg"
+    },
+    {
+      "key": "slim_74_1000",
+      "desktop_tablet": "assets/images/products/slim/slim_74_1000/series-card.jpg",
+      "mobile_fallback": "assets/images/products/slim/slim_74_1000/hero.jpg"
+    },
+    {
+      "key": "slim_74_1200",
+      "desktop_tablet": "assets/images/products/slim/slim_74_1200/series-card.jpg",
+      "mobile_fallback": "assets/images/products/slim/slim_74_1200/hero.jpg"
+    },
+    {
+      "key": "slim_111_780",
+      "desktop_tablet": "assets/images/products/slim/slim_111_780/series-card.jpg",
+      "mobile_fallback": "assets/images/products/slim/slim_111_780/hero.jpg"
+    },
+    {
+      "key": "slim_111_950",
+      "desktop_tablet": "assets/images/products/slim/slim_111_950/series-card.jpg",
+      "mobile_fallback": "assets/images/products/slim/slim_111_950/hero.jpg"
+    },
+    {
+      "key": "slim_111_1000",
+      "desktop_tablet": "assets/images/products/slim/slim_111_1000/series-card.jpg",
+      "mobile_fallback": "assets/images/products/slim/slim_111_1000/hero.jpg"
+    },
+    {
+      "key": "slim_111_1200",
+      "desktop_tablet": "assets/images/products/slim/slim_111_1200/series-card.jpg",
+      "mobile_fallback": "assets/images/products/slim/slim_111_1200/hero.jpg"
+    }
+  ],
+  "protected_status": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products.html": true,
+    "products-block.html": true,
+    "products-split.html": true,
+    "products-stick.html": true,
+    "products-twin.html": true,
+    "index.html": true,
+    "assets/js/core/i18n.js": true,
+    "assets/data/i18n/translations.js": true,
+    "data/sku.json": true
+  },
+  "missing_refs": [],
+  "assertions": {
+    "products_css_unchanged": true,
+    "products_series_js_unchanged": true,
+    "product_v2_unchanged": true,
+    "product_v2_74_unchanged": true,
+    "other_series_pages_unchanged": true,
+    "sku_data_unchanged": true,
+    "no_missing_refs": true,
+    "all_series_card_1200x1200": true
+  }
+}

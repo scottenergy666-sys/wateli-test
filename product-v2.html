@@ -869,6 +869,60 @@
       }
     }
 
+
+    /* ===== WATELI R22W / SKU MOBILE THUMBNAIL ROW RHYTHM FIX =====
+       Scope: product-v2 / product-v2-74 mobile thumbnail row only.
+       Fix: keep HERO / DETAIL 1 / DETAIL 2 visible as three equal columns on mobile.
+       No image assets, SKU data, product paths, desktop layout, PDI, or viewer logic changes.
+    */
+    @media (max-width: 760px) {
+      .wateli-sku-v2__thumbs {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        scroll-snap-type: none !important;
+        overscroll-behavior-x: auto !important;
+        -webkit-overflow-scrolling: auto !important;
+      }
+
+      .wateli-sku-v2__thumb {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: initial !important;
+        min-height: 94px !important;
+        padding: 8px !important;
+        box-sizing: border-box !important;
+        scroll-snap-align: none !important;
+      }
+
+      .wateli-sku-v2__thumb img {
+        width: 100% !important;
+        height: 54px !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .wateli-sku-v2__thumb {
+        min-height: 86px !important;
+        padding: 6px !important;
+      }
+
+      .wateli-sku-v2__thumb img {
+        height: 46px !important;
+        margin-bottom: 5px !important;
+      }
+
+      .wateli-sku-v2__thumb-label {
+        font-size: 10px !important;
+        line-height: 1.15 !important;
+        letter-spacing: .045em !important;
+      }
+    }
+
   </style>
 </head>
 <body class="page-template page-template--sku-v2" data-page="products">

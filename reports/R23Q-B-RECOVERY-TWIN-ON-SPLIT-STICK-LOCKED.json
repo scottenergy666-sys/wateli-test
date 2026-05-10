@@ -1,0 +1,59 @@
+{
+  "package": "WATELI-SITE-v2.0.0-R23Q-B-RECOVERY-TWIN-ON-SPLIT-STICK-LOCKED.zip",
+  "base": "WATELI-SITE-v2.0.0-R23P-STICK-SERIES-CARD-FIRST-SKU-PICTURE-ROUTE-ONLY.zip",
+  "reason": "Fix wrong-base mistake in R23Q. Preserve split/stick while adding twin.",
+  "preserved_routes": {
+    "slim": "from R23K",
+    "block": "from R23N accepted",
+    "split": [
+      "split_74_1000",
+      "split_111_950",
+      "split_111_1000",
+      "split_111_1200"
+    ],
+    "stick": [
+      "stick_111_1000 first-SKU route test"
+    ]
+  },
+  "new_twin_assets": [
+    {
+      "path": "assets/images/products/twin/twin_74_2000/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "327dd5660e53402ca7ec2472405581128f2696799c533815617936791fc8e4b0"
+    },
+    {
+      "path": "assets/images/products/twin/twin_111_2000/series-card.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "sha256": "d4927af8d84288e86c3b1c52ba0bae72aff435dbfb0932baedfa81d98b55afe1"
+    }
+  ],
+  "missing_refs": [],
+  "protected_file_byte_check_vs_R23P": {
+    "assets/css/pages/products.css": true,
+    "assets/js/pages/products-series.js": true,
+    "product-v2.html": true,
+    "product-v2-74.html": true,
+    "products-slim.html": true,
+    "products-block.html": true,
+    "products-split.html": true,
+    "products-stick.html": true,
+    "products.html": true,
+    "data/sku.json": true,
+    "data/key-id-manifest.json": true,
+    "data/key-id-manifest.csv": true
+  },
+  "actual_changed_files_vs_R23P": [
+    "assets/images/products/twin/twin_111_2000/series-card.jpg",
+    "assets/images/products/twin/twin_74_2000/series-card.jpg",
+    "products-twin.html",
+    "reports/R23Q-B-RECOVERY-TWIN-ON-SPLIT-STICK-LOCKED-REPORT.txt",
+    "reports/R23Q-B-RECOVERY-TWIN-ON-SPLIT-STICK-LOCKED.json",
+    "version.txt"
+  ]
+}

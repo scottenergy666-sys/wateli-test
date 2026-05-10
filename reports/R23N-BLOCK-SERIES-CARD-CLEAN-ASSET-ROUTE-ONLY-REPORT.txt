@@ -1,0 +1,53 @@
+WATELI R23N BLOCK SERIES-CARD CLEAN ASSET ROUTE ONLY
+
+Base:
+WATELI-SITE-v2.0.0-R23K-SLIM-SERIES-CARD-ALL-SKU-PICTURE-ROUTE-ONLY.zip
+
+Purpose:
+Use the two user-provided clean 1200x1200 BLOCK images for desktop/tablet BLOCK series cards, without adopting R23L and without modifying CSS/JS/SKU/detail pages.
+
+Important:
+- R23L is not used as base and not adopted.
+- R23K remains the accepted route base.
+- This package extends the validated SLIM route method to BLOCK using newly provided BLOCK assets only.
+- No image processing/cropping/resizing was applied to the provided assets.
+- The provided PNG files were kept as PNG and referenced as series-card.png to avoid format conversion.
+
+Desktop/tablet route:
+- block_74_1300 card: assets/images/products/block/block_74_1300/series-card.png
+- block_111_1300 card: assets/images/products/block/block_111_1300/series-card.png
+
+Mobile fallback:
+- block_74_1300 card: assets/images/products/block/block_74_1300/hero.jpg
+- block_111_1300 card: assets/images/products/block/block_111_1300/hero.jpg
+
+New asset sizes:
+- assets/images/products/block/block_74_1300/series-card.png: (1200, 1200)
+- assets/images/products/block/block_111_1300/series-card.png: (1200, 1200)
+
+Protected file byte checks:
+- assets/css/pages/products.css: UNCHANGED
+- assets/js/pages/products-series.js: UNCHANGED
+- product-v2.html: UNCHANGED
+- product-v2-74.html: UNCHANGED
+- products-slim.html: UNCHANGED
+- products-split.html: UNCHANGED
+- products-stick.html: UNCHANGED
+- products-twin.html: UNCHANGED
+- data/sku.json: UNCHANGED
+- data/key-id-manifest.json: UNCHANGED
+- data/key-id-manifest.csv: UNCHANGED
+
+Missing refs in products-block.html:
+0
+
+Changed files:
+- assets/images/products/block/block_111_1300/series-card.png
+- assets/images/products/block/block_74_1300/series-card.png
+- products-block.html
+- version.txt
+- reports/R23N-BLOCK-SERIES-CARD-CLEAN-ASSET-ROUTE-ONLY-REPORT.txt
+- reports/R23N-BLOCK-SERIES-CARD-CLEAN-ASSET-ROUTE-ONLY.json
+
+Final answer:
+BLOCK series-card ghosting from R23L was an asset-quality problem. This package does not use R23L BLOCK series-card files. It uses the two new user-provided 1200x1200 assets and routes only desktop/tablet BLOCK series cards to them. Mobile/SKU/detail contexts remain on hero.jpg and are not changed.
