@@ -1559,6 +1559,18 @@
         return `${text}${unit}`;
       }
 
+      function getDimensionDisplay(current) {
+        if (current?.dimension_display !== undefined && current?.dimension_display !== null && current?.dimension_display !== '') {
+          return String(current.dimension_display);
+        }
+        if (current?.length !== undefined && current?.length !== null && current?.length !== '' &&
+          current?.width !== undefined && current?.width !== null && current?.width !== '' &&
+          current?.height !== undefined && current?.height !== null && current?.height !== '') {
+          return `${current.length} x ${current.width} x ${current.height} ${current.dimension_unit || 'cm'}`;
+        }
+        return '';
+      }
+
       function getExcelDrivenSpecRows(targetId, current) {
         if (current?.key_id !== 'twin_111_2000') return null;
 
@@ -1569,22 +1581,18 @@
           rows.push({ label, text: String(value) });
         };
 
+        const size = getDimensionDisplay(current);
+
         if (isGeneral) {
           pushRow(getSpecLabel('voltage'), formatSpecDisplayValue(current?.voltage, getSpecUnit('voltage') || 'V'));
           pushRow(getSpecLabel('capacity'), formatSpecDisplayValue(current?.capacity, getSpecUnit('capacity') || 'mAh'));
+          pushRow(getSpecLabel('dimension'), size);
           return rows;
         }
-
-        const size = current?.length !== undefined && current?.length !== null && current?.length !== '' &&
-          current?.width !== undefined && current?.width !== null && current?.width !== '' &&
-          current?.height !== undefined && current?.height !== null && current?.height !== ''
-            ? `${current.length} x ${current.width} x ${current.height} ${current.dimension_unit || 'cm'}`
-            : '';
 
         pushRow(getSpecLabel('battery_type'), current?.battery_type || '');
         pushRow(getSpecLabel('connector'), current?.connector || '');
         pushRow(getSpecLabel('discharge_rate'), current?.discharge_rate || '');
-        pushRow(getSpecLabel('dimension'), size);
         return rows;
       }
 
@@ -1607,14 +1615,10 @@
           return;
         }
 
-        const generalKeys = ['voltage', 'capacity'];
-        const batteryKeys = ['battery_type', 'connector', 'discharge_rate', 'dimension'];
+        const generalKeys = ['voltage', 'capacity', 'dimension'];
+        const batteryKeys = ['battery_type', 'connector', 'discharge_rate'];
         const allowedKeys = String(targetId || '').includes('general') ? generalKeys : batteryKeys;
-        const size = current?.length !== undefined && current?.length !== null && current?.length !== '' &&
-          current?.width !== undefined && current?.width !== null && current?.width !== '' &&
-          current?.height !== undefined && current?.height !== null && current?.height !== ''
-            ? `${current.length} x ${current.width} x ${current.height} ${current.dimension_unit || 'cm'}`
-            : '';
+        const size = getDimensionDisplay(current);
 
         const filteredSpecMap = (specMap || []).filter((item) => allowedKeys.includes(item.key));
         filteredSpecMap.forEach((item) => {
@@ -2126,16 +2130,13 @@
       "series": "twin",
       "voltage": 7.4,
       "capacity": 2000,
-      "hero_image": "./assets/images/products/twin/twin_74_2000/hero.jpg",
-      "sku_1_image": "./assets/images/products/twin/twin_74_2000/sku-1.png",
-      "sku_2_image": "./assets/images/products/twin/twin_74_2000/sku-2.png",
+      "hero_image": "./assets/images/products/twin/twin_74_2000/hero.webp",
+      "sku_1_image": "./assets/images/products/twin/twin_74_2000/sku-1.webp",
+      "sku_2_image": "./assets/images/products/twin/twin_74_2000/sku-2.webp",
       "battery_type": "Li-ion",
       "connector": "T Plug",
       "discharge_rate": "20C / 40C",
-      "length": 7.5,
-      "width": 11.8,
-      "height": 1.7,
-      "dimension_unit": "cm"
+      "dimension_display": "L 133 × W 22 mm"
     },
     {
       "sku_id": "slim_74_950",
@@ -2144,9 +2145,9 @@
       "series": "slim",
       "voltage": 7.4,
       "capacity": 950,
-      "hero_image": "./assets/images/products/slim/slim_74_950/hero.jpg",
-      "sku_1_image": "./assets/images/products/slim/slim_74_950/sku-1.png",
-      "sku_2_image": "./assets/images/products/slim/slim_74_950/sku-2.png",
+      "hero_image": "./assets/images/products/slim/slim_74_950/hero.webp",
+      "sku_1_image": "./assets/images/products/slim/slim_74_950/sku-1.webp",
+      "sku_2_image": "./assets/images/products/slim/slim_74_950/sku-2.webp",
       "series_key": "slim",
       "sku_code": "SL-74-950",
       "display_name_zh": "SLIM 鋰電池 7.4V 950mAh",
@@ -2154,10 +2155,7 @@
       "battery_type": "Li-ion",
       "connector": "T Plug",
       "discharge_rate": "20C / 40C",
-      "length": 10.0,
-      "width": 2.0,
-      "height": 1.5,
-      "dimension_unit": "cm"
+      "dimension_display": "L 101 × W 20 × T 12 mm"
     },
     {
       "sku_id": "slim_74_1000",
@@ -2166,9 +2164,9 @@
       "series": "slim",
       "voltage": 7.4,
       "capacity": 1000,
-      "hero_image": "./assets/images/products/slim/slim_74_1000/hero.jpg",
-      "sku_1_image": "./assets/images/products/slim/slim_74_1000/sku-1.png",
-      "sku_2_image": "./assets/images/products/slim/slim_74_1000/sku-2.png",
+      "hero_image": "./assets/images/products/slim/slim_74_1000/hero.webp",
+      "sku_1_image": "./assets/images/products/slim/slim_74_1000/sku-1.webp",
+      "sku_2_image": "./assets/images/products/slim/slim_74_1000/sku-2.webp",
       "series_key": "slim",
       "sku_code": "SL-74-1000",
       "display_name_zh": "SLIM 鋰電池 7.4V 1000mAh",
@@ -2176,10 +2174,7 @@
       "battery_type": "Li-ion",
       "connector": "T Plug",
       "discharge_rate": "20C / 40C",
-      "length": 10.0,
-      "width": 2.0,
-      "height": 1.5,
-      "dimension_unit": "cm"
+      "dimension_display": "L 102 × W 20 × T 13 mm"
     },
     {
       "sku_id": "slim_74_1200",
@@ -2188,9 +2183,9 @@
       "series": "slim",
       "voltage": 7.4,
       "capacity": 1200,
-      "hero_image": "./assets/images/products/slim/slim_74_1200/hero.jpg",
-      "sku_1_image": "./assets/images/products/slim/slim_74_1200/sku-1.png",
-      "sku_2_image": "./assets/images/products/slim/slim_74_1200/sku-2.png",
+      "hero_image": "./assets/images/products/slim/slim_74_1200/hero.webp",
+      "sku_1_image": "./assets/images/products/slim/slim_74_1200/sku-1.webp",
+      "sku_2_image": "./assets/images/products/slim/slim_74_1200/sku-2.webp",
       "series_key": "slim",
       "sku_code": "SL-74-1200",
       "display_name_zh": "SLIM 鋰電池 7.4V 1200mAh",
@@ -2198,10 +2193,7 @@
       "battery_type": "Li-ion",
       "connector": "T Plug",
       "discharge_rate": "20C / 40C",
-      "length": 10.0,
-      "width": 2.0,
-      "height": 1.5,
-      "dimension_unit": "cm"
+      "dimension_display": "L 130 × W 20 × T 12 mm"
     },
     {
       "sku_id": "block_74_1300",
@@ -2210,16 +2202,13 @@
       "series": "block",
       "voltage": 7.4,
       "capacity": 1300,
-      "hero_image": "./assets/images/products/block/block_74_1300/hero.jpg",
-      "sku_1_image": "./assets/images/products/block/block_74_1300/sku-1.png",
-      "sku_2_image": "./assets/images/products/block/block_74_1300/sku-2.png",
+      "hero_image": "./assets/images/products/block/block_74_1300/hero.webp",
+      "sku_1_image": "./assets/images/products/block/block_74_1300/sku-1.webp",
+      "sku_2_image": "./assets/images/products/block/block_74_1300/sku-2.webp",
       "battery_type": "Li-ion",
       "connector": "T Plug",
       "discharge_rate": "20C / 40C",
-      "length": 7.5,
-      "width": 11.8,
-      "height": 1.7,
-      "dimension_unit": "cm"
+      "dimension_display": "L 100 × W 34 × T 9 mm"
     },
     {
       "sku_id": "split_74_1000",
@@ -2228,16 +2217,13 @@
       "series": "split",
       "voltage": 7.4,
       "capacity": 1000,
-      "hero_image": "./assets/images/products/split/split_74_1000/hero.jpg",
-      "sku_1_image": "./assets/images/products/split/split_74_1000/sku-1.png",
-      "sku_2_image": "./assets/images/products/split/split_74_1000/sku-2.png",
+      "hero_image": "./assets/images/products/split/split_74_1000/hero.webp",
+      "sku_1_image": "./assets/images/products/split/split_74_1000/sku-1.webp",
+      "sku_2_image": "./assets/images/products/split/split_74_1000/sku-2.webp",
       "battery_type": "Li-ion",
       "connector": "T Plug",
       "discharge_rate": "20C / 40C",
-      "length": 7.5,
-      "width": 11.8,
-      "height": 1.7,
-      "dimension_unit": "cm"
+      "dimension_display": "L 108 × W 20 × T 7 mm"
     },
     {
       "sku_id": "stick_74_1000",
@@ -2252,10 +2238,7 @@
       "battery_type": "Li-ion",
       "connector": "T Plug",
       "discharge_rate": "20C / 40C",
-      "length": 7.5,
-      "width": 11.8,
-      "height": 1.7,
-      "dimension_unit": "cm"
+      "dimension_display": "—"
     }
   ],
   "specMapRaw": [
@@ -2338,8 +2321,12 @@
           product_id: series,
           series,
           hero_image: variant.hero_image,
-          sku_1_image: `./assets/images/products/${series}/${keyId}/sku-1.png`,
-          sku_2_image: `./assets/images/products/${series}/${keyId}/sku-2.png`
+          sku_1_image:
+            variant.sku_1_image ||
+            `./assets/images/products/${series}/${keyId}/sku-1.png`,
+          sku_2_image:
+            variant.sku_2_image ||
+            `./assets/images/products/${series}/${keyId}/sku-2.png`
         };
       }
 

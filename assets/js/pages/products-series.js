@@ -578,7 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <aside class="wateli-quick-info-right">
                 <div class="wateli-quick-info-block">
                   <p class="wateli-quick-info-kicker" data-i18n="quickinfo.capacity"></p>
-                  <ul class="wateli-quick-info-capacity-list"><li>780 mAh</li><li>950 mAh</li><li>1000 mAh</li><li>1200 mAh</li></ul>
+                  <ul class="wateli-quick-info-capacity-list"><li>800 mAh</li><li>950 mAh</li><li>1000 mAh</li><li>1200 mAh</li></ul>
                 </div>
                 <div class="wateli-quick-info-block wateli-quick-info-block-model">
                   <p class="wateli-quick-info-kicker" data-i18n="quickinfo.model_description"></p>

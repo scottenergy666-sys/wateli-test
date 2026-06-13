@@ -6,16 +6,13 @@
     "series": "block",
     "voltage": 7.4,
     "capacity": 1300,
-    "hero_image": "./assets/images/products/block/block_74_1300/hero.jpg",
-    "sku_1_image": "./assets/images/products/block/block_74_1300/sku-1.png",
-    "sku_2_image": "./assets/images/products/block/block_74_1300/sku-2.png",
+    "hero_image": "./assets/images/products/block/block_74_1300/hero.webp",
+    "sku_1_image": "./assets/images/products/block/block_74_1300/sku-1.webp",
+    "sku_2_image": "./assets/images/products/block/block_74_1300/sku-2.webp",
     "battery_type": "Li-ion",
     "connector": "T Plug",
     "discharge_rate": "20C / 40C",
-    "length": 7.5,
-    "width": 11.8,
-    "height": 1.7,
-    "dimension_unit": "cm"
+    "dimension_display": "L 100 × W 34 × T 9 mm"
   },
   {
     "sku_id": "block_111_1300",
@@ -24,9 +21,10 @@
     "series": "block",
     "voltage": 11.1,
     "capacity": 1300,
-    "hero_image": "./assets/images/products/block/block_111_1300/hero.jpg",
-    "sku_1_image": "./assets/images/products/block/block_111_1300/sku-1.png",
-    "sku_2_image": "./assets/images/products/block/block_111_1300/sku-2.png"
+    "hero_image": "./assets/images/products/block/block_111_1300/hero.webp",
+    "sku_1_image": "./assets/images/products/block/block_111_1300/sku-1.webp",
+    "sku_2_image": "./assets/images/products/block/block_111_1300/sku-2.webp",
+    "dimension_display": "L 102 × W 34 × T 15 mm"
   },
   {
     "sku_id": "slim_74_950",
@@ -35,9 +33,10 @@
     "series": "slim",
     "voltage": 7.4,
     "capacity": 950,
-    "hero_image": "./assets/images/products/slim/slim_74_950/hero.jpg",
-    "sku_1_image": "./assets/images/products/slim/slim_74_950/sku-1.png",
-    "sku_2_image": "./assets/images/products/slim/slim_74_950/sku-2.png"
+    "hero_image": "./assets/images/products/slim/slim_74_950/hero.webp",
+    "sku_1_image": "./assets/images/products/slim/slim_74_950/sku-1.webp",
+    "sku_2_image": "./assets/images/products/slim/slim_74_950/sku-2.webp",
+    "dimension_display": "L 101 × W 20 × T 12 mm"
   },
   {
     "sku_id": "slim_74_1000",
@@ -46,9 +45,10 @@
     "series": "slim",
     "voltage": 7.4,
     "capacity": 1000,
-    "hero_image": "./assets/images/products/slim/slim_74_1000/hero.jpg",
-    "sku_1_image": "./assets/images/products/slim/slim_74_1000/sku-1.png",
-    "sku_2_image": "./assets/images/products/slim/slim_74_1000/sku-2.png"
+    "hero_image": "./assets/images/products/slim/slim_74_1000/hero.webp",
+    "sku_1_image": "./assets/images/products/slim/slim_74_1000/sku-1.webp",
+    "sku_2_image": "./assets/images/products/slim/slim_74_1000/sku-2.webp",
+    "dimension_display": "L 102 × W 20 × T 13 mm"
   },
   {
     "sku_id": "slim_74_1200",
@@ -57,20 +57,22 @@
     "series": "slim",
     "voltage": 7.4,
     "capacity": 1200,
-    "hero_image": "./assets/images/products/slim/slim_74_1200/hero.jpg",
-    "sku_1_image": "./assets/images/products/slim/slim_74_1200/sku-1.png",
-    "sku_2_image": "./assets/images/products/slim/slim_74_1200/sku-2.png"
+    "hero_image": "./assets/images/products/slim/slim_74_1200/hero.webp",
+    "sku_1_image": "./assets/images/products/slim/slim_74_1200/sku-1.webp",
+    "sku_2_image": "./assets/images/products/slim/slim_74_1200/sku-2.webp",
+    "dimension_display": "L 130 × W 20 × T 12 mm"
   },
   {
-    "sku_id": "slim_111_780",
-    "key_id": "slim_111_780",
+    "sku_id": "slim_111_800",
+    "key_id": "slim_111_800",
     "product_id": "slim",
     "series": "slim",
     "voltage": 11.1,
-    "capacity": 780,
-    "hero_image": "./assets/images/products/slim/slim_111_780/hero.jpg",
-    "sku_1_image": "./assets/images/products/slim/slim_111_780/sku-1.png",
-    "sku_2_image": "./assets/images/products/slim/slim_111_780/sku-2.png"
+    "capacity": 800,
+    "hero_image": "./assets/images/products/slim/slim_111_800/hero.webp",
+    "sku_1_image": "./assets/images/products/slim/slim_111_800/sku-1.webp",
+    "sku_2_image": "./assets/images/products/slim/slim_111_800/sku-2.webp",
+    "dimension_display": "L 105 × W 19 × T 17 mm"
   },
   {
     "sku_id": "slim_111_950",
@@ -79,9 +81,10 @@
     "series": "slim",
     "voltage": 11.1,
     "capacity": 950,
-    "hero_image": "./assets/images/products/slim/slim_111_950/hero.jpg",
-    "sku_1_image": "./assets/images/products/slim/slim_111_950/sku-1.png",
-    "sku_2_image": "./assets/images/products/slim/slim_111_950/sku-2.png"
+    "hero_image": "./assets/images/products/slim/slim_111_950/hero.webp",
+    "sku_1_image": "./assets/images/products/slim/slim_111_950/sku-1.webp",
+    "sku_2_image": "./assets/images/products/slim/slim_111_950/sku-2.webp",
+    "dimension_display": "L 103 × W 20 × T 18 mm"
   },
   {
     "sku_id": "slim_111_1000",
@@ -90,9 +93,10 @@
     "series": "slim",
     "voltage": 11.1,
     "capacity": 1000,
-    "hero_image": "./assets/images/products/slim/slim_111_1000/hero.jpg",
-    "sku_1_image": "./assets/images/products/slim/slim_111_1000/sku-1.png",
-    "sku_2_image": "./assets/images/products/slim/slim_111_1000/sku-2.png"
+    "hero_image": "./assets/images/products/slim/slim_111_1000/hero.webp",
+    "sku_1_image": "./assets/images/products/slim/slim_111_1000/sku-1.webp",
+    "sku_2_image": "./assets/images/products/slim/slim_111_1000/sku-2.webp",
+    "dimension_display": "L 103 × W 20 × T 19 mm"
   },
   {
     "sku_id": "slim_111_1200",
@@ -101,9 +105,10 @@
     "series": "slim",
     "voltage": 11.1,
     "capacity": 1200,
-    "hero_image": "./assets/images/products/slim/slim_111_1200/hero.jpg",
-    "sku_1_image": "./assets/images/products/slim/slim_111_1200/sku-1.png",
-    "sku_2_image": "./assets/images/products/slim/slim_111_1200/sku-2.png"
+    "hero_image": "./assets/images/products/slim/slim_111_1200/hero.webp",
+    "sku_1_image": "./assets/images/products/slim/slim_111_1200/sku-1.webp",
+    "sku_2_image": "./assets/images/products/slim/slim_111_1200/sku-2.webp",
+    "dimension_display": "L 131 × W 20 × T 17 mm"
   },
   {
     "sku_id": "split_74_1000",
@@ -112,16 +117,13 @@
     "series": "split",
     "voltage": 7.4,
     "capacity": 1000,
-    "hero_image": "./assets/images/products/split/split_74_1000/hero.jpg",
-    "sku_1_image": "./assets/images/products/split/split_74_1000/sku-1.png",
-    "sku_2_image": "./assets/images/products/split/split_74_1000/sku-2.png",
+    "hero_image": "./assets/images/products/split/split_74_1000/hero.webp",
+    "sku_1_image": "./assets/images/products/split/split_74_1000/sku-1.webp",
+    "sku_2_image": "./assets/images/products/split/split_74_1000/sku-2.webp",
     "battery_type": "Li-ion",
     "connector": "T Plug",
     "discharge_rate": "20C / 40C",
-    "length": 7.5,
-    "width": 11.8,
-    "height": 1.7,
-    "dimension_unit": "cm"
+    "dimension_display": "L 108 × W 20 × T 7 mm"
   },
   {
     "sku_id": "split_111_950",
@@ -130,9 +132,10 @@
     "series": "split",
     "voltage": 11.1,
     "capacity": 950,
-    "hero_image": "./assets/images/products/split/split_111_950/hero.jpg",
-    "sku_1_image": "./assets/images/products/split/split_111_950/sku-1.png",
-    "sku_2_image": "./assets/images/products/split/split_111_950/sku-2.png"
+    "hero_image": "./assets/images/products/split/split_111_950/hero.webp",
+    "sku_1_image": "./assets/images/products/split/split_111_950/sku-1.webp",
+    "sku_2_image": "./assets/images/products/split/split_111_950/sku-2.webp",
+    "dimension_display": "L 105 × W 20 × T 6 mm"
   },
   {
     "sku_id": "split_111_1000",
@@ -141,9 +144,10 @@
     "series": "split",
     "voltage": 11.1,
     "capacity": 1000,
-    "hero_image": "./assets/images/products/split/split_111_1000/hero.jpg",
-    "sku_1_image": "./assets/images/products/split/split_111_1000/sku-1.png",
-    "sku_2_image": "./assets/images/products/split/split_111_1000/sku-2.png"
+    "hero_image": "./assets/images/products/split/split_111_1000/hero.webp",
+    "sku_1_image": "./assets/images/products/split/split_111_1000/sku-1.webp",
+    "sku_2_image": "./assets/images/products/split/split_111_1000/sku-2.webp",
+    "dimension_display": "L 106 × W 20 × T 7 mm"
   },
   {
     "sku_id": "split_111_1200",
@@ -152,9 +156,10 @@
     "series": "split",
     "voltage": 11.1,
     "capacity": 1200,
-    "hero_image": "./assets/images/products/split/split_111_1200/hero.jpg",
-    "sku_1_image": "./assets/images/products/split/split_111_1200/sku-1.png",
-    "sku_2_image": "./assets/images/products/split/split_111_1200/sku-2.png"
+    "hero_image": "./assets/images/products/split/split_111_1200/hero.webp",
+    "sku_1_image": "./assets/images/products/split/split_111_1200/sku-1.webp",
+    "sku_2_image": "./assets/images/products/split/split_111_1200/sku-2.webp",
+    "dimension_display": "L 130 × W 20 × T 6 mm"
   },
   {
     "sku_id": "stick_74_1000",
@@ -169,10 +174,7 @@
     "battery_type": "Li-ion",
     "connector": "T Plug",
     "discharge_rate": "20C / 40C",
-    "length": 7.5,
-    "width": 11.8,
-    "height": 1.7,
-    "dimension_unit": "cm"
+    "dimension_display": "—"
   },
   {
     "sku_id": "stick_111_1000",
@@ -181,9 +183,10 @@
     "series": "stick",
     "voltage": 11.1,
     "capacity": 1000,
-    "hero_image": "./assets/images/products/stick/stick_111_1000/hero.jpg",
-    "sku_1_image": "./assets/images/products/stick/stick_111_1000/sku-1.png",
-    "sku_2_image": "./assets/images/products/stick/stick_111_1000/sku-2.png"
+    "hero_image": "./assets/images/products/stick/stick_111_1000/hero.webp",
+    "sku_1_image": "./assets/images/products/stick/stick_111_1000/sku-1.webp",
+    "sku_2_image": "./assets/images/products/stick/stick_111_1000/sku-2.webp",
+    "dimension_display": "L 180 × W 15 × T 16 mm"
   },
   {
     "sku_id": "twin_74_2000",
@@ -192,16 +195,13 @@
     "series": "twin",
     "voltage": 7.4,
     "capacity": 2000,
-    "hero_image": "./assets/images/products/twin/twin_74_2000/hero.jpg",
-    "sku_1_image": "./assets/images/products/twin/twin_74_2000/sku-1.png",
-    "sku_2_image": "./assets/images/products/twin/twin_74_2000/sku-2.png",
+    "hero_image": "./assets/images/products/twin/twin_74_2000/hero.webp",
+    "sku_1_image": "./assets/images/products/twin/twin_74_2000/sku-1.webp",
+    "sku_2_image": "./assets/images/products/twin/twin_74_2000/sku-2.webp",
     "battery_type": "Li-ion",
     "connector": "T Plug",
     "discharge_rate": "20C / 40C",
-    "length": 7.5,
-    "width": 11.8,
-    "height": 1.7,
-    "dimension_unit": "cm"
+    "dimension_display": "L 133 × W 22 mm"
   },
   {
     "sku_id": "twin_111_2000",
@@ -210,16 +210,13 @@
     "series": "twin",
     "voltage": 11.1,
     "capacity": 2000,
-    "hero_image": "./assets/images/products/twin/twin_111_2000/hero.jpg",
-    "sku_1_image": "./assets/images/products/twin/twin_111_2000/sku-1.png",
-    "sku_2_image": "./assets/images/products/twin/twin_111_2000/sku-2.png",
+    "hero_image": "./assets/images/products/twin/twin_111_2000/hero.webp",
+    "sku_1_image": "./assets/images/products/twin/twin_111_2000/sku-1.webp",
+    "sku_2_image": "./assets/images/products/twin/twin_111_2000/sku-2.webp",
     "battery_type": "Li-ion 18650",
     "connector": "小田宮",
     "discharge_rate": "20C / 40C",
-    "length": 7.5,
-    "width": 11.8,
-    "height": 1.7,
-    "dimension_unit": "cm",
-    "sku_code": "TW-111-2000"
+    "sku_code": "TW-111-2000",
+    "dimension_display": "Long: L 130 × W 22 mm / Short: L 67 × W 22 mm"
   }
 ]

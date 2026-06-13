@@ -1,12 +1,23 @@
-<<<<<<< HEAD
-WATELI-SITE-v2.0.0-R24A-STICK-APPLICATION-FIT-MODULE-ONLY
-Base: WATELI-SITE-v2.0.0-R23Z-TWIN-APPLICATION-FIT-MODULE-ONLY.zip
-Change: Adds STICK full-width application fit brand module below product cards, matching accepted BLOCK / SLIM / SPLIT / TWIN module structure.
-No image/JS/products.css/SKU changes.
-=======
-<<<<<<< HEAD
-WATELI-SITE-v2.0.0-R22O-C-ENTRY-CARD-FINAL-FIVE-IMAGE-REPLACE-ONLY
-=======
-WATELI-SITE-v2.0.0-R22O-B-ENTRY-CARD-FINAL-ARTWORK-REPLACE-ONLY
->>>>>>> 45591e9be9cf61480f9fd4e96abd5a854e53eaf5
->>>>>>> e537b8a6bdb474d126b5ad87c8d630d602fb8f3f
+Project: WATELI Official Website
+Version: v2.0.0-R24H-REWORK2A
+Base: R24G_LOCK_BASELINE
+Status: REVIEW
+Scope: Approved Chinese subtitle entry images with restored visual scale
+Source Images: 5 PNG
+Source Size: 1254x1254
+Scale Size: 1398x1398
+Scale Factor: 1.1148325
+Center Crop: 72px on all sides
+Final Working Canvas: 1254x1254
+Output WebP: 10
+Output Sizes: 1024x1024 and 768x768
+Resize Method: LANCZOS
+WebP Quality: 90
+WebP Method: 6
+Exact Alpha: Yes
+HTML Modified: No
+CSS Modified: No
+JavaScript Modified: No
+Data Modified: No
+Other Images Modified: No
+Deleted Files: 0
