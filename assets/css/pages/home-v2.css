@@ -550,3 +550,61 @@
     color: rgba(214, 221, 229, 0.62);
   }
 }
+
+/* R24I-REWORK1B: responsive five-series entry display enlargement and stronger mobile next-card hint. */
+@media (min-width: 901px) {
+  .page-template--home-v2 .home-product-series__container {
+    width: min(100% - 48px, 1360px);
+  }
+
+  .page-template--home-v2 .home-product-series__grid {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .page-template--home-v2 .home-product-series__container {
+    width: min(100% - 32px, 1200px);
+  }
+
+  .page-template--home-v2 .home-product-series__grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-template--home-v2 .home-product-series__container {
+    width: 100%;
+  }
+
+  .page-template--home-v2 .home-product-series__grid {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: min(calc(100vw - 64px), 390px);
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 8px 8px;
+    scroll-padding-inline: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .page-template--home-v2 .home-product-series__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-template--home-v2 .home-product-series__card {
+    width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .page-template--home-v2 .home-product-series__image-wrap {
+    width: 100%;
+  }
+}
