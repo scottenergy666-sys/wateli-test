@@ -1,25 +1,17 @@
 Project: WATELI Official Website
-Version: v2.0.0-R24I-REWORK1B
-Base: R24H_LOCK_BASELINE
+Version: v2.0.0-R24J-REWORK2
+Base: R24I_LOCK_BASELINE
 Status: REVIEW
-Scope: New five-series entry design, responsive display enlargement, mobile loading fix, and stronger next-card hint
-Source Images: 5 PNG
-Source Size: 1254x1254
-Output WebP: 10
-Output Sizes: 1024x1024 and 768x768
-Additional Bitmap Scale Applied: No
-Center Crop Applied: No
-Desktop Entry Container Max Width: 1360px
-Desktop Entry Grid Gap: 24px
-Tablet Entry Grid Gap: 20px
-Mobile Entry Card Width: min(calc(100vw - 64px), 390px)
-Mobile Entry Padding: 8px
-Mobile Entry Gap: 8px
-Mobile Next Card Track Hint: approximately 48px
-SLIM Loading: eager
-BLOCK Loading: eager
-Remaining Entry Loading: lazy
-JavaScript Modified: No
-Products HTML Modified: No
-Products CSS Modified: No
+Scope: Add 950 FAMILY Hero slide to desktop and mobile carousel using corrected 16:9 / 9:16 assets
+Desktop Hero New Slide: 950-family-hero-desktop-2048x1152.webp
+Mobile Hero New Slide: 950-family-hero-mobile-1080x1920.webp
+Desktop Hero Slides: 3
+Desktop Hero Dots: 3
+Desktop Autoplay: 4000ms
+Mobile Hero Slides: 2
+Mobile Hero Dots: 2
+Mobile Autoplay: 4000ms
+Mobile Arrows: No
+Third-party Slider: No
+Image Redesign in Website Package: No
 Deleted Files: 0

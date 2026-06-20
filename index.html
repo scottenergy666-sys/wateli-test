@@ -31,12 +31,33 @@
       <picture class="home-hero__slide home-hero__slide--product">
         <img src="assets/images/content/home/hero-desktop-slide-02.png" alt="">
       </picture>
+      <picture class="home-hero__slide home-hero__slide--family">
+        <source srcset="assets/images/content/home/950-family-hero-desktop-2048x1152.webp" type="image/webp">
+        <img src="assets/images/content/home/950-family-hero-desktop-2048x1152.png" alt="WATELI 950mAh FAMILY SLIM Li-Po Battery Series">
+      </picture>
+      <div class="home-hero__dots" aria-label="WATELI desktop Hero slide navigation">
+        <button class="home-hero__dot is-active" type="button" aria-label="顯示桌機 Hero 第 1 張" aria-current="true" data-home-hero-dot="0"></button>
+        <button class="home-hero__dot" type="button" aria-label="顯示桌機 Hero 第 2 張" aria-current="false" data-home-hero-dot="1"></button>
+        <button class="home-hero__dot" type="button" aria-label="顯示桌機 Hero 第 3 張" aria-current="false" data-home-hero-dot="2"></button>
+      </div>
     </section>
 
-    <section class="home-mobile-hero" aria-label="WATELI 手機首頁主視覺" data-i18n-attr="aria-label:home_v110_mobile_hero_aria">
-      <picture>
-        <img src="assets/images/content/home/hero-mobile-main.png" alt="WATELI Engineering Center 手機首頁主視覺" data-i18n-attr="alt:home_v110_mobile_hero_alt">
-      </picture>
+    <section class="home-mobile-hero" aria-label="WATELI 手機首頁主視覺" data-i18n-attr="aria-label:home_v110_mobile_hero_aria" data-mobile-hero-carousel>
+      <div class="home-mobile-hero__viewport">
+        <div class="home-mobile-hero__track" aria-label="WATELI Mobile Hero Carousel">
+          <picture class="home-mobile-hero__slide is-active" data-mobile-hero-slide>
+            <img src="assets/images/content/home/hero-mobile-main.png" alt="WATELI Engineering Center 手機首頁主視覺" data-i18n-attr="alt:home_v110_mobile_hero_alt" loading="eager" decoding="async">
+          </picture>
+          <picture class="home-mobile-hero__slide" data-mobile-hero-slide>
+            <source srcset="assets/images/content/home/950-family-hero-mobile-1080x1920.webp" type="image/webp">
+            <img src="assets/images/content/home/950-family-hero-mobile-1080x1920.png" alt="WATELI 950mAh FAMILY SLIM Li-Po Battery Series" loading="eager" decoding="async">
+          </picture>
+        </div>
+        <div class="home-mobile-hero__dots" aria-label="WATELI mobile Hero slide navigation">
+          <button class="home-mobile-hero__dot is-active" type="button" aria-label="顯示手機 Hero 第 1 張" aria-current="true" data-mobile-hero-dot="0"></button>
+          <button class="home-mobile-hero__dot" type="button" aria-label="顯示手機 Hero 第 2 張" aria-current="false" data-mobile-hero-dot="1"></button>
+        </div>
+      </div>
     </section>
 
     <section class="home-product-series" aria-labelledby="home-product-series-title">
@@ -92,27 +113,52 @@
       var mq = window.matchMedia('(min-width: 769px)');
       var hero = document.querySelector('.home-desktop-hero');
       if (!hero) return;
+
       var slides = Array.prototype.slice.call(hero.querySelectorAll('.home-hero__slide'));
+      var dots = Array.prototype.slice.call(hero.querySelectorAll('[data-home-hero-dot]'));
       if (slides.length < 2) return;
+
       var i = 0;
+      var timer = null;
+      var interval = 4000;
 
       function show(index) {
+        i = index;
         slides.forEach(function (slide, n) {
           slide.classList.toggle('is-active', n === index);
         });
+
+        dots.forEach(function (dot, n) {
+          var active = n === index;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-current', active ? 'true' : 'false');
+        });
       }
 
-      show(0);
-
-      setInterval(function () {
-        if (!mq.matches) {
-          show(0);
-          i = 0;
-          return;
+      function start() {
+        if (timer) {
+          window.clearInterval(timer);
         }
-        i = (i + 1) % slides.length;
-        show(i);
-      }, 4500);
+
+        timer = window.setInterval(function () {
+          if (!mq.matches) {
+            show(0);
+            return;
+          }
+
+          show((i + 1) % slides.length);
+        }, interval);
+      }
+
+      dots.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+          show(index);
+          start();
+        });
+      });
+
+      show(0);
+      start();
     })();
   </script>
 </body>

@@ -608,3 +608,148 @@
     width: 100%;
   }
 }
+
+/* R24J-REWORK2: corrected 16:9 / 9:16 950 FAMILY Hero carousel integration.
+   Scope: desktop Hero family slide/dots and mobile Hero carousel/dots only.
+   Images are approved assets copied without redesign, crop, resize, or recompression.
+*/
+@media (min-width: 769px) {
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide--family {
+    background: #000;
+  }
+
+  .page-template--home-v2 .home-desktop-hero .home-hero__slide--family img {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .page-template--home-v2 .home-desktop-hero .home-hero__dots {
+    position: absolute;
+    left: 50%;
+    bottom: clamp(120px, 14vh, 156px);
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 106, 26, 0.18);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(6px);
+  }
+
+  .page-template--home-v2 .home-desktop-hero .home-hero__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 1px solid rgba(255, 106, 26, 0.88);
+    border-radius: 999px;
+    background: rgba(255, 106, 26, 0.24);
+    cursor: pointer;
+    transition: width 160ms ease, background-color 160ms ease, opacity 160ms ease;
+  }
+
+  .page-template--home-v2 .home-desktop-hero .home-hero__dot.is-active,
+  .page-template--home-v2 .home-desktop-hero .home-hero__dot[aria-current="true"] {
+    width: 24px;
+    background: #ff6a1a;
+  }
+
+  .page-template--home-v2 .home-desktop-hero .home-hero__dot:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.82);
+    outline-offset: 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-template--home-v2 .home-mobile-hero {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    line-height: normal;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__viewport {
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #000;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    background: #000;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 10px 0 18px;
+    background: #000;
+    line-height: 1;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 1px solid rgba(255, 106, 26, 0.88);
+    border-radius: 999px;
+    background: rgba(255, 106, 26, 0.24);
+    cursor: pointer;
+    transition: width 160ms ease, background-color 160ms ease, opacity 160ms ease;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__dot.is-active,
+  .page-template--home-v2 .home-mobile-hero__dot[aria-current="true"] {
+    width: 22px;
+    background: #ff6a1a;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__dot:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.82);
+    outline-offset: 4px;
+  }
+}
+
