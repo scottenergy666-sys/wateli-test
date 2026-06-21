@@ -670,12 +670,14 @@
     overflow: hidden;
     background: #000;
     line-height: normal;
+    position: relative;
   }
 
   .page-template--home-v2 .home-mobile-hero__viewport {
     width: 100%;
     overflow: hidden;
     background: #000;
+    position: relative;
   }
 
   .page-template--home-v2 .home-mobile-hero__track {
@@ -726,8 +728,18 @@
     justify-content: center;
     gap: 9px;
     padding: 10px 0 18px;
-    background: #000;
+    background: transparent;
     line-height: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .page-template--home-v2 .home-mobile-hero__dots .home-mobile-hero__dot {
+    pointer-events: auto;
   }
 
   .page-template--home-v2 .home-mobile-hero__dot {
