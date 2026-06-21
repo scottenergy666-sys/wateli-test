@@ -700,7 +700,7 @@
 
   .page-template--home-v2 .home-mobile-hero__slide {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     width: 100%;
     min-width: 100%;
@@ -717,7 +717,7 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    object-position: center bottom;
+    object-position: center center;
   }
 
   .page-template--home-v2 .home-mobile-hero__dots {
@@ -725,7 +725,7 @@
     align-items: center;
     justify-content: center;
     gap: 9px;
-    padding: 10px 0 22px;
+    padding: 10px 0 18px;
     background: #000;
     line-height: 1;
   }
@@ -753,20 +753,3 @@
   }
 }
 
-
-/* R24M-REWORK1: Small height mobile hero fix for iPhone SE class devices. */
-@media (max-width: 480px) and (max-height: 700px) {
-  .page-template--home-v2 .home-mobile-hero__track {
-    aspect-ratio: auto;
-    height: calc(100svh - 96px);
-    max-height: 590px;
-  }
-
-  .page-template--home-v2 .home-mobile-hero__slide img {
-    max-height: 94%;
-  }
-
-  .page-template--home-v2 .home-mobile-hero__dots {
-    padding: 8px 0 14px;
-  }
-}
